@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+		<title>Get Repo List</title>
+		<link rel="icon" href="img/favicon.ico">
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/json.js"></script>
+	</head>
+	<body>
+		<dv>
+			<h2>Get your GitHub repo's contents list.</h2>
+			<p>Speed up your images with <a href="https://www.jsdelivr.com/">jsDelivr</a>.</p>
+			<p><a target="_blank" href="https://yidas.cn">View My Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://github.com/adiynil">View me on GitHub</a></p>
+			<p>Input your GitHub username , repo and directory.<br/>Don't change the second form or input nothing if you are using your repo's root directory.</p>
+			<div class="popbox">
+				<button id="preview" onclick="openbox(this)">Preview</button>
+				<div class="fade">
+					<button class="close" onclick="closebox(this);"></button>
+				</div>
+				<div class="pop">
+					<img id="previewimg" src="" />
+				</div>
+			</div>
+			<h4>
+				<input id="userrepo" placeholder="username/repo" />
+				<input id="dir" value="/" />
+				<button onclick="ajaxget()">Get List</button>
+			</h4>
+			<hr />
+			<input id="user" value="" type="hidden" />
+			<input id="repo" value="" type="hidden" />
+			<input id="dirt" value="" type="hidden" />
+			<div id="list">
+				
+			</div>
+		</dv>
+	</body>
+</html>
