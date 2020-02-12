@@ -182,3 +182,7 @@ code {
 .item {
 	padding-bottom: 2px;
 }
+
+#result {
+	display: none;
+}

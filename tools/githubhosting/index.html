@@ -26,8 +26,12 @@
 			<h4>
 				<input id="userrepo" placeholder="username/repo" />
 				<input id="dir" value="/" />
-				<button onclick="ajaxget()">Get List</button>
+				<button id="submit" onclick="ajaxget()">Get List</button>
 			</h4>
+			<div id="result">
+				<p>total：&nbsp;<label id="is"></label>&nbsp;items&nbsp;,&nbsp;<label id="ds"></label>&nbsp;dirs.
+				<button onclick="onecopymd()">Copy MarkDown List</button></p>
+			</div>
 			<hr />
 			<input id="user" value="" type="hidden" />
 			<input id="repo" value="" type="hidden" />

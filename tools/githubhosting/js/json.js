@@ -44,7 +44,13 @@ function createXmlHttpRequest(){
 		}
 	return xmlreq;
 };
+var mdlist; // 记录markdown列表
+var is;
+var ds;
 function ajaxget(){
+	mdlist = "";
+	is = 0;
+	ds = 0;
 	var list = Id('list');
 	var userrepo = Id('userrepo');
 	var dir = Id('dir');
@@ -70,20 +76,53 @@ function ajaxget(){
 		if(request.readyState==4){
 			var result = request.responseText;
 			var msg = eval('(' + result + ')');
-			if(msg.message=="Not Found"){ list.innerHTML += "<h3>Found Nothing !<h4>Please check your input !</h4></h3>"; }
-			else{
+			if(msg.message=="Not Found"){ 
+				list.innerHTML += "<h3>Found Nothing !<h4>Please check your input !</h4></h3>"; 
+			}else{				
 				for (var data of msg) {
+					var user = Id('user');
+					var repo = Id('repo');
+					var dir = Id('dirt');
+					var directlink = "https://cdn.jsdelivr.net/gh/"+user.value+"/"+repo.value+"@master"+dir.value+"/"+data.name;
+					directlink = "![]("+directlink+")";
+					mdlist += directlink + "\n";
 					var filename = "<p>FILENAME：<code>"+data.name+"</code></p>";
+					var dirname = "<p>DIR：<code><a href='#' onclick=redir('"+data.name+"')>/&nbsp;"+data.name+"</a></code></p>";
 					var directlink = "<p>DIRECT LINK：<code>https://cdn.jsdelivr.net/gh/"+Id("user").value+"/"+Id("repo").value+"@master"+Id("dirt").value+"/"+data.name+"</code></p>";
 					var btn1 = "<button onclick=preview('"+data.name+"')>Preview</button>&nbsp;";
 					var btn2 = "<button onclick=copy('md','"+data.name+"')>Copy MarkDown</button>&nbsp;";
 					var btn3 = "<button onclick=copy('html','"+data.name+"')>Copy HTML</button>&nbsp;";
 					var btn4 = "<button onclick=copy('url','"+data.name+"')>Copy URL</button>";
-					list.innerHTML += "<div>"+filename+directlink+btn1+btn2+btn3+btn4+"</div>";
+					if(data.type=="dir"){
+						list.innerHTML += "<div>"+dirname+"</div>";
+						ds += 1;
+					}else{
+						list.innerHTML += "<div>"+filename+directlink+btn1+btn2+btn3+btn4+"</div>";
+						is += 1;
+					}
+					Id("is").innerText = is;
+					Id("ds").innerText = ds;
+					Id("result").style.display = "block";
 				}
 			}
 		}
 	}
+};
+function redir(dir){
+	var user = Id('user');
+	var repo = Id('repo');
+	Id("userrepo").value = user.value + "/" + repo.value;
+	Id("dir").value = dir;
+	Id("submit").click();
+};
+function onecopymd(){
+	const textarea = document.createElement('textarea');
+	textarea.value = mdlist;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand('copy');
+	document.body.removeChild(textarea);
+	toast({message:"OK!",time:1500});
 };
 function copy(type,file){
 	var result;
