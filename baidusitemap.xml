@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yidas.cn/post/python-draw-doraemon/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://yidas.cn/post/build-website/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
     <loc>https://yidas.cn/post/test/</loc>
     <lastmod>2020-02-07</lastmod>
   </url>  <url>
