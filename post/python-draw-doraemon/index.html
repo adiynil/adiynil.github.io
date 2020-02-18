@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>用Python的海龟画图画一个哆啦A梦 - 阿飞 | 专注源于热爱</title>
+
+
+    <meta name="description" content="一年之前学的Python，过了这么久也差不多都还给老师了。我的傻吊儿子（误）喜欢哆啦A梦，前几天花了时间专门找了很多高清的哆啦A梦的海报挂上图床，突发奇想想到用Python的turtle画图能否实现画一个哆啦A梦….">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Python的海龟画图画一个哆啦A梦">
+<meta property="og:url" content="https://yidas.cn/post/python-draw-doraemon/">
+<meta property="og:site_name" content="阿飞 | 专注源于热爱">
+<meta property="og:description" content="一年之前学的Python，过了这么久也差不多都还给老师了。我的傻吊儿子（误）喜欢哆啦A梦，前几天花了时间专门找了很多高清的哆啦A梦的海报挂上图床，突发奇想想到用Python的turtle画图能否实现画一个哆啦A梦….">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/doraemon/thumbnail.jpg">
+<meta property="article:published_time" content="2020-02-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-18T17:16:34.774Z">
+<meta property="article:author" content="阿飞">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="turtle">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/doraemon/thumbnail.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                AFEI BLOG
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/doraemon">Doraemon</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="GitHub hosting tools" href="/tools/githubhosting/">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/doraemon/thumbnail.jpg" alt="用Python的海龟画图画一个哆啦A梦">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <!-- 2020-02-04 添加文章置顶标识 -->
+                
+                <!-- end -->
+                <span class="is-size-7 has-text-grey has-mr-7"><i class="fa fa-calendar"></i></span>
+                <time class="level-item has-text-grey" datetime="2020-02-17T16:00:00.000Z">2020-02-18</time>
+                
+                <div class="level-item">
+                <span class="is-size-7 has-text-grey has-mr-7"><i class="fa fa-folder"></i></span>
+                <a class="has-link-grey -link" href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">个人笔记</a>
+                </div>
+                
+                
+                <span class="is-size-7 has-text-grey has-mr-7"><i class="fa fa-eye"></i></span>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 887 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                用Python的海龟画图画一个哆啦A梦
+            
+        </h1>
+        <div class="content">
+            <p>一年之前学的Python，过了这么久也差不多都还给老师了。我的傻吊儿子（误）喜欢哆啦A梦，前几天花了时间专门找了很多高清的哆啦A梦的海报挂上图床，突发奇想想到用Python的turtle画图能否实现画一个哆啦A梦….</p>
+<a id="more"></a>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>由于实在是<del>年代久远</del>学艺不精，学的一点Python也还给老师了，加上前些天看课程直播讲到了Python又把Python装了回来，所以就有了尝试用turtle来画一个哆啦A梦的想法，自己琢磨了一会发现就只能画个头画眼睛化胡须啥的，身体其他部分完全没有思路怎么去画，就干脆点直接冲浪搜了，没想到还真的有人画这个，既然有现成，代码也能看的懂，那就拷贝下来自己研究研究吧。</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><hr>
+<p>先上一个最终的效果图吧 ☟☟☟</p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/doraemon/GIF.gif" alt="turtle画图哆啦A梦"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle <span class="keyword">as</span> t</span><br><span class="line">t.speed(<span class="number">20</span>)</span><br><span class="line">t.pensize(<span class="number">4</span>)</span><br><span class="line">t.hideturtle()</span><br><span class="line">t.screensize(<span class="number">500</span>, <span class="number">500</span>, bg=<span class="string">'white'</span>)</span><br><span class="line"><span class="comment"># 猫脸</span></span><br><span class="line">t.fillcolor(<span class="string">'#00A1E8'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">120</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.fillcolor(<span class="string">'white'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">100</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">134</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.fillcolor(<span class="string">"#EA0014"</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">18</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">7</span>, <span class="number">155</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.color(<span class="string">'white'</span>, <span class="string">'white'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">4</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">-30</span>, <span class="number">160</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">'black'</span>, <span class="string">'white'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">a = <span class="number">0.4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">120</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">        a = a+<span class="number">0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>) <span class="comment">#向左转3度</span></span><br><span class="line">        t.fd(a) <span class="comment">#向前走a的步长</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        a = a<span class="number">-0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>)</span><br><span class="line">        t.fd(a)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">30</span>, <span class="number">160</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">'black'</span>, <span class="string">'white'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">120</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">        a = a+<span class="number">0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>)  <span class="comment"># 向左转3度</span></span><br><span class="line">        t.fd(a)  <span class="comment"># 向前走a的步长</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        a = a<span class="number">-0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>)</span><br><span class="line">        t.fd(a)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">-38</span>,<span class="number">190</span>)</span><br><span class="line">t.pensize(<span class="number">4</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.right(<span class="number">-30</span>)</span><br><span class="line">t.forward(<span class="number">15</span>)</span><br><span class="line">t.right(<span class="number">70</span>)</span><br><span class="line">t.forward(<span class="number">15</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">15</span>, <span class="number">185</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">'black'</span>, <span class="string">'black'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">13</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">13</span>, <span class="number">190</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">'white'</span>, <span class="string">'white'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">5</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line"> </span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">134</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.right(<span class="number">90</span>)</span><br><span class="line">t.forward(<span class="number">40</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">124</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">10</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">114</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">6</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>,<span class="number">104</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">0</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line"><span class="comment"># 左边的胡子</span></span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>,<span class="number">124</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">170</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">114</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">174</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">104</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">'black'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">180</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">-70</span>, <span class="number">70</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">'black'</span>, <span class="string">'red'</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.seth(<span class="number">-60</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">80</span>,<span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">80</span>,<span class="number">80</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">-80</span>,<span class="number">70</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.forward(<span class="number">160</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">-50</span>,<span class="number">50</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.fillcolor(<span class="string">"#eb6e1a"</span>)</span><br><span class="line">t.seth(<span class="number">40</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">-40</span>, <span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">-40</span>, <span class="number">40</span>)</span><br><span class="line">t.seth(<span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">-40</span>, <span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">-40</span>, <span class="number">40</span>)</span><br><span class="line">t.seth(<span class="number">220</span>)</span><br><span class="line">t.circle(<span class="number">-80</span>, <span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">-80</span>, <span class="number">40</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line"><span class="comment"># 领带</span></span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">-70</span>, <span class="number">12</span>)</span><br><span class="line">t.pensize(<span class="number">14</span>)</span><br><span class="line">t.pencolor(<span class="string">'red'</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.seth(<span class="number">-20</span>)</span><br><span class="line">t.circle(<span class="number">200</span>, <span class="number">30</span>)</span><br><span class="line">t.circle(<span class="number">200</span>, <span class="number">10</span>)</span><br><span class="line"><span class="comment"># 铃铛</span></span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">-46</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.color(<span class="string">"black"</span>, <span class="string">'#f8d102'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">25</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">-5</span>, <span class="number">-40</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.color(<span class="string">"black"</span>, <span class="string">'#79675d'</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">5</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pensize(<span class="number">3</span>)</span><br><span class="line">t.right(<span class="number">115</span>)</span><br><span class="line">t.forward(<span class="number">7</span>)</span><br><span class="line">t.mainloop()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>最后推荐一个很适合新手入门的Python社区—— (<a href="https://python123.io">https://python123.io</a>) ，是我们老师以前上课的时候安利给我们的，主要是里面东西都比较浅显易懂，Python是我觉得而且大部分人都这么觉得入门最简单的编程语言了。</p>
+</blockquote>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7"><i class="fa fa-tags"></i></span>
+                    <a class="has-link-grey -link" href="/tags/Python/" rel="tag">Python</a>, <a class="has-link-grey -link" href="/tags/turtle/" rel="tag">turtle</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+<!-- 2020-02-05 添加文章版权标识 -->
+
+    
+        <!--  -->
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>本文作者：</strong><a target="_blank" href="https://yidas.cn">阿飞</a></p>
+                    <p><strong>原始链接：</strong><a href="https://yidas.cn/post/python-draw-doraemon/" alt="用Python的海龟画图画一个哆啦A梦">https://yidas.cn/post/python-draw-doraemon/</a></p>
+                    <p><strong>版权声明：</strong>本文遵循<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>版权协议，转载请附上原文出处链接和本声明。</p>
+                </div>
+            </div>
+        <!--  -->
+    
+
+<!-- end -->
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/post/my-icarus-config/">
+                <span class="level-item">使用Hexo主题icarus的深入浅出</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
+        app_key: 'dXvAhF4enbprKIDh9MAaVh64',
+        placeholder: 'write down your comments here...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+                   <!-- added -->
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-3 column-right ">
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/avatar.png" alt="阿飞">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        阿飞
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        专注源于热爱
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            5
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            3
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            10
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/adiynil" target="_blank" rel="noopener">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/adiynil">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://sm.ms/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">SM.MS</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">sm.ms</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://guguga.cn/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Barkure</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">guguga.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Default/">
+            <span class="level-start">
+                <span class="level-item">Default</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">
+            <span class="level-start">
+                <span class="level-item">个人笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E5%B9%B2%E8%B4%A7/">
+            <span class="level-start">
+                <span class="level-item">干货</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CloudFlare/">
+                        <span class="tag">CloudFlare</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/GitHub/">
+                        <span class="tag">GitHub</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/GitHub-Page/">
+                        <span class="tag">GitHub Page</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hello-world/">
+                        <span class="tag">hello world</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/icarus/">
+                        <span class="tag">icarus</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/markdown/">
+                        <span class="tag">markdown</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/test/">
+                        <span class="tag">test</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/turtle/">
+                        <span class="tag">turtle</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+                     <!-- added -->
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    AFEI BLOG
+                
+                </a> -->
+                <p class="is-size-7">
+                &copy; 2020 阿飞&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                共<span id="busuanzi_value_site_uv">0</span>个访客
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'https://yidas.cn',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+
+
+
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
