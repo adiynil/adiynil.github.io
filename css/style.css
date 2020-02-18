@@ -209,6 +209,10 @@ img.thumbnail {
   font-size: 1.15rem;
   position: relative;
 }
+.article .content a img {
+  margin: auto;
+  display: block;
+}
 .article .content a {
   word-wrap: break-word;
 }
