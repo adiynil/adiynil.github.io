@@ -17,16 +17,16 @@
 <meta property="og:site_name" content="阿飞 | 专注源于热爱">
 <meta property="og:description" content="我用了两天时间搭建起来的站点，依赖于GitHub的Page服务，域名是在腾讯云购买的，但是众所周知的是GitHub现在基本是半墙的状态，如果你不能快乐地上网，那么很可能不能愉快的访问GitHub，都已经用GitHub来搭建站点了，那么就要想法子来白嫖CDN来加速我的站点在国内的访问速度。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.postimg.cc/5tzYW5Gg/screenshot-4.png">
+<meta property="og:image" content="https://yidas.cn/images/og_image.png">
 <meta property="article:published_time" content="2020-02-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-18T17:30:23.226Z">
+<meta property="article:modified_time" content="2020-02-20T10:23:54.834Z">
 <meta property="article:author" content="阿飞">
-<meta property="article:tag" content="CloudFlare">
 <meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="CloudFlare">
 <meta property="article:tag" content="GitHub Page">
 <meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.postimg.cc/5tzYW5Gg/screenshot-4.png">
+<meta name="twitter:image" content="https://yidas.cn/images/og_image.png">
 
 
 
@@ -135,12 +135,6 @@
                 <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
 <div class="card">
     
-    <div class="card-image">
-        <span  class="image is-7by1">
-            <img class="thumbnail" src="https://i.postimg.cc/5tzYW5Gg/screenshot-4.png" alt="如何使用Cloudflare来加速我的GitHub Page">
-        </span>
-    </div>
-    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -161,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 853 个字)
+                    6 分钟 读完 (大约 866 个字)
                 </span>
                 
                 
@@ -179,14 +173,15 @@
             
         </h1>
         <div class="content">
-            <p>我用了两天时间搭建起来的站点，依赖于GitHub的Page服务，域名是在腾讯云购买的，但是众所周知的是GitHub现在基本是半墙的状态，如果你不能快乐地上网，那么很可能不能愉快的访问GitHub，都已经用GitHub来搭建站点了，那么就要想法子来白嫖CDN来加速我的站点在国内的访问速度。</p>
+            <p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-4.png" alt=""></p>
+<p>我用了两天时间搭建起来的站点，依赖于GitHub的Page服务，域名是在腾讯云购买的，但是众所周知的是GitHub现在基本是半墙的状态，如果你不能快乐地上网，那么很可能不能愉快的访问GitHub，都已经用GitHub来搭建站点了，那么就要想法子来白嫖CDN来加速我的站点在国内的访问速度。</p>
 <a id="more"></a>
 
 <hr>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的站点是依赖Hexo搭建在GitHub Page上的博客系统，本身就已经很轻量了，但是苦于国内访问确实慢，<del>但是又没钱</del>，所以只能白嫖Cloudflare的CDN，尽管Cloudflare也日常会抽风，但是起码有一点加成。</p>
 <hr>
 <h2 id="在Cloudflare添加站点"><a href="#在Cloudflare添加站点" class="headerlink" title="在Cloudflare添加站点"></a>在Cloudflare添加站点</h2><p>你需要先注册一个 <a href="https://www.cloudflare.com/">Cloudflare</a> 的账号，这个不赘述了，然后添加你的站点  </p>
-<p><img src="https://i.postimg.cc/25GhVwjx/screenshot-1.png" alt="添加站点">  </p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-1.png" alt="添加站点">  </p>
 <p>我们知道的是，Cloudflare免费套餐只能通过NS方式接入，这样用起来不够灵活、生效很慢（0~72小时），而且最重要的问题是没法在解析的时候手工解析到Cloudflare节点IP地址，这就达不到我的目的——指定节点解析。  </p>
 <blockquote>
 <p>指定节点解析有什么用呢，比如说我用的是默认的解析，在国内访问可能会走美国的节点，就打不到加速的目的了，我的目的就是白嫖Cloudflare的香港节点，或者是日本、韩国的节点都比较快。</p>
@@ -194,7 +189,7 @@
 <hr>
 <h2 id="接入第三方管理平台"><a href="#接入第三方管理平台" class="headerlink" title="接入第三方管理平台"></a>接入第三方管理平台</h2><p>这里我用到了第三方的Cloudflare管理平台 <a href="https://cdn.bnxb.com/">BNXB</a> ，用API接入Cloudflare的账号来管理站点。通过这个平台我就可以用CNAME来解析我的站点来使用Cloudflare的CDN加速了，注意要选择CNAME解析。  </p>
 <p>配置好了之后的截图应该是这样的：</p>
-<p><img src="https://i.postimg.cc/7PRwfYPG/screenshot-2.png" alt="BNXD配置">  </p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-2.png" alt="BNXD配置">  </p>
 <p>你需要在你的域名服务商那里添加一条CNAME记录解析到 <a href="https://cdn.bnxb.com/">BNXB</a> 给你提供的地址，你可以在 <code>解析设置</code> 里看到对应的地址。解析了之后你要访问一次你的域名来激活SSL证书（当然你得有）。</p>
 <p>到了这一步你可以配置你的CDN了，你可以选择在 <a href="https://www.cloudflare.com/">Cloudflare</a> 配置，或者如果你的英语不太好可以选择在 <a href="https://cdn.bnxb.com/">BNXB</a> 配置，已经中文本土化了。详细的配置应该怎么配置可以百度有很多配置教程。</p>
 <h2 id="自定义解析节点"><a href="#自定义解析节点" class="headerlink" title="自定义解析节点"></a>自定义解析节点</h2><p>用第三方管理平台来管理Cloudflare不用NS接入，那么我们完全可以自己定义解析节点，只要是Cloudflare的节点就可以。  </p>
@@ -439,28 +434,6 @@
         <ul class="menu-list">
         
             <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener">
-                    <span class="level-left">
-                        <span class="level-item">Hexo</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">hexo.io</span>
-                    </span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank" rel="noopener">
-                    <span class="level-left">
-                        <span class="level-item">PPOffice</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">github.com</span>
-                    </span>
-                </a>
-            </li>
-        
-            <li>
                 <a class="level is-mobile" href="https://sm.ms/" target="_blank" rel="noopener">
                     <span class="level-left">
                         <span class="level-item">SM.MS</span>
@@ -478,6 +451,28 @@
                     </span>
                     <span class="level-right">
                         <span class="level-item tag">guguga.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://jingying666.club/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">啾咪 - .Me</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">jingying666.club</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://zhangyijia.eu5.org" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">ZhangYiJia | Blog</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">zhangyijia.eu5.org</span>
                     </span>
                 </a>
             </li>
