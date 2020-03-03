@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>仿Google Design的导航栏和卡片设计 - Young ideas - 专注源于热爱</title>
+
+
+    <meta name="description" content="纯CSS仿制Google Design的导航栏和卡片信息。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="仿Google Design的导航栏和卡片设计">
+<meta property="og:url" content="https://yidas.cn/post/cp-gd/">
+<meta property="og:site_name" content="Young ideas - 专注源于热爱">
+<meta property="og:description" content="纯CSS仿制Google Design的导航栏和卡片信息。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yidas.cn/images/og_image.png">
+<meta property="article:published_time" content="2019-11-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-23T16:44:02.004Z">
+<meta property="article:author" content="阿飞">
+<meta property="article:tag" content="Google">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yidas.cn/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="sitemap.xml" title="仿Google Design的导航栏和卡片设计" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+    <script data-ad-client="ca-pub-5060610520633423" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="仿Google Design的导航栏和卡片设计" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/doraemon">Doraemon</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="GitHub hosting tools" href="/tools/githubhosting/">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <!-- 2020-02-04 添加文章置顶标识 -->
+                
+                <!-- end -->
+                <span class="is-size-7 has-text-grey has-mr-7"><i class="fa fa-calendar"></i></span>
+                <time class="level-item has-text-grey" datetime="2019-11-13T16:00:00.000Z">2019-11-14</time>
+                
+                <div class="level-item">
+                <span class="is-size-7 has-text-grey has-mr-7"><i class="fa fa-folder"></i></span>
+                <a class="has-link-grey -link" href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">个人笔记</a>
+                </div>
+                
+                
+                <span class="is-size-7 has-text-grey has-mr-7"><i class="fa fa-eye"></i></span>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 711 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                仿Google Design的导航栏和卡片设计
+            
+        </h1>
+        <div class="content">
+            <p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/cp-gd-thumbnail.jpg" alt=""></p>
+<p>纯CSS仿制<a href="https://design.google/library/">Google Design</a>的导航栏和卡片信息。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>由于要设计一个网页作为期末作业，所以我简单仿了一个Google Design的导航栏和卡片信息</p>
+</blockquote>
+<p>前后导航栏对比：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/1573738565037-gdnavbar.png" alt="Google Design"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/1573738605580-mydsnavbar.png" alt="My design"></p>
+<hr>
+<h2 id="导航栏HTML和CSS"><a href="#导航栏HTML和CSS" class="headerlink" title="导航栏HTML和CSS"></a>导航栏HTML和CSS</h2><ul>
+<li>HTML</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"logo"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/afeilogo.png"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"active"</span> <span class="attr">href</span>=<span class="string">"#home"</span>&gt;</span>主页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#news"</span>&gt;</span>新闻<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#contact"</span>&gt;</span>联系<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#about"</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#contact"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-user"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>CSS</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">			<span class="attribute">z-index</span>: <span class="number">999</span>;</span><br><span class="line">		    <span class="attribute">list-style-type</span>: none;</span><br><span class="line">		    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">		    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">		    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">		    <span class="attribute">background-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">		    <span class="attribute">position</span>: fixed;</span><br><span class="line">		    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">		    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">			<span class="attribute">box-shadow</span>:<span class="number">0px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">#aaaaaa</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="selector-class">.nav</span>  <span class="selector-tag">ul</span> <span class="selector-class">.left</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">		    <span class="attribute">float</span>: left;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="selector-class">.nav</span>  <span class="selector-tag">ul</span> <span class="selector-class">.right</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">		    <span class="attribute">float</span>: right;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="selector-class">.nav</span>  <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">			<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">			<span class="attribute">margin-right</span>: <span class="number">5px</span>;</span><br><span class="line">		    <span class="attribute">display</span>: block;</span><br><span class="line">		    <span class="attribute">color</span>: gray;</span><br><span class="line">		    <span class="attribute">text-align</span>: center;</span><br><span class="line">		    <span class="attribute">padding</span>: <span class="number">16px</span> <span class="number">18px</span>;</span><br><span class="line">		    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="selector-class">.nav</span>  <span class="selector-tag">ul</span> <span class="selector-class">.left</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">:not(.active)</span> &#123;</span><br><span class="line">		    <span class="attribute">border-bottom</span>: <span class="number">4px</span> lightgray solid;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="selector-class">.nav</span>  <span class="selector-tag">ul</span> <span class="selector-class">.right</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">:not(.active)</span> &#123;</span><br><span class="line">		    <span class="attribute">color</span>: <span class="number">#000000</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="selector-class">.nav</span>  <span class="selector-tag">ul</span> <span class="selector-class">.left</span> <span class="selector-tag">li</span> <span class="selector-class">.active</span> &#123;</span><br><span class="line">			<span class="attribute">border-bottom</span>: <span class="number">4px</span> blue solid;</span><br><span class="line">		    <span class="attribute">color</span>: black;</span><br><span class="line">			<span class="attribute">font-weight</span>: bold;</span><br><span class="line">		&#125;</span><br><span class="line">               <span class="selector-class">.logo</span> &#123;</span><br><span class="line">			<span class="attribute">margin-top</span>: <span class="number">1px</span>;</span><br><span class="line">			<span class="attribute">margin-left</span>: <span class="number">40px</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="attribute">float</span>: left;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">			<span class="attribute">height</span>: inherit;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="selector-class">.logo</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="selector-class">.content</span> &#123;</span><br><span class="line">			<span class="attribute">display</span>: block;</span><br><span class="line">			<span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">			<span class="attribute">padding-left</span>: <span class="number">40px</span>;</span><br><span class="line">			<span class="attribute">padding-right</span>: <span class="number">40px</span>;</span><br><span class="line">			<span class="attribute">margin-top</span>: <span class="number">70px</span>;</span><br><span class="line">			<span class="attribute">background-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>卡片信息前后对比：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/1573739071036-ss.png" alt="Google Design"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/1573739167792-dd.png" alt="My design"></p>
+<h2 id="卡片信息HTML和CSS"><a href="#卡片信息HTML和CSS" class="headerlink" title="卡片信息HTML和CSS"></a>卡片信息HTML和CSS</h2><ul>
+<li>HTML</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-12"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"breadcrumbs"</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-home"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>首页<span class="symbol">&amp;nbsp;</span>&gt;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"leb"</span> <span class="attr">class</span>=<span class="string">""</span>&gt;</span>当前<span class="symbol">&amp;nbsp;</span>&gt;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"leb"</span> <span class="attr">class</span>=<span class="string">""</span>&gt;</span>当前<span class="symbol">&amp;nbsp;</span>&gt;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"leb"</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span>当前<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"big"</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/test3.jpg"</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>首页超大图的标准长两行的标题，最多只能显示两行如果两行就会是这个亚子的<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"desc"</span>&gt;</span>如果是中文呢如果是中文呢如果是中文呢如果是中文呢，谁知道呢，中文字体不太好看的亚子啊</span><br><span class="line">							那可怎么办呢，真难搞。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"link"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>继续阅读...<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- content end --&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-12"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content-a"</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-4"</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"style-a"</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"thumbnail"</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/test.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"headline"</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"thislb"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span>这是一条标准的中文标题，也许会很长呢</span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"desc-content"</span>&gt;</span></span><br><span class="line">										如果是中文呢如果是中文呢如果是中文呢如果是中文呢，谁知道呢，中文字体不太好看的亚子啊</span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/avatar.jpg"</span> /&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">span</span>&gt;</span>Afei<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>#人文#<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-4"</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"style-a"</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"thumbnail"</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/test2.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"headline"</span>&gt;</span></span><br><span class="line">										Title of a longer featured blog post</span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"desc-content"</span>&gt;</span></span><br><span class="line">										Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most</span><br><span class="line">										interesting in this post's contents.</span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/avatar.jpg"</span> /&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">span</span>&gt;</span>Afei<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>#Views#<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-4"</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"style-a"</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"thumbnail"</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/test2.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">									<span class="comment">&lt;!-- headline或者desc-content --&gt;</span></span><br><span class="line">									<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/avatar.jpg"</span> /&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">span</span>&gt;</span>Afei<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">										<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>#Views#<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">									<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- row end --&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- container end --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>CSS</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content-a</span> &#123;</span><br><span class="line">		<span class="attribute">display</span>: block;</span><br><span class="line">		<span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">		<span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">		<span class="attribute">padding-right</span>: <span class="number">20px</span>;</span><br><span class="line">		<span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">		<span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">		<span class="attribute">background-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="selector-class">.style-a</span> &#123;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">		<span class="attribute">height</span>: auto;</span><br><span class="line">		<span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">		<span class="attribute">max-height</span>: <span class="number">500px</span>;</span><br><span class="line">		<span class="attribute">border-bottom</span>: <span class="number">3px</span> white solid;</span><br><span class="line">		<span class="attribute">border-bottom-right-radius</span>: <span class="number">3px</span>;</span><br><span class="line">		<span class="attribute">border-bottom-left-radius</span>: <span class="number">3px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">		<span class="attribute">box-shadow</span>:<span class="number">0px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">#aaaaaa</span>;</span><br><span class="line">		<span class="attribute">border-bottom</span>: <span class="number">3px</span> blue solid;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.thumbnail</span> &#123;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">		<span class="attribute">max-height</span>: <span class="number">300px</span>;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.thumbnail</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> &#123;</span><br><span class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.headline</span> &#123;</span><br><span class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">margin-top</span>: <span class="number">15px</span>;</span><br><span class="line">		<span class="attribute">display</span>: -webkit-box;</span><br><span class="line">		<span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">		<span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">		<span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">		<span class="attribute">font-weight</span>: bold;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.desc-content</span> &#123;</span><br><span class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">		<span class="attribute">display</span>: -webkit-box;</span><br><span class="line">		<span class="attribute">-webkit-line-clamp</span>: <span class="number">3</span>;</span><br><span class="line">		<span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">		<span class="attribute">overflow</span>: hidden;</span><br><span class="line">		<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> &#123;</span><br><span class="line">		<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">		<span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">		<span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">		<span class="attribute">font-weight</span>: bold;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">		<span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">		<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">		<span class="attribute">vertical-align</span>: middle;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">		<span class="attribute">text-decoration</span>: none;</span><br><span class="line">		<span class="attribute">color</span>: dimgray;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">		<span class="attribute">color</span>: royalblue;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> <span class="selector-class">.left</span> &#123;</span><br><span class="line">		<span class="attribute">float</span>: left;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> <span class="selector-class">.left</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">		<span class="attribute">margin-left</span>: <span class="number">4px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-class">.style-a</span> <span class="selector-class">.content</span> <span class="selector-class">.info</span> <span class="selector-class">.right</span> &#123;</span><br><span class="line">		<span class="attribute">float</span>: right;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7"><i class="fa fa-tags"></i></span>
+                    <a class="has-link-grey -link" href="/tags/CSS/" rel="tag">CSS</a>, <a class="has-link-grey -link" href="/tags/Google/" rel="tag">Google</a>, <a class="has-link-grey -link" href="/tags/HTML/" rel="tag">HTML</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+<!-- 2020-02-05 添加文章版权标识 -->
+
+    
+        <!--  -->
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>本文作者：</strong><a target="_blank" href="https://yidas.cn">阿飞</a></p>
+                    <p><strong>原始链接：</strong><a href="https://yidas.cn/post/cp-gd/" alt="仿Google Design的导航栏和卡片设计">https://yidas.cn/post/cp-gd/</a></p>
+                    <p><strong>版权声明：</strong>本文遵循<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>版权协议，转载请附上原文出处链接和本声明。</p>
+                </div>
+            </div>
+        <!--  -->
+    
+
+<!-- end -->
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/post/hello-world/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Hello World</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
+        app_key: 'dXvAhF4enbprKIDh9MAaVh64',
+        placeholder: 'write down your comments here...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+                   <!-- added -->
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-3 column-right ">
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/avatar.png" alt="阿飞">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        阿飞
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        专注源于热爱
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            7
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            4
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            19
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/adiynil" target="_blank" rel="noopener">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/adiynil">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://sm.ms/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">SM.MS</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">sm.ms</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://guguga.cn/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Barkure</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">guguga.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://jingying666.club/" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">啾咪搜索</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">jingying666.club</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://zhangyijia.eu5.org" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">ZhangYiJia</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">zhangyijia.eu5.org</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Default/">
+            <span class="level-start">
+                <span class="level-item">Default</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">
+            <span class="level-start">
+                <span class="level-item">个人笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/">
+            <span class="level-start">
+                <span class="level-item">优惠活动</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E5%B9%B2%E8%B4%A7/">
+            <span class="level-start">
+                <span class="level-item">干货</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CloudFlare/">
+                        <span class="tag">CloudFlare</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Coding/">
+                        <span class="tag">Coding</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/GitHub/">
+                        <span class="tag">GitHub</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/GitHub-Page/">
+                        <span class="tag">GitHub Page</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Gitee/">
+                        <span class="tag">Gitee</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Google/">
+                        <span class="tag">Google</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hello-world/">
+                        <span class="tag">hello world</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/icarus/">
+                        <span class="tag">icarus</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/markdown/">
+                        <span class="tag">markdown</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/test/">
+                        <span class="tag">test</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/turtle/">
+                        <span class="tag">turtle</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/">
+                        <span class="tag">域名注册</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="tag">服务器</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/">
+                        <span class="tag">腾讯云</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">
+                        <span class="tag">阿里云</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+                     <!-- added -->
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.png" alt="仿Google Design的导航栏和卡片设计" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 阿飞&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                共<span id="busuanzi_value_site_uv">0</span>个访客
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'https://yidas.cn',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+
+
+
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

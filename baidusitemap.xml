@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yidas.cn/post/product-recommend/</loc>
-    <lastmod>2020-02-20</lastmod>
+    <loc>https://yidas.cn/post/cp-gd/</loc>
+    <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://yidas.cn/post/python-draw-doraemon/</loc>
-    <lastmod>2020-02-20</lastmod>
+    <lastmod>2020-02-23</lastmod>
+  </url>  <url>
+    <loc>https://yidas.cn/post/product-recommend/</loc>
+    <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>https://yidas.cn/post/cloudflare-cdn/</loc>
     <lastmod>2020-02-20</lastmod>

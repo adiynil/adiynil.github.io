@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yidas.cn/post/product-recommend/</loc>
+    <loc>https://yidas.cn/about/</loc>
     
-    <lastmod>2020-02-20T18:50:01.648Z</lastmod>
+    <lastmod>2020-03-03T09:19:58.526Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yidas.cn/404</loc>
+    
+    <lastmod>2020-02-24T13:47:03.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yidas.cn/post/cp-gd/</loc>
+    
+    <lastmod>2020-02-23T16:44:02.004Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://yidas.cn/post/python-draw-doraemon/</loc>
     
-    <lastmod>2020-02-20T10:31:47.345Z</lastmod>
+    <lastmod>2020-02-23T03:59:27.915Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yidas.cn/post/product-recommend/</loc>
+    
+    <lastmod>2020-02-23T03:53:05.036Z</lastmod>
     
   </url>
   
@@ -40,20 +61,6 @@
     <loc>https://yidas.cn/doraemon/</loc>
     
     <lastmod>2020-02-12T07:20:53.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yidas.cn/404</loc>
-    
-    <lastmod>2020-02-07T17:39:57.969Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yidas.cn/about/</loc>
-    
-    <lastmod>2020-02-07T17:22:14.841Z</lastmod>
     
   </url>
   
