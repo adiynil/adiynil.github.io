@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
   <head>
     
 <meta charset="UTF-8"/>
@@ -23,7 +23,7 @@
 
 
 
-  <link rel="alternate" href="/default" title="Young ideas - 专注源于热爱">
+  <link rel="alternate" href="/default" title="Young ideas">
 
 
 
@@ -39,9 +39,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown Test">
 <meta property="og:url" content="https://yidas.cn/post/test/">
-<meta property="og:site_name" content="Young ideas - 专注源于热爱">
+<meta property="og:site_name" content="Young ideas">
 <meta property="og:description" content="这是一段文章的摘要…">
-<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/02/03/YecK7hZRCatkuTI.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/03/YecK7hZRCatkuTI.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/03/YecK7hZRCatkuTI.png">
@@ -87,7 +86,7 @@
 </script>
 
 
-    <title> Markdown Test - Young ideas - 专注源于热爱 </title>
+    <title> Markdown Test - Young ideas </title>
   <meta name="generator" content="Hexo 4.2.0"></head>
 
   <body>
@@ -99,9 +98,8 @@
     </a>
     
 
-    
     <label for="nav-cb" id="nav-button">
-        <a class="menu">Menu</a>
+        <a class="menu"><i class="iconfont icon-menu"></i></a>
     </label>
     <input type="checkbox" id="nav-cb" />
     <nav id="nav-top">
@@ -110,6 +108,9 @@
                 
                     <li class="menu-item">
                         <a href="/">
+                            
+                            <i class="iconfont icon-home"></i>
+                            
                             
                             
                                 Home
@@ -121,6 +122,7 @@
                         <a href="/doraemon">
                             
                             
+                            
                                 Doraemon
                             
                         </a>
@@ -128,6 +130,7 @@
                 
                     <li class="menu-item">
                         <a href="/archives">
+                            
                             
                             
                                 Archives
@@ -154,10 +157,11 @@
       </h1>
 
       <info class="post-info">
-          <span>2020 2月 02</span><span class="post-category">
-                <a href="/categories/Default/">Default</a>
+          
+          <span><i class="iconfont icon-calendar"></i><label>2020 Feb 02</label></span><span>
+                <i class="iconfont icon-folder"></i><label><a href="/categories/Default/">Default</a></label>
               </span>
-              <span>阿飞</span>
+              <span><i class="iconfont icon-user"></i><label>阿飞</label></span>
       </info>
             
     </header>
@@ -361,20 +365,29 @@
       <footer class="post-footer">
 		
 		<div class="post-tags">
+      <i class="iconfont icon-tag-group"></i><label>
 		  
 			<a href="/tags/markdown/">markdown</a>
 		  
 			<a href="/tags/test/">test</a>
 		  
+      </label>
 		</div>
 		
+
+    
+    <div class="copyright">
+      <p><strong>Permalink：</strong><a href="https://yidas.cn/post/test/" alt="Markdown Test">https://yidas.cn/post/test/</a></p>
+      <p><strong>Copyright：</strong>This work is licensed under a <a rel="license noopener" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+    </div>
+    
 
         
         
   <nav class="post-nav">
     
       <a class="prev" href="/post/cloudflare-cdn/">
-        <i class="iconfont icon-left"></i>
+        <i class="iconfont icon-doubleleft"></i>
         <span class="prev-text nav-default">如何使用Cloudflare来加速我的GitHub Page</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
@@ -383,13 +396,15 @@
       <a class="next" href="/post/hello-world/">
         <span class="next-text nav-default">Hello World</span>
         <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
+        <i class="iconfont icon-doubleright"></i>
       </a>
     
   </nav>
 
         
   <div class="comments" id="comments">
+    <hr>
+    <p class="comments-title"><i class="iconfont icon-comment"></i><label>Comments</label></p>
     
       <div id="vcomments"></div>
     
@@ -404,7 +419,9 @@
     <div id="secondary">
     
     <section id="widget-custom" class="widget-area">
-        <h3 class="widget-title">Me</h3>
+        <h3 class="widget-title">
+        <i class="iconfont icon-profile"></i><label>Me</label>
+        </h3>
         <a style='font-size:40px' href='https://github.com/adiynil' target="_blank" rel="noopener"><i class='iconfont icon-github'></i></a>
     </section>
 
@@ -427,7 +444,7 @@
       </footer>
 
       <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
+        <i class="iconfont icon-up-fill"></i>
       </div>
     </div>
     
@@ -441,10 +458,12 @@
         el: '#vcomments' ,
         appId: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
         appKey: 'dXvAhF4enbprKIDh9MAaVh64',
-        notify:false, 
-        verify:false, 
-        avatar:'mp', 
-        placeholder: 'Write down your comments here...' 
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'Write down your comments here...',
+        pageSize: '10',
+        lang: 'en'
     });
   </script>
 

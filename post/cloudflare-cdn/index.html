@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
   <head>
     
 <meta charset="UTF-8"/>
@@ -23,7 +23,7 @@
 
 
 
-  <link rel="alternate" href="/default" title="Young ideas - 专注源于热爱">
+  <link rel="alternate" href="/default" title="Young ideas">
 
 
 
@@ -39,14 +39,13 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用Cloudflare来加速我的GitHub Page">
 <meta property="og:url" content="https://yidas.cn/post/cloudflare-cdn/">
-<meta property="og:site_name" content="Young ideas - 专注源于热爱">
+<meta property="og:site_name" content="Young ideas">
 <meta property="og:description" content="我用了两天时间搭建起来的站点，依赖于GitHub的Page服务，域名是在腾讯云购买的，但是众所周知的是GitHub现在基本是半墙的状态，如果你不能快乐地上网，那么很可能不能愉快的访问GitHub，都已经用GitHub来搭建站点了，那么就要想法子来白嫖CDN来加速我的站点在国内的访问速度。">
-<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-4.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-1.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-2.png">
 <meta property="article:published_time" content="2020-02-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-20T10:23:54.834Z">
+<meta property="article:modified_time" content="2020-03-05T14:21:36.478Z">
 <meta property="article:author" content="阿飞">
 <meta property="article:tag" content="CloudFlare">
 <meta property="article:tag" content="Hexo">
@@ -89,7 +88,7 @@
 </script>
 
 
-    <title> 如何使用Cloudflare来加速我的GitHub Page - Young ideas - 专注源于热爱 </title>
+    <title> 如何使用Cloudflare来加速我的GitHub Page - Young ideas </title>
   <meta name="generator" content="Hexo 4.2.0"></head>
 
   <body>
@@ -101,9 +100,8 @@
     </a>
     
 
-    
     <label for="nav-cb" id="nav-button">
-        <a class="menu">Menu</a>
+        <a class="menu"><i class="iconfont icon-menu"></i></a>
     </label>
     <input type="checkbox" id="nav-cb" />
     <nav id="nav-top">
@@ -112,6 +110,9 @@
                 
                     <li class="menu-item">
                         <a href="/">
+                            
+                            <i class="iconfont icon-home"></i>
+                            
                             
                             
                                 Home
@@ -123,6 +124,7 @@
                         <a href="/doraemon">
                             
                             
+                            
                                 Doraemon
                             
                         </a>
@@ -130,6 +132,7 @@
                 
                     <li class="menu-item">
                         <a href="/archives">
+                            
                             
                             
                                 Archives
@@ -156,10 +159,13 @@
       </h1>
 
       <info class="post-info">
-          <span>2020 2月 04</span><span class="post-category">
-                <a href="/categories/%E5%B9%B2%E8%B4%A7/">干货</a>
+          
+            <span><i class="iconfont icon-pin"></i><label>TOP</label></span>
+          
+          <span><i class="iconfont icon-calendar"></i><label>2020 Feb 04</label></span><span>
+                <i class="iconfont icon-folder"></i><label><a href="/categories/%E5%B9%B2%E8%B4%A7/">干货</a></label>
               </span>
-              <span>阿飞</span>
+              <span><i class="iconfont icon-user"></i><label>阿飞</label></span>
       </info>
             
     </header>
@@ -206,6 +212,7 @@
       <footer class="post-footer">
 		
 		<div class="post-tags">
+      <i class="iconfont icon-tag-group"></i><label>
 		  
 			<a href="/tags/CloudFlare/">CloudFlare</a>
 		  
@@ -215,15 +222,23 @@
 		  
 			<a href="/tags/GitHub/">GitHub</a>
 		  
+      </label>
 		</div>
 		
+
+    
+    <div class="copyright">
+      <p><strong>Permalink：</strong><a href="https://yidas.cn/post/cloudflare-cdn/" alt="如何使用Cloudflare来加速我的GitHub Page">https://yidas.cn/post/cloudflare-cdn/</a></p>
+      <p><strong>Copyright：</strong>This work is licensed under a <a rel="license noopener" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+    </div>
+    
 
         
         
   <nav class="post-nav">
     
       <a class="prev" href="/post/my-icarus-config/">
-        <i class="iconfont icon-left"></i>
+        <i class="iconfont icon-doubleleft"></i>
         <span class="prev-text nav-default">使用Hexo主题icarus的深入浅出</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
@@ -232,13 +247,15 @@
       <a class="next" href="/post/test/">
         <span class="next-text nav-default">Markdown Test</span>
         <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
+        <i class="iconfont icon-doubleright"></i>
       </a>
     
   </nav>
 
         
   <div class="comments" id="comments">
+    <hr>
+    <p class="comments-title"><i class="iconfont icon-comment"></i><label>Comments</label></p>
     
       <div id="vcomments"></div>
     
@@ -253,7 +270,9 @@
     <div id="secondary">
     
     <section id="widget-custom" class="widget-area">
-        <h3 class="widget-title">Me</h3>
+        <h3 class="widget-title">
+        <i class="iconfont icon-profile"></i><label>Me</label>
+        </h3>
         <a style='font-size:40px' href='https://github.com/adiynil' target="_blank" rel="noopener"><i class='iconfont icon-github'></i></a>
     </section>
 
@@ -276,7 +295,7 @@
       </footer>
 
       <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
+        <i class="iconfont icon-up-fill"></i>
       </div>
     </div>
     
@@ -290,10 +309,12 @@
         el: '#vcomments' ,
         appId: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
         appKey: 'dXvAhF4enbprKIDh9MAaVh64',
-        notify:false, 
-        verify:false, 
-        avatar:'mp', 
-        placeholder: 'Write down your comments here...' 
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'Write down your comments here...',
+        pageSize: '10',
+        lang: 'en'
     });
   </script>
 

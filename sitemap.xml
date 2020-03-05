@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yidas.cn/post/cloudflare-cdn/</loc>
+    
+    <lastmod>2020-03-05T14:21:36.478Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yidas.cn/doraemon/</loc>
     
     <lastmod>2020-03-03T17:48:12.547Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://yidas.cn/post/product-recommend/</loc>
     
     <lastmod>2020-02-23T03:53:05.036Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yidas.cn/post/cloudflare-cdn/</loc>
-    
-    <lastmod>2020-02-20T10:23:54.834Z</lastmod>
     
   </url>
   

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
   <head>
     
 <meta charset="UTF-8"/>
@@ -23,7 +23,7 @@
 
 
 
-  <link rel="alternate" href="/default" title="Young ideas - 专注源于热爱">
+  <link rel="alternate" href="/default" title="Young ideas">
 
 
 
@@ -39,9 +39,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="https://yidas.cn/post/hello-world/">
-<meta property="og:site_name" content="Young ideas - 专注源于热爱">
+<meta property="og:site_name" content="Young ideas">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-31T16:00:00.000Z">
 <meta property="article:modified_time" content="2020-02-07T06:15:46.266Z">
 <meta property="article:author" content="阿飞">
@@ -82,7 +81,7 @@
 </script>
 
 
-    <title> Hello World - Young ideas - 专注源于热爱 </title>
+    <title> Hello World - Young ideas </title>
   <meta name="generator" content="Hexo 4.2.0"></head>
 
   <body>
@@ -94,9 +93,8 @@
     </a>
     
 
-    
     <label for="nav-cb" id="nav-button">
-        <a class="menu">Menu</a>
+        <a class="menu"><i class="iconfont icon-menu"></i></a>
     </label>
     <input type="checkbox" id="nav-cb" />
     <nav id="nav-top">
@@ -105,6 +103,9 @@
                 
                     <li class="menu-item">
                         <a href="/">
+                            
+                            <i class="iconfont icon-home"></i>
+                            
                             
                             
                                 Home
@@ -116,6 +117,7 @@
                         <a href="/doraemon">
                             
                             
+                            
                                 Doraemon
                             
                         </a>
@@ -123,6 +125,7 @@
                 
                     <li class="menu-item">
                         <a href="/archives">
+                            
                             
                             
                                 Archives
@@ -149,10 +152,11 @@
       </h1>
 
       <info class="post-info">
-          <span>2020 2月 01</span><span class="post-category">
-                <a href="/categories/Default/">Default</a>
+          
+          <span><i class="iconfont icon-calendar"></i><label>2020 Feb 01</label></span><span>
+                <i class="iconfont icon-folder"></i><label><a href="/categories/Default/">Default</a></label>
               </span>
-              <span>阿飞</span>
+              <span><i class="iconfont icon-user"></i><label>阿飞</label></span>
       </info>
             
     </header>
@@ -183,18 +187,27 @@
       <footer class="post-footer">
 		
 		<div class="post-tags">
+      <i class="iconfont icon-tag-group"></i><label>
 		  
 			<a href="/tags/hello-world/">hello world</a>
 		  
+      </label>
 		</div>
 		
+
+    
+    <div class="copyright">
+      <p><strong>Permalink：</strong><a href="https://yidas.cn/post/hello-world/" alt="Hello World">https://yidas.cn/post/hello-world/</a></p>
+      <p><strong>Copyright：</strong>This work is licensed under a <a rel="license noopener" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+    </div>
+    
 
         
         
   <nav class="post-nav">
     
       <a class="prev" href="/post/test/">
-        <i class="iconfont icon-left"></i>
+        <i class="iconfont icon-doubleleft"></i>
         <span class="prev-text nav-default">Markdown Test</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
@@ -203,13 +216,15 @@
       <a class="next" href="/post/cp-gd/">
         <span class="next-text nav-default">仿Google Design的导航栏和卡片设计</span>
         <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
+        <i class="iconfont icon-doubleright"></i>
       </a>
     
   </nav>
 
         
   <div class="comments" id="comments">
+    <hr>
+    <p class="comments-title"><i class="iconfont icon-comment"></i><label>Comments</label></p>
     
       <div id="vcomments"></div>
     
@@ -224,7 +239,9 @@
     <div id="secondary">
     
     <section id="widget-custom" class="widget-area">
-        <h3 class="widget-title">Me</h3>
+        <h3 class="widget-title">
+        <i class="iconfont icon-profile"></i><label>Me</label>
+        </h3>
         <a style='font-size:40px' href='https://github.com/adiynil' target="_blank" rel="noopener"><i class='iconfont icon-github'></i></a>
     </section>
 
@@ -247,7 +264,7 @@
       </footer>
 
       <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
+        <i class="iconfont icon-up-fill"></i>
       </div>
     </div>
     
@@ -261,10 +278,12 @@
         el: '#vcomments' ,
         appId: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
         appKey: 'dXvAhF4enbprKIDh9MAaVh64',
-        notify:false, 
-        verify:false, 
-        avatar:'mp', 
-        placeholder: 'Write down your comments here...' 
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'Write down your comments here...',
+        pageSize: '10',
+        lang: 'en'
     });
   </script>
 

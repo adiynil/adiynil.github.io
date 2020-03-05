@@ -4,7 +4,6 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import '//at.alicdn.com/t/font_1669411_h29q1ibwcan.css';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -398,7 +397,7 @@ i {
   line-height: 100%; }
 
 i + * {
-  margin-left: 5px; }
+  margin-left: 4px; }
 
 h1 {
   font-size: 1.75rem;
@@ -541,6 +540,8 @@ h6 {
       display: inline-block; }
       #nav-top .nav-top-items .menu-item a {
         color: black; }
+        #nav-top .nav-top-items .menu-item a:hover {
+          color: #0047AB; }
     #nav-top .nav-top-items .menu-item:hover,
     #nav-top .nav-top-items .menu-item:active {
       background-color: #eee; }
@@ -549,7 +550,7 @@ h6 {
   float: right;
   display: none; }
   #nav-button .menu {
-    padding: 8px 5px;
+    padding: 8px 16px;
     margin-left: 10px;
     border: 1px solid #bdbdbd;
     border-radius: 2px; }
@@ -622,13 +623,19 @@ h6 {
     border-radius: 2px; }
   .post .readmore:hover,
   .post .readmore:active {
-    background-color: #f5f5f5; }
+    background-color: #f5f5f5;
+    border-color: #0047AB; }
+    .post .readmore:hover a,
+    .post .readmore:active a {
+      color: #0047AB; }
   .post .post-header .post-title {
     margin: 0 0 10px;
     line-height: 1.4;
     font-size: 1.5em;
     font-weight: 400;
     font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif; }
+    .post .post-header .post-title a:hover {
+      color: #0047AB; }
   .post .post-header .post-link {
     display: inline-block;
     vertical-align: middle;
@@ -841,8 +848,22 @@ h6 {
         margin-right: 5px;
         color: #0047AB;
         word-break: break-all; }
-        .post .post-footer .post-tags a::before {
-          content: '#'; }
+    .post .post-footer .copyright {
+      margin: 10px 0;
+      padding-left: 10px;
+      position: relative;
+      color: rgba(0, 0, 0, 0.6);
+      background-color: #fff;
+      border-left: 2px solid #aaa; }
+      .post .post-footer .copyright p {
+        margin: 0; }
+      .post .post-footer .copyright a {
+        color: #0047AB;
+        word-break: break-all; }
+        .post .post-footer .copyright a:hover {
+          border-bottom: 1px solid #0047AB; }
+    .post .post-footer .comments-title {
+      font-weight: 600; }
     .post .post-footer .post-nav {
       margin: 1em 0; }
       .post .post-footer .post-nav:before, .post .post-footer .post-nav:after {
@@ -1084,6 +1105,366 @@ h6 {
         color: #0047AB;
         transform: scale(1.1); }
 
+@font-face {
+  font-family: 'iconfont';
+  /* project id 96542 */
+  src: url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.eot");
+  /* IE9 */
+  src: url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.eot#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.woff") format("woff"), url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.ttf") format("truetype"), url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer; }
+
+.icon-news:before {
+  content: "\e60c"; }
+
+.icon-facebook:before {
+  content: "\e601"; }
+
+.icon-down-square-o:before {
+  content: "\e604"; }
+
+.icon-github:before {
+  content: "\e606"; }
+
+.icon-global:before {
+  content: "\e607"; }
+
+.icon-left-square:before {
+  content: "\e608"; }
+
+.icon-home-big:before {
+  content: "\e609"; }
+
+.icon-loading:before {
+  content: "\e60a"; }
+
+.icon-like-o:before {
+  content: "\e60b"; }
+
+.icon-html:before {
+  content: "\e60d"; }
+
+.icon-map:before {
+  content: "\e60e"; }
+
+.icon-left-square-o:before {
+  content: "\e60f"; }
+
+.icon-picasa:before {
+  content: "\e610"; }
+
+.icon-linkedin:before {
+  content: "\e611"; }
+
+.icon-qq:before {
+  content: "\e612"; }
+
+.icon-right-square:before {
+  content: "\e613"; }
+
+.icon-safari:before {
+  content: "\e614"; }
+
+.icon-pinterest:before {
+  content: "\e615"; }
+
+.icon-firefox:before {
+  content: "\e616"; }
+
+.icon-up-square:before {
+  content: "\e617"; }
+
+.icon-linux:before {
+  content: "\e61b"; }
+
+.icon-reddit:before {
+  content: "\e61c"; }
+
+.icon-right-square-o:before {
+  content: "\e61d"; }
+
+.icon-android:before {
+  content: "\e61e"; }
+
+.icon-adobe:before {
+  content: "\e61f"; }
+
+.icon-alipay:before {
+  content: "\e620"; }
+
+.icon-taobao:before {
+  content: "\e621"; }
+
+.icon-baidu:before {
+  content: "\e622"; }
+
+.icon-chrome:before {
+  content: "\e623"; }
+
+.icon-up-square-o:before {
+  content: "\e624"; }
+
+.icon-alert:before {
+  content: "\e665"; }
+
+.icon-at:before {
+  content: "\e666"; }
+
+.icon-download:before {
+  content: "\e66a"; }
+
+.icon-help:before {
+  content: "\e66b"; }
+
+.icon-info:before {
+  content: "\e66c"; }
+
+.icon-layout:before {
+  content: "\e66d"; }
+
+.icon-globe:before {
+  content: "\e66f"; }
+
+.icon-image:before {
+  content: "\e670"; }
+
+.icon-menu:before {
+  content: "\e671"; }
+
+.icon-folder:before {
+  content: "\e672"; }
+
+.icon-star:before {
+  content: "\e673"; }
+
+.icon-thumbs-down:before {
+  content: "\e674"; }
+
+.icon-search:before {
+  content: "\e675"; }
+
+.icon-thumbs-up:before {
+  content: "\e676"; }
+
+.icon-user:before {
+  content: "\e677"; }
+
+.icon-file-text:before {
+  content: "\e678"; }
+
+.icon-dingtalk:before {
+  content: "\ea81"; }
+
+.icon-wechat:before {
+  content: "\e61a"; }
+
+.icon-weibo:before {
+  content: "\e605"; }
+
+.icon-google:before {
+  content: "\e69b"; }
+
+.icon-coding:before {
+  content: "\e600"; }
+
+.icon-tag:before {
+  content: "\e715"; }
+
+.icon-comment-border:before {
+  content: "\e602"; }
+
+.icon-list:before {
+  content: "\e603"; }
+
+.icon-copyright:before {
+  content: "\f28a"; }
+
+.icon-instagram:before {
+  content: "\e618"; }
+
+.icon-tag-border:before {
+  content: "\e83a"; }
+
+.icon-comment:before {
+  content: "\e619"; }
+
+.icon-comment-fill:before {
+  content: "\e644"; }
+
+.icon-tag-group:before {
+  content: "\e667"; }
+
+.icon-larger:before {
+  content: "\e76c"; }
+
+.icon-calculator:before {
+  content: "\e77a"; }
+
+.icon-email-fill:before {
+  content: "\e77e"; }
+
+.icon-folder-fill:before {
+  content: "\e77f"; }
+
+.icon-hot-fill:before {
+  content: "\e781"; }
+
+.icon-pin-fill:before {
+  content: "\e788"; }
+
+.icon-home:before {
+  content: "\e7a7"; }
+
+.icon-home-fill:before {
+  content: "\e7ae"; }
+
+.icon-up-border:before {
+  content: "\e6a0"; }
+
+.icon-up-fill:before {
+  content: "\e6a1"; }
+
+.icon-up-circle:before {
+  content: "\e6a2"; }
+
+.icon-bookmarks:before {
+  content: "\e7c2"; }
+
+.icon-new:before {
+  content: "\e7d4"; }
+
+.icon-profile:before {
+  content: "\e78c"; }
+
+.icon-rss:before {
+  content: "\e628"; }
+
+.icon-clock:before {
+  content: "\e638"; }
+
+.icon-share:before {
+  content: "\e63e"; }
+
+.icon-email:before {
+  content: "\e64b"; }
+
+.icon-up:before {
+  content: "\e658"; }
+
+.icon-left:before {
+  content: "\e659"; }
+
+.icon-down:before {
+  content: "\e65a"; }
+
+.icon-right:before {
+  content: "\e65b"; }
+
+.icon-youtube:before {
+  content: "\e660"; }
+
+.icon-twitter:before {
+  content: "\e662"; }
+
+.icon-attachent:before {
+  content: "\e746"; }
+
+.icon-calendar:before {
+  content: "\e747"; }
+
+.icon-category:before {
+  content: "\e748"; }
+
+.icon-close:before {
+  content: "\e749"; }
+
+.icon-doubleright:before {
+  content: "\e74c"; }
+
+.icon-doubleleft:before {
+  content: "\e74d"; }
+
+.icon-link:before {
+  content: "\e757"; }
+
+.icon-pin:before {
+  content: "\e75d"; }
+
+.icon-return:before {
+  content: "\e75f"; }
+
+/**
+.icon-linkedin:before {
+  content: "\e60d";
+  position: relative;
+  top: -2px;
+}
+.icon-twitter:before {
+  content: "\e600";
+}
+.icon-weibo:before {
+  content: "\e602";
+}
+.icon-stack-overflow:before {
+  content: "\e603";
+  font-size: .85em;
+  position: relative;
+  top: -4px;
+}
+.icon-email:before {
+  content: "\e605";
+  position: relative;
+  top: -2px;
+}
+.icon-facebook:before {
+  content: "\e601";
+  font-size: .95em;
+  position: relative;
+  top: -2px;
+}
+.icon-github:before {
+  content: "\e606";
+  position: relative;
+  top: -3px;
+}
+.icon-rss:before {
+  content: "\e604";
+}
+.icon-google:before {
+  content: "\e609";
+}
+.icon-zhihu:before {
+  content: "\e607";
+  font-size: .9em;
+  position: relative;
+  top: -2px;
+}
+.icon-heart:before {
+  content: "\e608"; 
+}
+.icon-right:before { 
+  content: "\e60a";
+}
+.icon-left:before {
+  content: "\e60b"; 
+}
+.icon-up:before {
+  content: "\e60c";
+}
+.icon-search:before {
+  content: "\e60e";
+}
+.icon-close:before {
+  content: "\e60f";
+}
+**/
 .back-to-top {
   display: none;
   position: fixed;

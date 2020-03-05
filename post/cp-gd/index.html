@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
   <head>
     
 <meta charset="UTF-8"/>
@@ -23,7 +23,7 @@
 
 
 
-  <link rel="alternate" href="/default" title="Young ideas - 专注源于热爱">
+  <link rel="alternate" href="/default" title="Young ideas">
 
 
 
@@ -39,9 +39,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="仿Google Design的导航栏和卡片设计">
 <meta property="og:url" content="https://yidas.cn/post/cp-gd/">
-<meta property="og:site_name" content="Young ideas - 专注源于热爱">
+<meta property="og:site_name" content="Young ideas">
 <meta property="og:description" content="纯CSS仿制Google Design的导航栏和卡片信息。">
-<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/cp-gd-thumbnail.jpg">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/1573738565037-gdnavbar.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/1573738605580-mydsnavbar.png">
@@ -90,7 +89,7 @@
 </script>
 
 
-    <title> 仿Google Design的导航栏和卡片设计 - Young ideas - 专注源于热爱 </title>
+    <title> 仿Google Design的导航栏和卡片设计 - Young ideas </title>
   <meta name="generator" content="Hexo 4.2.0"></head>
 
   <body>
@@ -102,9 +101,8 @@
     </a>
     
 
-    
     <label for="nav-cb" id="nav-button">
-        <a class="menu">Menu</a>
+        <a class="menu"><i class="iconfont icon-menu"></i></a>
     </label>
     <input type="checkbox" id="nav-cb" />
     <nav id="nav-top">
@@ -113,6 +111,9 @@
                 
                     <li class="menu-item">
                         <a href="/">
+                            
+                            <i class="iconfont icon-home"></i>
+                            
                             
                             
                                 Home
@@ -124,6 +125,7 @@
                         <a href="/doraemon">
                             
                             
+                            
                                 Doraemon
                             
                         </a>
@@ -131,6 +133,7 @@
                 
                     <li class="menu-item">
                         <a href="/archives">
+                            
                             
                             
                                 Archives
@@ -157,10 +160,11 @@
       </h1>
 
       <info class="post-info">
-          <span>2019 11月 14</span><span class="post-category">
-                <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">个人笔记</a>
+          
+          <span><i class="iconfont icon-calendar"></i><label>2019 Nov 14</label></span><span>
+                <i class="iconfont icon-folder"></i><label><a href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">个人笔记</a></label>
               </span>
-              <span>阿飞</span>
+              <span><i class="iconfont icon-user"></i><label>阿飞</label></span>
       </info>
             
     </header>
@@ -210,6 +214,7 @@
       <footer class="post-footer">
 		
 		<div class="post-tags">
+      <i class="iconfont icon-tag-group"></i><label>
 		  
 			<a href="/tags/Google/">Google</a>
 		  
@@ -217,15 +222,23 @@
 		  
 			<a href="/tags/HTML/">HTML</a>
 		  
+      </label>
 		</div>
 		
+
+    
+    <div class="copyright">
+      <p><strong>Permalink：</strong><a href="https://yidas.cn/post/cp-gd/" alt="仿Google Design的导航栏和卡片设计">https://yidas.cn/post/cp-gd/</a></p>
+      <p><strong>Copyright：</strong>This work is licensed under a <a rel="license noopener" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+    </div>
+    
 
         
         
   <nav class="post-nav">
     
       <a class="prev" href="/post/hello-world/">
-        <i class="iconfont icon-left"></i>
+        <i class="iconfont icon-doubleleft"></i>
         <span class="prev-text nav-default">Hello World</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
@@ -235,6 +248,8 @@
 
         
   <div class="comments" id="comments">
+    <hr>
+    <p class="comments-title"><i class="iconfont icon-comment"></i><label>Comments</label></p>
     
       <div id="vcomments"></div>
     
@@ -249,7 +264,9 @@
     <div id="secondary">
     
     <section id="widget-custom" class="widget-area">
-        <h3 class="widget-title">Me</h3>
+        <h3 class="widget-title">
+        <i class="iconfont icon-profile"></i><label>Me</label>
+        </h3>
         <a style='font-size:40px' href='https://github.com/adiynil' target="_blank" rel="noopener"><i class='iconfont icon-github'></i></a>
     </section>
 
@@ -272,7 +289,7 @@
       </footer>
 
       <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
+        <i class="iconfont icon-up-fill"></i>
       </div>
     </div>
     
@@ -286,10 +303,12 @@
         el: '#vcomments' ,
         appId: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
         appKey: 'dXvAhF4enbprKIDh9MAaVh64',
-        notify:false, 
-        verify:false, 
-        avatar:'mp', 
-        placeholder: 'Write down your comments here...' 
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'Write down your comments here...',
+        pageSize: '10',
+        lang: 'en'
     });
   </script>
 
