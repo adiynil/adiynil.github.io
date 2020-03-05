@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import '//at.alicdn.com/t/font_1669411_h29q1ibwcan.css';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -393,6 +394,12 @@ a {
   color: rgba(0, 0, 0, 0.75);
   text-decoration: none; }
 
+i {
+  line-height: 100%; }
+
+i + * {
+  margin-left: 5px; }
+
 h1 {
   font-size: 1.75rem;
   font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif; }
@@ -447,13 +454,15 @@ h6 {
 #content {
   display: block !important;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   height: auto;
-  max-width: 1100px;
-  padding-top: 10px; }
+  max-width: 1100px; }
 
 #primary.home {
   width: 73%;
+  float: left; }
+
+#primary.single-page {
   float: left; }
 
 #primary {
@@ -462,8 +471,7 @@ h6 {
   display: block; }
 
 @media only screen and (max-width: 850px) {
-  .site-header-inner,
-  .content {
+  .site-header-inner, .content {
     width: 90%; }
   #secondary {
     display: none; }
@@ -496,7 +504,7 @@ h6 {
   line-height: 65px;
   max-width: 1100px;
   margin: 0 auto;
-  width: 90%; }
+  width: 100%; }
 
 .site-title {
   text-align: left;
@@ -514,24 +522,28 @@ h6 {
     width: 100%; }
 
 #nav-top {
+  height: auto;
   float: right;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
   background-color: #fff; }
   #nav-top .nav-top-items {
     list-style: none;
     padding-left: 0px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    overflow: hidden; }
     #nav-top .nav-top-items .menu-item {
+      -webkit-transition: all .1s;
+      -moz-transition: all .1s;
+      -ms-transition: all .1s;
+      -o-transition: all .1s;
+      transition: all .1s;
       font-size: 16px;
-      margin-left: 10px;
-      margin-right: 10px;
+      padding: 0 10px;
       display: inline-block; }
       #nav-top .nav-top-items .menu-item a {
         color: black; }
+    #nav-top .nav-top-items .menu-item:hover,
+    #nav-top .nav-top-items .menu-item:active {
+      background-color: #eee; }
 
 #nav-button {
   float: right;
@@ -542,17 +554,55 @@ h6 {
     border: 1px solid #bdbdbd;
     border-radius: 2px; }
 
+#nav-cb {
+  display: none; }
+
+#nav-cb:checked + #nav-top .menu-item {
+  height: auto; }
+
+#nav-cb:checked + #nav-top .nav-top-items {
+  height: auto; }
+
+@media screen and (max-width: 1130px) and (min-width: 851px) {
+  .site-title {
+    margin-left: 10px; }
+  .site-logo {
+    margin-left: 10px; }
+  #nav-top {
+    margin-right: 10px; } }
+
 @media only screen and (max-width: 850px) {
   #nav-top {
-    display: none;
+    margin-right: 0;
     margin-top: 1px;
+    width: 100%;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
+    #nav-top .nav-top-items {
+      height: 0; }
+      #nav-top .nav-top-items .menu-item {
+        height: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center; }
   #nav-button {
-    display: block; } }
+    display: block;
+    margin-right: 10px; }
+  .site-title {
+    margin-left: 10px; }
+  .site-logo {
+    margin-left: 10px; } }
 
 .posts {
   margin-bottom: 20px;
   border-bottom: 1px solid #eee; }
+
+.news {
+  font-size: 12px;
+  padding: 5px 15px;
+  border: 1px #eee solid;
+  background-color: #fff;
+  margin: 10px; }
 
 .post {
   padding: 20px 15px;
@@ -876,12 +926,15 @@ h6 {
     font-size: 16px;
     letter-spacing: 1px;
     padding-bottom: 5px;
+    margin-bottom: 0px;
     font-weight: 400;
     border-bottom: 1px solid #ddd; }
   .widget-area .category-list-item {
     line-height: 1.9; }
     .widget-area .category-list-item .category-list-link {
       color: rgba(0, 0, 0, 0.6); }
+    .widget-area .category-list-item .category-list-link:hover {
+      color: #0047AB; }
     .widget-area .category-list-item .category-list-count {
       padding-left: 5px;
       color: #999;
@@ -892,7 +945,7 @@ h6 {
       content: ")"; }
 
 .widget-area + .widget-area {
-  margin-top: 20px; }
+  margin-top: 10px; }
 
 .widget_tags .tag-list-item {
   padding: 0 10px 7px 0;
@@ -902,6 +955,8 @@ h6 {
   display: inline-block; }
   .widget_tags .tag-list-item .tag-list-link {
     color: rgba(0, 0, 0, 0.6); }
+  .widget_tags .tag-list-item .tag-list-link:hover {
+    color: #0047AB; }
 
 .widget_tags .tag-list-count {
   vertical-align: super;
@@ -915,7 +970,7 @@ h6 {
 #colophon {
   width: 90%;
   margin: 30px auto 0;
-  padding: 20px 0;
+  padding: 20px 0px;
   border-top: 1px solid #e1e1e1;
   color: #aaa;
   font-size: 14px;
@@ -928,8 +983,10 @@ h6 {
     margin: 0 4px; }
 
 .archive {
-  margin: 2em 0px;
-  line-height: 1.6; }
+  margin: 0.75em 0px;
+  line-height: 1.6;
+  padding-left: 20px;
+  display: inline-block; }
   .archive .archive-post + .collection-title {
     margin-top: 30px; }
   .archive .archive-title {
@@ -1026,83 +1083,6 @@ h6 {
       .categories .categories-tags .category-link:active, .categories .categories-tags .category-link:focus, .categories .categories-tags .category-link:hover {
         color: #0047AB;
         transform: scale(1.1); }
-
-@font-face {
-  font-family: 'iconfont';
-  /* project id 96542 */
-  src: url("//at.alicdn.com/t/font_8gx15cdpiaz41jor.eot");
-  src: url("//at.alicdn.com/t/font_8gx15cdpiaz41jor.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_8gx15cdpiaz41jor.woff") format("woff"), url("//at.alicdn.com/t/font_8gx15cdpiaz41jor.ttf") format("truetype"), url("//at.alicdn.com/t/font_8gx15cdpiaz41jor.svg#iconfont") format("svg"); }
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-  cursor: pointer; }
-
-.icon-linkedin:before {
-  content: "\e60d";
-  position: relative;
-  top: -2px; }
-
-.icon-twitter:before {
-  content: "\e600"; }
-
-.icon-weibo:before {
-  content: "\e602"; }
-
-.icon-stack-overflow:before {
-  content: "\e603";
-  font-size: .85em;
-  position: relative;
-  top: -4px; }
-
-.icon-email:before {
-  content: "\e605";
-  position: relative;
-  top: -2px; }
-
-.icon-facebook:before {
-  content: "\e601";
-  font-size: .95em;
-  position: relative;
-  top: -2px; }
-
-.icon-github:before {
-  content: "\e606";
-  position: relative;
-  top: -3px; }
-
-.icon-rss:before {
-  content: "\e604"; }
-
-.icon-google:before {
-  content: "\e609"; }
-
-.icon-zhihu:before {
-  content: "\e607";
-  font-size: .9em;
-  position: relative;
-  top: -2px; }
-
-.icon-heart:before {
-  content: "\e608"; }
-
-.icon-right:before {
-  content: "\e60a"; }
-
-.icon-left:before {
-  content: "\e60b"; }
-
-.icon-up:before {
-  content: "\e60c"; }
-
-.icon-search:before {
-  content: "\e60e"; }
-
-.icon-close:before {
-  content: "\e60f"; }
 
 .back-to-top {
   display: none;

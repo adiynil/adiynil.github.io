@@ -65,16 +65,6 @@
       enable: true
     },
   };
-  function turnonoffmenu(e){
-    var menu = document.getElementById('nav-top');
-    if(menu.style.display=='block'){
-      menu.style.display='none';
-      e.innerHTML='Menu';
-    } else {
-      menu.style.display='block';
-      e.innerHTML='Close';
-    }
-  };
 </script>
 
 
@@ -105,9 +95,10 @@
     
 
     
-  <div id="nav-button">
-        <a class="menu" onclick="turnonoffmenu(this)">Menu</a>
-  </div>
+    <label for="nav-cb" id="nav-button">
+        <a class="menu">Menu</a>
+    </label>
+    <input type="checkbox" id="nav-cb" />
     <nav id="nav-top">
         
             <ul id="menu-top" class="nav-top-items">
@@ -139,15 +130,6 @@
                         </a>
                     </li>
                 
-                    <li class="menu-item">
-                        <a href="/about">
-                            
-                            
-                                About
-                            
-                        </a>
-                    </li>
-                
             </ul>
         
   </nav>
@@ -168,9 +150,10 @@
 
       <info class="post-info">
           <span>2020 2月 01</span><span class="post-category">
-              <a href="/categories/Default/">Default</a>
+                <a href="/categories/Default/">Default</a>
               </span>
-          </info>
+              <span>阿飞</span>
+      </info>
             
     </header>
 
