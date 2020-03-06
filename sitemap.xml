@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yidas.cn/links/</loc>
+    
+    <lastmod>2020-03-06T16:44:04.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yidas.cn/post/test/</loc>
+    
+    <lastmod>2020-03-06T16:36:51.098Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yidas.cn/about/</loc>
+    
+    <lastmod>2020-03-06T07:22:16.507Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yidas.cn/post/cloudflare-cdn/</loc>
     
     <lastmod>2020-03-05T14:21:36.478Z</lastmod>
@@ -12,13 +33,6 @@
     <loc>https://yidas.cn/doraemon/</loc>
     
     <lastmod>2020-03-03T17:48:12.547Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yidas.cn/about/</loc>
-    
-    <lastmod>2020-03-03T09:19:58.526Z</lastmod>
     
   </url>
   
@@ -54,13 +68,6 @@
     <loc>https://yidas.cn/post/my-icarus-config/</loc>
     
     <lastmod>2020-02-20T10:23:17.858Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yidas.cn/post/test/</loc>
-    
-    <lastmod>2020-02-20T10:06:48.550Z</lastmod>
     
   </url>
   

@@ -352,6 +352,7 @@ optgroup {
  * Remove most spacing between table cells.
  */
 table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0; }
 
@@ -362,9 +363,6 @@ th {
 sup {
   font-size: .6em;
   opacity: .6; }
-
-p {
-  text-align: justify; }
 
 html {
   font-size: 16px;
@@ -462,7 +460,11 @@ h6 {
   float: left; }
 
 #primary.single-page {
-  float: left; }
+  float: left;
+  margin-top: 15px; }
+
+.comments-title {
+  font-weight: 600; }
 
 #primary {
   width: 100%;
@@ -659,35 +661,29 @@ h6 {
   .post .post-content {
     margin-bottom: 0px; }
     .post .post-content h1 {
-      font-size: 1.4em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 0.75em; }
+      margin: 0.3em auto; }
     .post .post-content h2 {
-      font-size: 1.4em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 0.75em; }
+      margin: 0.3em auto; }
     .post .post-content h3 {
-      font-size: 1.4em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 0.75em; }
+      margin: 0.3em auto; }
     .post .post-content h4 {
-      font-size: 1.4em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 0.75em; }
+      margin: 0.3em auto; }
     .post .post-content h5 {
-      font-size: 1.4em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 0.75em; }
+      margin: 0.3em auto; }
     .post .post-content h6 {
-      font-size: 1.4em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 0.75em; }
+      margin: 0.3em auto; }
     .post .post-content .headerlink:hover {
       border-bottom: 0; }
     .post .post-content .headerlink::before {
@@ -720,20 +716,18 @@ h6 {
       border-spacing: 0; }
       .post .post-content > table th, .post .post-content > table td {
         padding: 5px 15px;
-        border: 1px double #e7eaef;
-        text-align: left; }
+        border: 1px double #e7eaef; }
     .post .post-content code, .post .post-content pre {
-      padding: 7px;
-      font-size: 13px;
-      font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+      padding: 10px;
+      font-size: 15px;
+      font-family: "Consolas", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       background: #f0f2f5; }
     .post .post-content code {
       padding: 3px 5px;
       color: #000; }
     .post .post-content .highlight {
       margin: 1em 0;
-      overflow-x: auto;
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125); }
+      overflow-x: auto; }
       .post .post-content .highlight table {
         position: relative; }
         .post .post-content .highlight table::after {
@@ -741,11 +735,11 @@ h6 {
           top: 0;
           right: 0;
           left: 0;
-          padding: 2px 7px;
-          font-size: 13px;
+          padding: 0px 7px;
+          font-size: 15px;
           font-weight: bold;
           color: #cacaca;
-          background: #e7eaef;
+          background: #eaedf1;
           content: 'Code'; }
       .post .post-content .highlight.html > ::after {
         content: "HTML"; }
@@ -785,15 +779,15 @@ h6 {
         content: "Stylus"; }
       .post .post-content .highlight .code pre {
         margin: 0;
-        padding: 30px 10px 10px; }
+        padding: 28px 5px 8px; }
       .post .post-content .highlight .gutter {
         width: 10px;
         color: #cacaca; }
         .post .post-content .highlight .gutter pre {
           margin: 0;
-          padding: 30px 7px 10px; }
+          padding: 28px 7px 8px; }
       .post .post-content .highlight .line {
-        height: 20px; }
+        height: 23px; }
       .post .post-content .highlight table, .post .post-content .highlight tr, .post .post-content .highlight td {
         margin: 0;
         padding: 0;
@@ -801,18 +795,18 @@ h6 {
         border-collapse: collapse; }
       .post .post-content .highlight .code .comment,
       .post .post-content .highlight .code .quote {
-        color: #93a1a1; }
+        color: #424242; }
       .post .post-content .highlight .code .keyword,
       .post .post-content .highlight .code .selector-tag,
       .post .post-content .highlight .code .addition {
-        color: #859900; }
+        color: blue; }
       .post .post-content .highlight .code .number,
       .post .post-content .highlight .code .string,
       .post .post-content .highlight .code .meta .meta-string,
       .post .post-content .highlight .code .literal,
       .post .post-content .highlight .code .doctag,
       .post .post-content .highlight .code .regexp {
-        color: #2aa198; }
+        color: #b71c1c; }
       .post .post-content .highlight .code .attribute,
       .post .post-content .highlight .code .attr,
       .post .post-content .highlight .code .variable,
@@ -831,7 +825,7 @@ h6 {
         color: #cb4b16; }
       .post .post-content .highlight .code .built_in,
       .post .post-content .highlight .code .deletion {
-        color: #dc322f; }
+        color: #673ab7; }
     .post .post-content .read-more .read-more-link {
       color: #0047AB;
       font-size: 1.1em;
@@ -862,8 +856,6 @@ h6 {
         word-break: break-all; }
         .post .post-footer .copyright a:hover {
           border-bottom: 1px solid #0047AB; }
-    .post .post-footer .comments-title {
-      font-weight: 600; }
     .post .post-footer .post-nav {
       margin: 1em 0; }
       .post .post-footer .post-nav:before, .post .post-footer .post-nav:after {
@@ -914,12 +906,14 @@ h6 {
     transition-timing-function: ease-out;
     transition-duration: 0.3s; }
   .pagination .prev {
-    float: left; }
+    float: left;
+    margin-left: 9px; }
     .pagination .prev:hover {
       color: #0047AB;
       transform: translateX(-4px); }
   .pagination .next {
-    float: right; }
+    float: right;
+    margin-right: 9px; }
     .pagination .next:hover {
       color: #0047AB;
       transform: translateX(4px); }
@@ -1105,12 +1099,89 @@ h6 {
         color: #0047AB;
         transform: scale(1.1); }
 
+.links {
+  font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.fixheight {
+  padding: 64px 0; }
+
+.links .item {
+  width: calc(20% - 1.8rem);
+  margin: 0rem 0.75rem 1rem;
+  border: 1px solid #eee;
+  text-decoration: none;
+  color: #757575;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+
+.links .item:hover, .links .item:active {
+  -webkit-box-shadow: 0 1rem 1.75rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1rem 1.75rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 1.75rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-0.25rem);
+  -moz-transform: translateY(-0.25rem);
+  -ms-transform: translateY(-0.25rem);
+  -o-transform: translateY(-0.25rem);
+  transform: translateY(-0.25rem); }
+
+.links .avatar {
+  width: 100%;
+  overflow: hidden; }
+
+.links .avatar img {
+  width: 100%;
+  height: auto; }
+
+.links .info p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 0px;
+  margin: 14px auto; }
+
+.links .info i {
+  margin-right: 2px; }
+
+.links .info .title {
+  font-size: 16px;
+  color: #000000; }
+
+.links-content {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px 15px; }
+
+.links-footer {
+  background-color: #fff;
+  margin: 10px;
+  padding: 5px 15px 10px; }
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .links .item {
+    width: calc(100%/4 - 1.7rem); } }
+
+@media screen and (max-width: 600px) and (min-width: 480px) {
+  .links .item {
+    width: calc(100%/3 - 1.7rem); } }
+
+@media screen and (max-width: 480px) {
+  .links .item {
+    width: calc(100%/2 - 1.7rem); } }
+
 @font-face {
   font-family: 'iconfont';
   /* project id 96542 */
-  src: url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.eot");
+  src: url("//at.alicdn.com/t/font_1669411_c7fo5aezou.eot");
   /* IE9 */
-  src: url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.eot#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.woff") format("woff"), url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.ttf") format("truetype"), url("//at.alicdn.com/t/font_1669411_908hwvr1b6n.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_1669411_c7fo5aezou.eot#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1669411_c7fo5aezou.woff") format("woff"), url("//at.alicdn.com/t/font_1669411_c7fo5aezou.ttf") format("truetype"), url("//at.alicdn.com/t/font_1669411_c7fo5aezou.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
 
 .iconfont {
@@ -1120,6 +1191,12 @@ h6 {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer; }
+
+.icon-new1:before {
+  content: "\e625"; }
+
+.icon-archive:before {
+  content: "\e639"; }
 
 .icon-news:before {
   content: "\e60c"; }
@@ -1466,6 +1543,7 @@ h6 {
 }
 **/
 .back-to-top {
+  font-size: 30px;
   display: none;
   position: fixed;
   right: 20px;
