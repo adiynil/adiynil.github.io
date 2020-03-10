@@ -546,7 +546,7 @@ h6 {
           color: #0047AB; }
     #nav-top .nav-top-items .menu-item:hover,
     #nav-top .nav-top-items .menu-item:active {
-      background-color: #eee; }
+      background-color: #fafafa; }
 
 #nav-button {
   float: right;
@@ -698,7 +698,7 @@ h6 {
       .post .post-content a.fancybox {
         border: 0; }
     .post .post-content blockquote {
-      margin: 2em 0;
+      margin: 0.3em 0;
       padding-left: 10px;
       position: relative;
       color: rgba(0, 0, 0, 0.6);
@@ -843,8 +843,8 @@ h6 {
         color: #0047AB;
         word-break: break-all; }
     .post .post-footer .copyright {
-      margin: 10px 0;
-      padding-left: 10px;
+      margin: 15px 0;
+      padding: 15px 0px 15px 10px;
       position: relative;
       color: rgba(0, 0, 0, 0.6);
       background-color: #fff;
@@ -1179,9 +1179,9 @@ h6 {
 @font-face {
   font-family: 'iconfont';
   /* project id 96542 */
-  src: url("//at.alicdn.com/t/font_1669411_c7fo5aezou.eot");
+  src: url("//at.alicdn.com/t/font_1669411_8ki431dzq8i.eot");
   /* IE9 */
-  src: url("//at.alicdn.com/t/font_1669411_c7fo5aezou.eot#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1669411_c7fo5aezou.woff") format("woff"), url("//at.alicdn.com/t/font_1669411_c7fo5aezou.ttf") format("truetype"), url("//at.alicdn.com/t/font_1669411_c7fo5aezou.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_1669411_8ki431dzq8i.eot#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1669411_8ki431dzq8i.woff") format("woff"), url("//at.alicdn.com/t/font_1669411_uk69l9i8vm.ttf") format("truetype"), url("//at.alicdn.com/t/font_1669411_8ki431dzq8i.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
 
 .iconfont {
@@ -1192,8 +1192,17 @@ h6 {
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer; }
 
-.icon-new1:before {
-  content: "\e625"; }
+.icon-laba:before {
+  content: "\ea74"; }
+
+.icon-info-a:before {
+  content: "\e6ba"; }
+
+.icon-profile1:before {
+  content: "\e6c9"; }
+
+.icon-icon:before {
+  content: "\e626"; }
 
 .icon-archive:before {
   content: "\e639"; }
@@ -1305,9 +1314,6 @@ h6 {
 
 .icon-layout:before {
   content: "\e66d"; }
-
-.icon-globe:before {
-  content: "\e66f"; }
 
 .icon-image:before {
   content: "\e670"; }
@@ -1477,71 +1483,6 @@ h6 {
 .icon-return:before {
   content: "\e75f"; }
 
-/**
-.icon-linkedin:before {
-  content: "\e60d";
-  position: relative;
-  top: -2px;
-}
-.icon-twitter:before {
-  content: "\e600";
-}
-.icon-weibo:before {
-  content: "\e602";
-}
-.icon-stack-overflow:before {
-  content: "\e603";
-  font-size: .85em;
-  position: relative;
-  top: -4px;
-}
-.icon-email:before {
-  content: "\e605";
-  position: relative;
-  top: -2px;
-}
-.icon-facebook:before {
-  content: "\e601";
-  font-size: .95em;
-  position: relative;
-  top: -2px;
-}
-.icon-github:before {
-  content: "\e606";
-  position: relative;
-  top: -3px;
-}
-.icon-rss:before {
-  content: "\e604";
-}
-.icon-google:before {
-  content: "\e609";
-}
-.icon-zhihu:before {
-  content: "\e607";
-  font-size: .9em;
-  position: relative;
-  top: -2px;
-}
-.icon-heart:before {
-  content: "\e608"; 
-}
-.icon-right:before { 
-  content: "\e60a";
-}
-.icon-left:before {
-  content: "\e60b"; 
-}
-.icon-up:before {
-  content: "\e60c";
-}
-.icon-search:before {
-  content: "\e60e";
-}
-.icon-close:before {
-  content: "\e60f";
-}
-**/
 .back-to-top {
   font-size: 30px;
   display: none;
