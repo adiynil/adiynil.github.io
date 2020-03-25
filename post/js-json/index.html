@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+  <meta name="keywords" content="JSON,JSON数组,JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+
+
+
+<link rel="canonical" href="https://www.yidas.cn/post/js-json/"/>
+
+
+<meta name="description" content="闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到JSON数据，就学了一下用原生的JavaScript操作JSON数据。其实也没有怎么接触过JSON数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用JSON数据，在这里就记录一下。 JSON对象12345678910&#x2F;&#x2F; JS中新建一个JSON对象var json &#x3D; &amp;#123;&quot;name&quot;:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用JS操作JSON数据的笔记">
+<meta property="og:url" content="https://www.yidas.cn/post/js-json/">
+<meta property="og:site_name" content="Young ideas">
+<meta property="og:description" content="闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到JSON数据，就学了一下用原生的JavaScript操作JSON数据。其实也没有怎么接触过JSON数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用JSON数据，在这里就记录一下。 JSON对象12345678910&#x2F;&#x2F; JS中新建一个JSON对象var json &#x3D; &amp;#123;&quot;name&quot;:">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-25T08:48:00.000Z">
+<meta property="article:modified_time" content="2020-03-25T09:40:43.749Z">
+<meta property="article:author" content="阿飞">
+<meta property="article:tag" content="JSON">
+<meta property="article:tag" content="JSON数组">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2d71539625e26c385c94a65f0bfe7430";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159684939-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159684939-1');
+</script>
+
+
+    <title> 使用JS操作JSON数据的笔记 - Young ideas </title>
+  <meta name="generator" content="Hexo 4.2.0"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    
+    <a class="site-logo" href="/.">
+        <img src="/images/logo.png" />
+    </a>
+    
+
+    <label for="nav-cb" id="nav-button">
+        <a class="menu"><i class="iconfont icon-menu"></i></a>
+    </label>
+    <input type="checkbox" id="nav-cb" />
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/">
+                            
+                            <i class="iconfont icon-home"></i>
+                            
+                            
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/links">
+                            
+                            <i class="iconfont icon-link"></i>
+                            
+                            
+                            
+                                Links
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            <i class="iconfont icon-profile"></i>
+                            
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            <i class="iconfont icon-archive"></i>
+                            
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary" class="home">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          使用JS操作JSON数据的笔记
+        
+      </h1>
+
+      <info class="post-info">
+        
+        <span><i class="iconfont icon-calendar"></i><label>2020 Mar 25</label></span><span>
+                <i class="iconfont icon-folder"></i><label><a href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/">个人笔记</a></label>
+              </span>
+            <span><i class="iconfont icon-user"></i><label>阿飞</label></span>
+      </info>
+            
+    </header>
+
+    
+      <div class="post-content">
+      <p>闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到JSON数据，就学了一下用原生的JavaScript操作JSON数据。其实也没有怎么接触过JSON数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用JSON数据，在这里就记录一下。</p>
+<h3 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// JS中新建一个<span class="type">JSON</span>对象</span><br><span class="line">var <span class="type">json</span> = &#123;"name":"value"&#125;</span><br><span class="line"></span><br><span class="line">// 添加/修改数据，通过key来访问</span><br><span class="line"><span class="type">json</span>["gender"]="male"</span><br><span class="line">// 或者</span><br><span class="line"><span class="type">json</span>.gender="male"</span><br><span class="line"></span><br><span class="line">// 删除数据</span><br><span class="line"><span class="keyword">delete</span> <span class="type">json</span>.name</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSON数组的操作"><a href="#JSON数组的操作" class="headerlink" title="JSON数组的操作"></a>JSON数组的操作</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JSON数组的操作</span></span><br><span class="line"><span class="comment">// 新建</span></span><br><span class="line">var jsonarray = [&#123;<span class="string">"name"</span>:<span class="string">"zhangsan"</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"lisi"</span>&#125;]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加</span></span><br><span class="line"></span><br><span class="line">jsonarray.<span class="keyword">push</span>(&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>&#125;)</span><br><span class="line"></span><br><span class="line">jsonarray.splice(<span class="number">1</span>,<span class="number">0</span>,&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>&#125;)</span><br><span class="line"><span class="comment">// 这里理解为在索引为1的位置插入一个（或多个）JSON对象,占有从索引1开始位置</span></span><br><span class="line"><span class="comment">// 也可以用来替换/修改JSON数组对象，只要把第二个参数0改成非0，例如1</span></span><br><span class="line"><span class="comment">// 就等同于 把从索引为1开始的1个对象（没有默认为空对象，也就是添加）替换成第三个参数&#123;"name":"wangwu"&#125;</span></span><br><span class="line"><span class="comment">// 也就是说有第三个或者以上参数就是替换或者增加，没有则是删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改，访问key来直接修改</span></span><br><span class="line">jsonarray[<span class="number">0</span>].name=<span class="string">"newname"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除</span></span><br><span class="line"><span class="keyword">delete</span> jsonarray[<span class="number">0</span>] <span class="comment">// 只是清空，但是其实还占有位置</span></span><br><span class="line"></span><br><span class="line">jsonarray.shift() <span class="comment">// 删除第一项，返回删除的对象</span></span><br><span class="line">jsonarray.<span class="keyword">pop</span>() <span class="comment">// 删除最后一项，返回删除的对象</span></span><br><span class="line"><span class="comment">// splice方法，上面有提到，也是返回删除的对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 其实通过上面可以看出，JSON数组也是一个普通的数组，操作也是和数组的操作一样的，只不过对象变成了JSON对象</span></span><br></pre></td></tr></table></figure>
+
+<p>总所周知，JSON对象是可以嵌套的，无论是对象或者数组都可以，但是操作方法都一样的，只要通过json.key来访问到子对象/子数组，操作起来也是一样的。</p>
+
+      </div>
+    
+
+    
+      <footer class="post-footer">
+      
+      
+      <div class="post-tags">
+        <i class="iconfont icon-tag-group"></i><label>
+        
+        <a href="/tags/JSON/">JSON</a>
+        
+        <a href="/tags/JSON%E6%95%B0%E7%BB%84/">JSON数组</a>
+        
+        <a href="/tags/JavaScript/">JavaScript</a>
+        
+        </label>
+      </div>
+      
+
+      
+      
+      <div class="copyright">
+        <p><strong>Permalink：</strong><a href="https://www.yidas.cn/post/js-json/" alt="使用JS操作JSON数据的笔记">https://www.yidas.cn/post/js-json/</a></p>
+        <p><strong>Copyright：</strong>This work is licensed under a <a rel="license noopener" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+      </div>
+      
+
+          
+          
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/post/chrome-extensions-recommend/">
+        <span class="next-text nav-default">Chrome浏览器优秀拓展程序推荐</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-doubleright"></i>
+      </a>
+    
+  </nav>
+
+          
+          <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5060610520633423"
+     data-ad-slot="8010593362">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+          
+  <div class="comments" id="comments">
+  
+    <hr>
+  
+    <p class="comments-title"><i class="iconfont icon-comment"></i><label>Comments</label></p>
+    
+      <div id="vcomments"></div>
+    
+  </div>
+
+
+        </footer>
+    
+  </article>
+
+    </div>
+    <div id="secondary">
+    
+    <section id="widget-custom" class="widget-area">
+        <h3 class="widget-title">
+        <i class="iconfont icon-profile"></i><label>Me</label>
+        </h3>
+         <p style='font-size:16px;'>Name：阿飞</p> <p style='font-size:16px;'>Desc：专注源于热爱</p> <a style='font-size:30px;margin-right:10px' href='https://adiy.top' target="_blank" rel="noopener"><i class='iconfont icon-global'></i></a> <a style='font-size:30px;margin-right:10px' href='https://github.com/adiynil' target="_blank" rel="noopener"><i class='iconfont icon-github'></i></a> <a style='font-size:30px;margin-right:10px' href='https://www.instagram.com/adiynil' target="_blank" rel="noopener"><i class='iconfont icon-instagram'></i></a> <a style='font-size:30px;margin-right:10px' href='mailto:a@yidas.cn'><i class='iconfont icon-email-fill'></i></a>
+    </section>
+
+
+</div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+    2020
+    <span class="footer-author">阿飞.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up-square"></i>
+      </div>
+    </div>
+    
+
+
+
+
+  <script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '1sXuvsE3RF01SMtS4NEYcUQp-gzGzoHsz',
+        appKey: 'dXvAhF4enbprKIDh9MAaVh64',
+        notify:false,
+        verify:false,
+        avatar:'mp',
+        placeholder: 'Write down your comments here...',
+        pageSize: '10',
+        lang: 'en'
+    });
+  </script>
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/theme.js"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  </body>
+</html>
