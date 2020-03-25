@@ -13,7 +13,7 @@
 
 
 
-  <meta name="keywords" content="JSON,JSON数组,JavaScript," />
+  <meta name="keywords" content="JavaScript,Json,Json数组," />
 
 
 
@@ -29,19 +29,19 @@
 <link rel="canonical" href="https://www.yidas.cn/post/js-json/"/>
 
 
-<meta name="description" content="闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到JSON数据，就学了一下用原生的JavaScript操作JSON数据。其实也没有怎么接触过JSON数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用JSON数据，在这里就记录一下。 JSON对象12345678910&#x2F;&#x2F; JS中新建一个JSON对象var json &#x3D; &amp;#123;&quot;name&quot;:">
+<meta name="description" content="闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到Json数据，就学了一下用原生的JavaScript操作Json数据。其实也没有怎么接触过Json数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用Json数据，在这里就记录一下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用JS操作JSON数据的笔记">
+<meta property="og:title" content="使用JS操作Json数据的笔记">
 <meta property="og:url" content="https://www.yidas.cn/post/js-json/">
 <meta property="og:site_name" content="Young ideas">
-<meta property="og:description" content="闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到JSON数据，就学了一下用原生的JavaScript操作JSON数据。其实也没有怎么接触过JSON数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用JSON数据，在这里就记录一下。 JSON对象12345678910&#x2F;&#x2F; JS中新建一个JSON对象var json &#x3D; &amp;#123;&quot;name&quot;:">
+<meta property="og:description" content="闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到Json数据，就学了一下用原生的JavaScript操作Json数据。其实也没有怎么接触过Json数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用Json数据，在这里就记录一下。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-25T08:48:00.000Z">
-<meta property="article:modified_time" content="2020-03-25T09:40:43.749Z">
+<meta property="article:modified_time" content="2020-03-25T09:55:40.910Z">
 <meta property="article:author" content="阿飞">
-<meta property="article:tag" content="JSON">
-<meta property="article:tag" content="JSON数组">
 <meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Json">
+<meta property="article:tag" content="Json数组">
 <meta name="twitter:card" content="summary">
 
 
@@ -84,7 +84,7 @@
 </script>
 
 
-    <title> 使用JS操作JSON数据的笔记 - Young ideas </title>
+    <title> 使用JS操作Json数据的笔记 - Young ideas </title>
   <meta name="generator" content="Hexo 4.2.0"></head>
 
   <body>
@@ -166,7 +166,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          使用JS操作JSON数据的笔记
+          使用JS操作Json数据的笔记
         
       </h1>
 
@@ -182,12 +182,22 @@
 
     
       <div class="post-content">
-      <p>闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到JSON数据，就学了一下用原生的JavaScript操作JSON数据。其实也没有怎么接触过JSON数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用JSON数据，在这里就记录一下。</p>
-<h3 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// JS中新建一个<span class="type">JSON</span>对象</span><br><span class="line">var <span class="type">json</span> = &#123;"name":"value"&#125;</span><br><span class="line"></span><br><span class="line">// 添加/修改数据，通过key来访问</span><br><span class="line"><span class="type">json</span>["gender"]="male"</span><br><span class="line">// 或者</span><br><span class="line"><span class="type">json</span>.gender="male"</span><br><span class="line"></span><br><span class="line">// 删除数据</span><br><span class="line"><span class="keyword">delete</span> <span class="type">json</span>.name</span><br></pre></td></tr></table></figure>
+      <p>闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到Json数据，就学了一下用原生的JavaScript操作Json数据。其实也没有怎么接触过Json数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用Json数据，在这里就记录一下。</p>
+<a id="more"></a>
 
-<h3 id="JSON数组的操作"><a href="#JSON数组的操作" class="headerlink" title="JSON数组的操作"></a>JSON数组的操作</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JSON数组的操作</span></span><br><span class="line"><span class="comment">// 新建</span></span><br><span class="line">var jsonarray = [&#123;<span class="string">"name"</span>:<span class="string">"zhangsan"</span>&#125;,&#123;<span class="string">"name"</span>:<span class="string">"lisi"</span>&#125;]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加</span></span><br><span class="line"></span><br><span class="line">jsonarray.<span class="keyword">push</span>(&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>&#125;)</span><br><span class="line"></span><br><span class="line">jsonarray.splice(<span class="number">1</span>,<span class="number">0</span>,&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>&#125;)</span><br><span class="line"><span class="comment">// 这里理解为在索引为1的位置插入一个（或多个）JSON对象,占有从索引1开始位置</span></span><br><span class="line"><span class="comment">// 也可以用来替换/修改JSON数组对象，只要把第二个参数0改成非0，例如1</span></span><br><span class="line"><span class="comment">// 就等同于 把从索引为1开始的1个对象（没有默认为空对象，也就是添加）替换成第三个参数&#123;"name":"wangwu"&#125;</span></span><br><span class="line"><span class="comment">// 也就是说有第三个或者以上参数就是替换或者增加，没有则是删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改，访问key来直接修改</span></span><br><span class="line">jsonarray[<span class="number">0</span>].name=<span class="string">"newname"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除</span></span><br><span class="line"><span class="keyword">delete</span> jsonarray[<span class="number">0</span>] <span class="comment">// 只是清空，但是其实还占有位置</span></span><br><span class="line"></span><br><span class="line">jsonarray.shift() <span class="comment">// 删除第一项，返回删除的对象</span></span><br><span class="line">jsonarray.<span class="keyword">pop</span>() <span class="comment">// 删除最后一项，返回删除的对象</span></span><br><span class="line"><span class="comment">// splice方法，上面有提到，也是返回删除的对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 其实通过上面可以看出，JSON数组也是一个普通的数组，操作也是和数组的操作一样的，只不过对象变成了JSON对象</span></span><br></pre></td></tr></table></figure>
+<h3 id="Json对象"><a href="#Json对象" class="headerlink" title="Json对象"></a>Json对象</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// JS中新建一个<span class="type">Json</span>对象</span><br><span class="line">var <span class="type">Json</span> = &#123;"name":"value"&#125;</span><br><span class="line"></span><br><span class="line">// 添加/修改数据，通过key来访问</span><br><span class="line"><span class="type">Json</span>["gender"]="male"</span><br><span class="line">// 或者</span><br><span class="line"><span class="type">Json</span>.gender="male"</span><br><span class="line"></span><br><span class="line">// 删除数据</span><br><span class="line"><span class="keyword">delete</span> <span class="type">Json</span>.name</span><br></pre></td></tr></table></figure>
 
-<p>总所周知，JSON对象是可以嵌套的，无论是对象或者数组都可以，但是操作方法都一样的，只要通过json.key来访问到子对象/子数组，操作起来也是一样的。</p>
+<h3 id="Json数组的操作"><a href="#Json数组的操作" class="headerlink" title="Json数组的操作"></a>Json数组的操作</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Json数组的操作</span></span><br><span class="line"><span class="comment">// 新建</span></span><br><span class="line">var Jsonarray = <span class="literal">[&#123;"<span class="identifier">name</span>":"<span class="identifier">zhangsan</span>"&#125;,&#123;"<span class="identifier">name</span>":"<span class="identifier">lisi</span>"&#125;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Jsonarray</span>.</span></span>push(&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Jsonarray</span>.</span></span>splice(<span class="number">1</span>,<span class="number">0</span>,&#123;<span class="string">"name"</span>:<span class="string">"wangwu"</span>&#125;)</span><br><span class="line"><span class="comment">// 这里理解为在索引为1的位置插入一个（或多个）Json对象,占有从索引1开始位置</span></span><br><span class="line"><span class="comment">// 也可以用来替换/修改Json数组对象，只要把第二个参数0改成非0，例如1</span></span><br><span class="line"><span class="comment">// 就等同于 把从索引为1开始的1个对象（没有默认为空对象，也就是添加）替换成第三个参数&#123;"name":"wangwu"&#125;</span></span><br><span class="line"><span class="comment">// 也就是说有第三个或者以上参数就是替换或者增加，没有则是删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改，访问key来直接修改</span></span><br><span class="line">Jsonarray<span class="literal">[<span class="number">0</span>]</span>.name=<span class="string">"newname"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除</span></span><br><span class="line">delete Jsonarray<span class="literal">[<span class="number">0</span>]</span> <span class="comment">// 只是清空，但是其实还占有位置</span></span><br><span class="line"></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Jsonarray</span>.</span></span>shift<span class="literal">()</span> <span class="comment">// 删除第一项，返回删除的对象</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Jsonarray</span>.</span></span>pop<span class="literal">()</span> <span class="comment">// 删除最后一项，返回删除的对象</span></span><br><span class="line"><span class="comment">// splice方法，上面有提到，也是返回删除的对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 其实通过上面可以看出，Json数组也是一个普通的数组，操作也是和数组的操作一样的，只不过对象变成了Json对象</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Json的两个重要函数"><a href="#Json的两个重要函数" class="headerlink" title="Json的两个重要函数"></a>Json的两个重要函数</h3><p>这两个函数分别是</p>
+<ul>
+<li><code>JSON.parse()</code></li>
+<li><code>JSON.stringify()</code></li>
+</ul>
+<p><code>JSON.parse(a)</code>就是把a这个字符串解析成Json格式的对象</p>
+<p><code>JSON.stringify(b)</code>就是把b这个Json对象解析成可以被识别的Json字符串</p>
+<p>可能这样说不太好理解，这么说吧，如果要通过POST协议传输Json类型的数据，但是是不能直接传输Json对象的，解析成字符串对象就可以。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>总所周知，Json对象是可以嵌套的，无论是对象或者数组都可以，但是操作方法都一样的，只要通过Json.key来访问到子对象/子数组，操作起来也是一样的。</p>
 
       </div>
     
@@ -199,11 +209,11 @@
       <div class="post-tags">
         <i class="iconfont icon-tag-group"></i><label>
         
-        <a href="/tags/JSON/">JSON</a>
-        
-        <a href="/tags/JSON%E6%95%B0%E7%BB%84/">JSON数组</a>
-        
         <a href="/tags/JavaScript/">JavaScript</a>
+        
+        <a href="/tags/Json/">Json</a>
+        
+        <a href="/tags/Json%E6%95%B0%E7%BB%84/">Json数组</a>
         
         </label>
       </div>
@@ -212,7 +222,7 @@
       
       
       <div class="copyright">
-        <p><strong>Permalink：</strong><a href="https://www.yidas.cn/post/js-json/" alt="使用JS操作JSON数据的笔记">https://www.yidas.cn/post/js-json/</a></p>
+        <p><strong>Permalink：</strong><a href="https://www.yidas.cn/post/js-json/" alt="使用JS操作Json数据的笔记">https://www.yidas.cn/post/js-json/</a></p>
         <p><strong>Copyright：</strong>This work is licensed under a <a rel="license noopener" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
       </div>
       
