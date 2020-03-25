@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Young ideas</title>
+  <icon>https://www.yidas.cn/icon.png</icon>
+  <subtitle>专注源于热爱</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.yidas.cn/"/>
+  <updated>2020-03-25T09:55:40.910Z</updated>
+  <id>https://www.yidas.cn/</id>
+  
+  <author>
+    <name>阿飞</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用JS操作Json数据的笔记</title>
+    <link href="https://www.yidas.cn/post/js-json/"/>
+    <id>https://www.yidas.cn/post/js-json/</id>
+    <published>2020-03-25T08:48:00.000Z</published>
+    <updated>2020-03-25T09:55:40.910Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到Json数据，就学了一下用原生的JavaScript操作Json数据。其实也没有怎么接触过Json数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用Json数据，在这里就记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="个人笔记" scheme="https://www.yidas.cn/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Json" scheme="https://www.yidas.cn/tags/Json/"/>
+    
+      <category term="Json数组" scheme="https://www.yidas.cn/tags/Json%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="JavaScript" scheme="https://www.yidas.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome浏览器优秀拓展程序推荐</title>
+    <link href="https://www.yidas.cn/post/chrome-extensions-recommend/"/>
+    <id>https://www.yidas.cn/post/chrome-extensions-recommend/</id>
+    <published>2020-03-10T17:38:09.000Z</published>
+    <updated>2020-03-10T18:04:48.029Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/03/11/3ZMPHniz2fYDsgw.jpg&quot; alt=&quot;thumbnail&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Chrome浏览器给我的印象一直是程序猿推荐浏览器的第一位，尽管它的内存占用确实不算是优秀，但是它的拓展程序丰富这一优点却可以盖过内存占用高这一不足。毕竟已经是0202年了，谁的电脑还带不起一个Chrome呢。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="干货" scheme="https://www.yidas.cn/categories/%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="Chrome Extension" scheme="https://www.yidas.cn/tags/Chrome-Extension/"/>
+    
+      <category term="Chrome" scheme="https://www.yidas.cn/tags/Chrome/"/>
+    
+      <category term="谷歌浏览器" scheme="https://www.yidas.cn/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PacificRack优惠VPS1H1G年付$9.99</title>
+    <link href="https://www.yidas.cn/post/pacificrack-postyear/"/>
+    <id>https://www.yidas.cn/post/pacificrack-postyear/</id>
+    <published>2020-03-10T06:52:20.000Z</published>
+    <updated>2020-03-10T08:52:31.928Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PacificRack也算是老牌国外性价比VPS供应商了，新年的优惠到现在又有货放出来了，KVM架构，据说速度很不错，流量也多。&lt;a href=&quot;https://pacificrack.com/portal/aff.php?aff=1575&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;i class=&quot;iconfont icon-link&quot;&gt;&lt;/i&gt;&amp;nbsp;直达链接&lt;/a&gt; VPS区可以看到&lt;code&gt;Post New Year Sale&lt;/code&gt;优惠VPS。还有一个更低配的只要&lt;code&gt;$7.25/year&lt;/code&gt;，但是性价比不如&lt;code&gt;$9.9/year&lt;/code&gt;这款，而且只能走AFF链接，有需要的&lt;a href=&quot;https://pacificrack.com/portal/aff.php?aff=1575&amp;pid=50&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;i class=&quot;iconfont icon-link&quot;&gt;&lt;/i&gt;&amp;nbsp;走这里&lt;/a&gt;。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;$9.99/year&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;$9.99/year&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;$9.99/year&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;1G RAM&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;2G RAM&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;3G RAM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;13G SSD&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;20G SSd&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;28G SSD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;1x Intel Xeon vCore&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;2x Intel Xeon vCore&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;2x Intel Xeon vCore&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;1 Gigabit&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;1 Gigabit&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;1 Gigabit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;2TB/mo&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;3TB/mo&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;4TB/mo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+    
+    </summary>
+    
+    
+      <category term="优惠活动" scheme="https://www.yidas.cn/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/"/>
+    
+    
+      <category term="VPS" scheme="https://www.yidas.cn/tags/VPS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国内服务器/域名优惠活动合集</title>
+    <link href="https://www.yidas.cn/post/product-recommend/"/>
+    <id>https://www.yidas.cn/post/product-recommend/</id>
+    <published>2020-02-17T16:00:00.000Z</published>
+    <updated>2020-03-10T05:31:35.816Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;服务器和域名是我们建站必须要用到的，除非你只是想搭建一个部署在&lt;code&gt;GitHub&lt;/code&gt;/&lt;code&gt;Coding&lt;/code&gt;/&lt;code&gt;Gitee&lt;/code&gt;的静态博客网站，那么总会要用到服务器和域名，而且服务器能干的事可就多了，一个我们自己的域名也能帮助我们在网络上有效辨识自己。这篇文章就聚集一下我自己关注到的服务器/域名优惠活动。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="优惠活动" scheme="https://www.yidas.cn/categories/%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8/"/>
+    
+    
+      <category term="GitHub Page" scheme="https://www.yidas.cn/tags/GitHub-Page/"/>
+    
+      <category term="GitHub" scheme="https://www.yidas.cn/tags/GitHub/"/>
+    
+      <category term="阿里云" scheme="https://www.yidas.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+      <category term="腾讯云" scheme="https://www.yidas.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    
+      <category term="服务器" scheme="https://www.yidas.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="域名注册" scheme="https://www.yidas.cn/tags/%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/"/>
+    
+      <category term="Coding" scheme="https://www.yidas.cn/tags/Coding/"/>
+    
+      <category term="Gitee" scheme="https://www.yidas.cn/tags/Gitee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Python的海龟画图画一个哆啦A梦</title>
+    <link href="https://www.yidas.cn/post/python-draw-doraemon/"/>
+    <id>https://www.yidas.cn/post/python-draw-doraemon/</id>
+    <published>2020-02-17T16:00:00.000Z</published>
+    <updated>2020-02-23T03:59:27.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/doraemon/thumbnail.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;一年之前学的Python，过了这么久也差不多都还给老师了。我的傻吊儿子（误）喜欢哆啦A梦，前几天花了时间专门找了很多高清的哆啦A梦的海报挂上图床，突发奇想想到用Python的turtle画图能否实现画一个哆啦A梦….&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="个人笔记" scheme="https://www.yidas.cn/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Python" scheme="https://www.yidas.cn/tags/Python/"/>
+    
+      <category term="turtle" scheme="https://www.yidas.cn/tags/turtle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo主题icarus的深入浅出</title>
+    <link href="https://www.yidas.cn/post/my-icarus-config/"/>
+    <id>https://www.yidas.cn/post/my-icarus-config/</id>
+    <published>2020-02-05T05:55:00.000Z</published>
+    <updated>2020-02-20T10:23:17.858Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/adiynil/cloudimg//icarus-config-thumbnail.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;你现在所看到的站点是我使用Hexo在GitHub Page搭建的，用的主题是icarus，icarus这个主题非常好看而且配置很多很齐全，但是总有一些地方是不够用的，这里整理一下我自己对这个主题的修修改改。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="干货" scheme="https://www.yidas.cn/categories/%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.yidas.cn/tags/Hexo/"/>
+    
+      <category term="icarus" scheme="https://www.yidas.cn/tags/icarus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用Cloudflare来加速我的GitHub Page</title>
+    <link href="https://www.yidas.cn/post/cloudflare-cdn/"/>
+    <id>https://www.yidas.cn/post/cloudflare-cdn/</id>
+    <published>2020-02-03T16:00:00.000Z</published>
+    <updated>2020-03-10T08:22:39.583Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我用了两天时间搭建起来的站点，依赖于GitHub的Page服务，域名是在腾讯云购买的，但是众所周知的是GitHub现在基本是半墙的状态，如果你不能快乐地上网，那么很可能不能愉快的访问GitHub，都已经用GitHub来搭建站点了，那么就要想法子来白嫖CDN来加速我的站点在国内的访问速度。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="干货" scheme="https://www.yidas.cn/categories/%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="CloudFlare" scheme="https://www.yidas.cn/tags/CloudFlare/"/>
+    
+      <category term="Hexo" scheme="https://www.yidas.cn/tags/Hexo/"/>
+    
+      <category term="GitHub Page" scheme="https://www.yidas.cn/tags/GitHub-Page/"/>
+    
+      <category term="GitHub" scheme="https://www.yidas.cn/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown Test</title>
+    <link href="https://www.yidas.cn/post/test/"/>
+    <id>https://www.yidas.cn/post/test/</id>
+    <published>2020-02-01T16:00:00.000Z</published>
+    <updated>2020-03-06T16:36:51.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown具有一系列衍生版本，用于扩展Markdown的功能（如表格、脚注、内嵌HTML等等），这些功能原初的Markdown尚不具备，它们能让Markdown转换成更多的格式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Default" scheme="https://www.yidas.cn/categories/Default/"/>
+    
+    
+      <category term="markdown" scheme="https://www.yidas.cn/tags/markdown/"/>
+    
+      <category term="test" scheme="https://www.yidas.cn/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.yidas.cn/post/hello-world/"/>
+    <id>https://www.yidas.cn/post/hello-world/</id>
+    <published>2020-01-31T16:00:00.000Z</published>
+    <updated>2020-02-07T06:15:46.266Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Default" scheme="https://www.yidas.cn/categories/Default/"/>
+    
+    
+      <category term="hello world" scheme="https://www.yidas.cn/tags/hello-world/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>仿Google Design的导航栏和卡片设计</title>
+    <link href="https://www.yidas.cn/post/cp-gd/"/>
+    <id>https://www.yidas.cn/post/cp-gd/</id>
+    <published>2019-11-13T16:00:00.000Z</published>
+    <updated>2020-02-23T16:44:02.004Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/cp-gd-thumbnail.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;纯CSS仿制&lt;a href=&quot;https://design.google/library/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Design&lt;/a&gt;的导航栏和卡片信息。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="个人笔记" scheme="https://www.yidas.cn/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Google" scheme="https://www.yidas.cn/tags/Google/"/>
+    
+      <category term="CSS" scheme="https://www.yidas.cn/tags/CSS/"/>
+    
+      <category term="HTML" scheme="https://www.yidas.cn/tags/HTML/"/>
+    
+  </entry>
+  
+</feed>
