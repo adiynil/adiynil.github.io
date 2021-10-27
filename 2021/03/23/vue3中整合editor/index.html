@@ -1,0 +1,204 @@
+<html>
+<!-- Head tag -->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+		<link href="/favicon.ico" rel="icon">
+	 
+      <title>vue中整合editor.md | adiynil</title>
+	
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+
+	
+<link rel="stylesheet" href="/css/style.css">
+
+	
+<link rel="stylesheet" href="/css/highlight.css">
+
+	
+  
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+	<div id="site" class="site">
+		<div id="sidebar" class="sidebar">
+			<header id="header" class="site-header">
+	<div class="site-branding">
+		<h1 class="site-title">
+			
+				<a href="/images/avatar-small.png" class="avatar-circle"><img src="/images/avatar-small.png" /></a>
+			
+			<a href="/" rel="home">Troy&#39;s 博客</a></h1>
+		<p class="site-description">专注于Web开发，现在居住于成都. Happy Coding, Happy Life!</p>
+		<button class="secondary-toggle font-asesome-icon">Menu and widgets</button>
+	</div>
+</header>
+<div id="secondary" class="secondary">
+	<nav class="main-navigation">
+                         <ul id="menu-demo-menu" class="nav-menu">
+						 
+							<li class="menu-item"><a href="/">首页</a></li>
+						
+							<li class="menu-item"><a href="/archives">归档</a></li>
+						
+							<li class="menu-item"><a href="/about">关于</a></li>
+						
+                         </ul>
+    </nav>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">归档</h3>		
+		<ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+		</ul>
+	</aside>
+
+
+	
+		<aside class="widget">
+    <input id="local-search-input" type="search" class="search-field" placeholder="Search …" value="" name="s">
+    <div id="local-search-result" class="search-result">
+    </div>
+</aside>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">最新文章</h3>		
+		<ul>
+			
+          <li>
+            <a href="/2021/10/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
+          </li>
+        
+		</ul>
+	</aside>
+
+
+	
+		
+  <aside class="widget">
+		<h3 class="widget-title">标签云</h3>
+        <a href="/tags/nextTick/" style="font-size: 10px;">$nextTick</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Chrome-Extension/" style="font-size: 10px;">Chrome Extension</a> <a href="/tags/CloudFlare/" style="font-size: 10px;">CloudFlare</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/GitHub-Page/" style="font-size: 10px;">GitHub Page</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Json%E6%95%B0%E7%BB%84/" style="font-size: 10px;">Json数组</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/editor-md/" style="font-size: 10px;">editor.md</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/promise/" style="font-size: 20px;">promise</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">谷歌浏览器</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 10px;">队列</a>
+    </aside>
+
+	
+</div>
+
+		</div>
+		<div id="content" class="site-content">
+			<main id="main" class="site-main" role="main">
+				
+<article class="hentry ">
+		
+		
+			<header class="entry-header">
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/" rel="bookmark">vue中整合editor.md</a></h2>	
+			</header>
+		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<p>在做毕设过程中需要在前端用到Markdown编辑器，一想就想到了Editor.md，虽然有和Vue整合好的mavonEditor可供选择，但是还是喜欢Editor.md，就想办法搞一下。</p>
+<p>Editor.md作为一个很成熟开元Markdown编辑器，虽然已经好久不更新了，但是无疑还是非常实用的，由于Editor.md并没有提供与Vue整合的直接方案，但是我们可以自己把它封装成一个Vue组件来使用。</p>
+<span id="more"></span>
+
+<p>参考了两篇文章：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jdbdh/article/details/90314447">https://blog.csdn.net/jdbdh/article/details/90314447</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.lwl.tech/post/3">http://www.lwl.tech/post/3</a></p>
+</blockquote>
+<p>首先了解到Editor.md是通过附着在window对象上来暴露给用户使用的，并且在初始化的时候依赖了jQuery，那么我们要解决：</p>
+<ol>
+<li><p>把jQuery挂载到window对象</p>
+</li>
+<li><p>异步加载editormd.mi.js后创建editor示例</p>
+</li>
+</ol>
+<p><em>MarkdownEditor.vue</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;markdown-editor-box&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/static/editormd/css/editormd.min.css&quot; /&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; :href=&quot;&#x27;/static/editormd/css/themes/&#x27; + themeCode&quot; /&gt;</span><br><span class="line">    &lt;div :id=&quot;id&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import $ from &quot;jquery&quot;;</span><br><span class="line">import &#123; v4 as uuid &#125; from &quot;uuid&quot;;</span><br><span class="line">import &#123; defaultConfig &#125; from &quot;../../config/editor.md&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;MarkdownEditor&quot;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    id: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: uuid(),</span><br><span class="line">    &#125;,</span><br><span class="line">    config: &#123;</span><br><span class="line">      type: Object,</span><br><span class="line">    &#125;,</span><br><span class="line">    themeCode: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;atelier-forest-light.min.css&quot;,</span><br><span class="line">      // preview at https://jmblog.github.io/color-themes-for-google-code-prettify/</span><br><span class="line">      // location /static/editormd/css/themes/</span><br><span class="line">    &#125;,</span><br><span class="line">    initData: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">    &#125;,</span><br><span class="line">    delay: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 0,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  data: function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      editor: null,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    getConfig: function () &#123;</span><br><span class="line">      // return Object.assign(defaultConfig, this.config);</span><br><span class="line">      // or</span><br><span class="line">      return &#123; ...defaultConfig, ...this.config &#125;;</span><br><span class="line">      // maybe add custom config from back-end</span><br><span class="line">      // return &#123; ...defaultConfig, ...this.config, ...customConfig &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    initEditor: function () &#123;</span><br><span class="line">      let vm = this;</span><br><span class="line">      window.$ = window.jQuery = $;</span><br><span class="line">      (async () =&gt; &#123;</span><br><span class="line">        await $.getScript(&quot;/static/editormd/editormd.min.js&quot;);</span><br><span class="line">        let editor = window.editormd(this.id, this.getConfig());</span><br><span class="line">        vm.editor = editor;</span><br><span class="line">        // this.$nextTick(() =&gt; &#123;</span><br><span class="line">        //   let editor = window.editormd(this.editorId, this.getConfig());</span><br><span class="line">        //   editor.on(&quot;load&quot;, () =&gt; &#123;</span><br><span class="line">        //     setTimeout(() =&gt; &#123;</span><br><span class="line">        //       // hack bug: 一个页面多个编辑器只能初始化其中一个数据问题</span><br><span class="line">        //       this.editorLoaded = true;</span><br><span class="line">        //       this.initData &amp;&amp; editor.setMarkdown(this.initData);</span><br><span class="line">        //     &#125;, this.initDataDelay);</span><br><span class="line">        //   &#125;);</span><br><span class="line">        //   this.onchange &amp;&amp;</span><br><span class="line">        //     editor.on(&quot;change&quot;, () =&gt; &#123;</span><br><span class="line">        //       let html = editor.getPreviewedHTML();</span><br><span class="line">        //       this.onchange(&#123;</span><br><span class="line">        //         markdown: editor.getMarkdown(),</span><br><span class="line">        //         html: html,</span><br><span class="line">        //         text: window.$(html).text(),</span><br><span class="line">        //       &#125;);</span><br><span class="line">        //     &#125;);</span><br><span class="line">        //   this.editor = editor;</span><br><span class="line">        // &#125;);</span><br><span class="line">      &#125;)();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted: function () &#123;</span><br><span class="line">    let vm = this;</span><br><span class="line">    vm.initEditor();</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    initData: function (newVal) &#123;</span><br><span class="line">      if (newVal) &#123;</span><br><span class="line">        this.editorLoaded &amp;&amp; this.editor.setMarkdown(newVal);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;undo&quot;,&quot;redo&quot;,&quot;|&quot;,&quot;bold&quot;,&quot;del&quot;,&quot;italic&quot;,&quot;quote&quot;,&quot;ucwords&quot;,&quot;uppercase&quot;,&quot;lowercase&quot;,&quot;h1&quot;,&quot;h2&quot;,&quot;h3&quot;,&quot;h4&quot;,&quot;h5&quot;,&quot;|&quot;,&quot;list-ul&quot;,&quot;list-ol&quot;,&quot;hr&quot;,&quot;|&quot;,&quot;link&quot;,&quot;reference-link&quot;,&quot;image&quot;,&quot;code&quot;,&quot;preformatted-text&quot;,&quot;code-block&quot;,&quot;table&quot;,&quot;datetime&quot;,&quot;emoji&quot;,&quot;html-entities&quot;,&quot;pagebreak&quot;,&quot;goto-line&quot;,&quot;watch&quot;,&quot;preview&quot;,&quot;fullscreen&quot;,&quot;clear&quot;,&quot;search&quot;,&quot;help&quot;,&quot;info&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;undo&quot;,&quot;redo&quot;,&quot;|&quot;,&quot;bold&quot;,&quot;del&quot;,&quot;italic&quot;,&quot;quote&quot;,&quot;list-ul&quot;,&quot;list-ol&quot;,&quot;hr&quot;,&quot;|&quot;,&quot;h1&quot;,&quot;h2&quot;,&quot;h3&quot;,&quot;|&quot;,&quot;link&quot;,&quot;image&quot;,&quot;code-block&quot;,&quot;table&quot;,&quot;||&quot;,&quot;watch&quot;,&quot;preview&quot;,&quot;fullscreen&quot;,&quot;clear&quot;,&quot;search&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+				
+					<div class="license-statement">本文由http://troyyang.com原创编写，转载请尽量保留版权网址，感谢您的理解与分享!</div>
+				
+				
+					
+				
+			
+		</div><!-- .entry-content -->
+		
+			<div class="entry-comments">
+				 
+  
+   
+			</div>
+		
+		<footer class="entry-footer">
+			<span class="posted-on font-asesome-icon">
+	<a href="" rel="bookmark">
+	<time class="updated" datetime="2021-03-23T14:12:00.000Z">2021-03-23</time>
+	</a>
+</span>
+
+
+	<span class="tags-links font-asesome-icon">
+	
+		<a href="/tags/vue/" rel="category tag">vue</a>
+    
+		<a href="/tags/editor-md/" rel="category tag">editor.md</a>
+    
+</span>
+		
+
+		</footer><!-- .entry-footer -->
+</article>
+
+			</main>
+		</div>
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<span>powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp; theme by <a target="_blank" rel="noopener" href="https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress">Troy</a> &nbsp; inspired by <a target="_blank" rel="noopener" href="https://wordpress.org/themes/">wordpress</a></span>
+			</div><!-- .site-info -->
+		</footer>
+	</div>
+	<div class="misc">
+    <a href="#main"><span class="top font-asesome-icon">Top</span></a>
+</div>
+	
+    <!-- After footer scripts -->
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+</body>
+</html>

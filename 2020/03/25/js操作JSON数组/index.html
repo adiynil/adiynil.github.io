@@ -1,0 +1,205 @@
+<html>
+<!-- Head tag -->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+		<link href="/favicon.ico" rel="icon">
+	 
+      <title>使用JS操作Json数据的笔记 | adiynil</title>
+	
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+
+	
+<link rel="stylesheet" href="/css/style.css">
+
+	
+<link rel="stylesheet" href="/css/highlight.css">
+
+	
+  
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+	<div id="site" class="site">
+		<div id="sidebar" class="sidebar">
+			<header id="header" class="site-header">
+	<div class="site-branding">
+		<h1 class="site-title">
+			
+				<a href="/images/avatar-small.png" class="avatar-circle"><img src="/images/avatar-small.png" /></a>
+			
+			<a href="/" rel="home">Troy&#39;s 博客</a></h1>
+		<p class="site-description">专注于Web开发，现在居住于成都. Happy Coding, Happy Life!</p>
+		<button class="secondary-toggle font-asesome-icon">Menu and widgets</button>
+	</div>
+</header>
+<div id="secondary" class="secondary">
+	<nav class="main-navigation">
+                         <ul id="menu-demo-menu" class="nav-menu">
+						 
+							<li class="menu-item"><a href="/">首页</a></li>
+						
+							<li class="menu-item"><a href="/archives">归档</a></li>
+						
+							<li class="menu-item"><a href="/about">关于</a></li>
+						
+                         </ul>
+    </nav>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">归档</h3>		
+		<ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+		</ul>
+	</aside>
+
+
+	
+		<aside class="widget">
+    <input id="local-search-input" type="search" class="search-field" placeholder="Search …" value="" name="s">
+    <div id="local-search-result" class="search-result">
+    </div>
+</aside>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">最新文章</h3>		
+		<ul>
+			
+          <li>
+            <a href="/2021/10/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
+          </li>
+        
+		</ul>
+	</aside>
+
+
+	
+		
+  <aside class="widget">
+		<h3 class="widget-title">标签云</h3>
+        <a href="/tags/nextTick/" style="font-size: 10px;">$nextTick</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Chrome-Extension/" style="font-size: 10px;">Chrome Extension</a> <a href="/tags/CloudFlare/" style="font-size: 10px;">CloudFlare</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/GitHub-Page/" style="font-size: 10px;">GitHub Page</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Json%E6%95%B0%E7%BB%84/" style="font-size: 10px;">Json数组</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/editor-md/" style="font-size: 10px;">editor.md</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/promise/" style="font-size: 20px;">promise</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">谷歌浏览器</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 10px;">队列</a>
+    </aside>
+
+	
+</div>
+
+		</div>
+		<div id="content" class="site-content">
+			<main id="main" class="site-main" role="main">
+				
+<article class="hentry ">
+		
+		
+			<header class="entry-header">
+				<h2 class="entry-title"><a class="post-title-link" href="/2020/03/25/js%E6%93%8D%E4%BD%9CJSON%E6%95%B0%E7%BB%84/" rel="bookmark">使用JS操作Json数据的笔记</a></h2>	
+			</header>
+		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<p>闲来无事（瞎折腾），在GitHub上看到好玩的API就拿来玩一下，因为要用到Json数据，就学了一下用原生的JavaScript操作Json数据。其实也没有怎么接触过Json数据，之前用GitHub的API写了个JS来获取我的repo里面的内容第一次用Json数据，在这里就记录一下。</p>
+<span id="more"></span>
+
+<h3 id="Json对象"><a href="#Json对象" class="headerlink" title="Json对象"></a>Json对象</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// JS中新建一个Json对象</span><br><span class="line">var Json = &#123;&quot;name&quot;:&quot;value&quot;&#125;</span><br><span class="line"></span><br><span class="line">// 添加/修改数据，通过key来访问</span><br><span class="line">Json[&quot;gender&quot;]=&quot;male&quot;</span><br><span class="line">// 或者</span><br><span class="line">Json.gender=&quot;male&quot;</span><br><span class="line"></span><br><span class="line">// 删除数据</span><br><span class="line">delete Json.name</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Json数组的操作"><a href="#Json数组的操作" class="headerlink" title="Json数组的操作"></a>Json数组的操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// Json数组的操作</span><br><span class="line">// 新建</span><br><span class="line">var Jsonarray = [&#123;&quot;name&quot;:&quot;zhangsan&quot;&#125;,&#123;&quot;name&quot;:&quot;lisi&quot;&#125;]</span><br><span class="line"></span><br><span class="line">// 添加</span><br><span class="line"></span><br><span class="line">Jsonarray.push(&#123;&quot;name&quot;:&quot;wangwu&quot;&#125;)</span><br><span class="line"></span><br><span class="line">Jsonarray.splice(1,0,&#123;&quot;name&quot;:&quot;wangwu&quot;&#125;)</span><br><span class="line">// 这里理解为在索引为1的位置插入一个（或多个）Json对象,占有从索引1开始位置</span><br><span class="line">// 也可以用来替换/修改Json数组对象，只要把第二个参数0改成非0，例如1</span><br><span class="line">// 就等同于 把从索引为1开始的1个对象（没有默认为空对象，也就是添加）替换成第三个参数&#123;&quot;name&quot;:&quot;wangwu&quot;&#125;</span><br><span class="line">// 也就是说有第三个或者以上参数就是替换或者增加，没有则是删除</span><br><span class="line"></span><br><span class="line">// 修改，访问key来直接修改</span><br><span class="line">Jsonarray[0].name=&quot;newname&quot;</span><br><span class="line"></span><br><span class="line">// 删除</span><br><span class="line">delete Jsonarray[0] // 只是清空，但是其实还占有位置</span><br><span class="line"></span><br><span class="line">Jsonarray.shift() // 删除第一项，返回删除的对象</span><br><span class="line">Jsonarray.pop() // 删除最后一项，返回删除的对象</span><br><span class="line">// splice方法，上面有提到，也是返回删除的对象</span><br><span class="line"></span><br><span class="line">// 其实通过上面可以看出，Json数组也是一个普通的数组，操作也是和数组的操作一样的，只不过对象变成了Json对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Json的两个重要函数"><a href="#Json的两个重要函数" class="headerlink" title="Json的两个重要函数"></a>Json的两个重要函数</h3><p>这两个函数分别是</p>
+<ul>
+<li><code>JSON.parse()</code></li>
+<li><code>JSON.stringify()</code></li>
+</ul>
+<p><code>JSON.parse(a)</code>就是把a这个字符串解析成Json格式的对象</p>
+<p><code>JSON.stringify(b)</code>就是把b这个Json对象解析成可以被识别的Json字符串</p>
+<p>可能这样说不太好理解，这么说吧，如果要通过POST协议传输Json类型的数据，但是是不能直接传输Json对象的，解析成字符串对象就可以。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>总所周知，Json对象是可以嵌套的，无论是对象或者数组都可以，但是操作方法都一样的，只要通过Json.key来访问到子对象/子数组，操作起来也是一样的。</p>
+
+
+				
+					<div class="license-statement">本文由http://troyyang.com原创编写，转载请尽量保留版权网址，感谢您的理解与分享!</div>
+				
+				
+					
+				
+			
+		</div><!-- .entry-content -->
+		
+			<div class="entry-comments">
+				 
+  
+   
+			</div>
+		
+		<footer class="entry-footer">
+			<span class="posted-on font-asesome-icon">
+	<a href="" rel="bookmark">
+	<time class="updated" datetime="2020-03-25T08:48:00.000Z">2020-03-25</time>
+	</a>
+</span>
+
+	<span class="cat-links font-asesome-icon">
+		
+				<a href="/categories/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/" rel="category tag">个人笔记</a>
+		
+	</span>
+
+
+	<span class="tags-links font-asesome-icon">
+	
+		<a href="/tags/Json/" rel="category tag">Json</a>
+    
+		<a href="/tags/Json%E6%95%B0%E7%BB%84/" rel="category tag">Json数组</a>
+    
+		<a href="/tags/JavaScript/" rel="category tag">JavaScript</a>
+    
+</span>
+		
+
+		</footer><!-- .entry-footer -->
+</article>
+
+			</main>
+		</div>
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<span>powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp; theme by <a target="_blank" rel="noopener" href="https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress">Troy</a> &nbsp; inspired by <a target="_blank" rel="noopener" href="https://wordpress.org/themes/">wordpress</a></span>
+			</div><!-- .site-info -->
+		</footer>
+	</div>
+	<div class="misc">
+    <a href="#main"><span class="top font-asesome-icon">Top</span></a>
+</div>
+	
+    <!-- After footer scripts -->
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+</body>
+</html>

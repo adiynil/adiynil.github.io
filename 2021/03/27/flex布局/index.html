@@ -1,0 +1,282 @@
+<html>
+<!-- Head tag -->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+		<link href="/favicon.ico" rel="icon">
+	 
+      <title>一文搞懂CSS Flex布局 | adiynil</title>
+	
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+
+	
+<link rel="stylesheet" href="/css/style.css">
+
+	
+<link rel="stylesheet" href="/css/highlight.css">
+
+	
+  
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+	<div id="site" class="site">
+		<div id="sidebar" class="sidebar">
+			<header id="header" class="site-header">
+	<div class="site-branding">
+		<h1 class="site-title">
+			
+				<a href="/images/avatar-small.png" class="avatar-circle"><img src="/images/avatar-small.png" /></a>
+			
+			<a href="/" rel="home">Troy&#39;s 博客</a></h1>
+		<p class="site-description">专注于Web开发，现在居住于成都. Happy Coding, Happy Life!</p>
+		<button class="secondary-toggle font-asesome-icon">Menu and widgets</button>
+	</div>
+</header>
+<div id="secondary" class="secondary">
+	<nav class="main-navigation">
+                         <ul id="menu-demo-menu" class="nav-menu">
+						 
+							<li class="menu-item"><a href="/">首页</a></li>
+						
+							<li class="menu-item"><a href="/archives">归档</a></li>
+						
+							<li class="menu-item"><a href="/about">关于</a></li>
+						
+                         </ul>
+    </nav>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">归档</h3>		
+		<ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+		</ul>
+	</aside>
+
+
+	
+		<aside class="widget">
+    <input id="local-search-input" type="search" class="search-field" placeholder="Search …" value="" name="s">
+    <div id="local-search-result" class="search-result">
+    </div>
+</aside>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">最新文章</h3>		
+		<ul>
+			
+          <li>
+            <a href="/2021/10/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
+          </li>
+        
+		</ul>
+	</aside>
+
+
+	
+		
+  <aside class="widget">
+		<h3 class="widget-title">标签云</h3>
+        <a href="/tags/nextTick/" style="font-size: 10px;">$nextTick</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Chrome-Extension/" style="font-size: 10px;">Chrome Extension</a> <a href="/tags/CloudFlare/" style="font-size: 10px;">CloudFlare</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/GitHub-Page/" style="font-size: 10px;">GitHub Page</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Json%E6%95%B0%E7%BB%84/" style="font-size: 10px;">Json数组</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/editor-md/" style="font-size: 10px;">editor.md</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/promise/" style="font-size: 20px;">promise</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">谷歌浏览器</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 10px;">队列</a>
+    </aside>
+
+	
+</div>
+
+		</div>
+		<div id="content" class="site-content">
+			<main id="main" class="site-main" role="main">
+				
+<article class="hentry ">
+		
+		
+			<header class="entry-header">
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/27/flex%E5%B8%83%E5%B1%80/" rel="bookmark">一文搞懂CSS Flex布局</a></h2>	
+			</header>
+		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<p>css中，flex、grid 各种布局都是我们必须掌握的，作为常用功能又强大的flex布局你还没学会吗，全文没有一张图，用最通俗易懂的语言教你怎么用css中的flex布局。</p>
+<span id="more"></span>
+
+<h2 id="父容器属性"><a href="#父容器属性" class="headerlink" title="父容器属性"></a>父容器属性</h2><h3 id="开启flex"><a href="#开启flex" class="headerlink" title="开启flex"></a>开启flex</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: flex;</span><br></pre></td></tr></table></figure>
+
+<h3 id="控制子元素水平方向对齐"><a href="#控制子元素水平方向对齐" class="headerlink" title="控制子元素水平方向对齐"></a>控制子元素水平方向对齐</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">justify-content</span>: flex-start/center/flex-end/space-between/space-around/space-evenly;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>flex-start/center/flex-end</code> 子元素之间没有留白</p>
+<p><code>space-between/space-around/space-evenly</code> 子元素之间留白相等</p>
+</blockquote>
+<ul>
+<li><code>flex-start</code> =&gt; <code>[ a b c ######## ]</code></li>
+<li><code>center</code> =&gt; <code>[ #### a b c #### ]</code></li>
+<li><code>flex-end</code> =&gt; <code>[ ######## a b c ]</code></li>
+<li><code>space-between</code> =&gt; <code>[ a ### b ### c ]</code>  (两端无留白)</li>
+<li><code>space -evenly</code> =&gt; <code>[ ## a ## b ## c ## ]</code> (两端留白和子元素之间留白相等)</li>
+<li><code>space-around</code> =&gt; <code>[ # a ###  b ### c # ] </code> (两端留白是子元素之间留白的一半)</li>
+</ul>
+<blockquote>
+<p><strong>以上是针对于父容器的<code>flex-direction</code>属性为行模式的时候</strong></p>
+<p><strong>列模式时，<code>justify-content</code>和<code>align-items</code>的作用倒转过来，分别是</strong></p>
+<ul>
+<li><strong><code>justify-content</code> =&gt; 控制垂直方向对齐</strong></li>
+<li><strong><code>align-items</code> =&gt; 控制水平方向对齐</strong></li>
+</ul>
+</blockquote>
+<p><strong>[什么是行模式和列模式？](#### 行模式&amp;列模式)</strong></p>
+<h3 id="控制子元素垂直方向对齐"><a href="#控制子元素垂直方向对齐" class="headerlink" title="控制子元素垂直方向对齐"></a>控制子元素垂直方向对齐</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">align-items</span>: flex-start/center/flex-end/stretch/baseline;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>flex-start/center/flex-end</code> 和上边类似，就是方向换成垂直方向</li>
+<li><code>baseline</code> =&gt; 按照文字基线对齐</li>
+<li><code>stretch</code> =&gt; 子元素拉伸并在垂直方向铺满父容器</li>
+</ul>
+<blockquote>
+<p><strong>以上是针对于父容器的<code>flex-direction</code>属性为行模式的时候</strong></p>
+<p><strong>列模式时，<code>justify-content</code>和<code>align-items</code>的作用倒转过来，分别是</strong></p>
+<ul>
+<li><strong><code>justify-content</code> =&gt; 控制垂直方向对齐</strong></li>
+<li><strong><code>align-items</code> =&gt; 控制水平方向对齐</strong></li>
+</ul>
+</blockquote>
+<p><strong>[什么是行模式和列模式？](#### 行模式&amp;列模式)</strong></p>
+<h3 id="控制子元素排列方式"><a href="#控制子元素排列方式" class="headerlink" title="控制子元素排列方式"></a>控制子元素排列方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-direction</span>: row/column/row-reverse/column-reverse;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>row</code> =&gt; 按行排列从左到右</li>
+<li><code>row-reverse</code> =&gt; 按行排列从右到左</li>
+<li><code>column</code> =&gt; 按列从上到下，子元素的宽度不需要撑满父容器</li>
+<li><code>column-reverse</code> =&gt; 按列从下到上，子元素的宽度不需要撑满父容器</li>
+</ul>
+<h4 id="行模式-amp-列模式"><a href="#行模式-amp-列模式" class="headerlink" title="行模式&amp;列模式"></a>行模式&amp;列模式</h4><ul>
+<li>父容器的<code>flex-direction</code>属性为<code>row</code>/<code>row-reverse</code> =&gt; <strong>行模式</strong></li>
+<li>父容器的<code>flex-direction</code>属性为<code>column</code>/<code>column-reverse</code> =&gt; <strong>列模式</strong></li>
+</ul>
+<h3 id="控制子元素的折行"><a href="#控制子元素的折行" class="headerlink" title="控制子元素的折行"></a>控制子元素的折行</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-wrap</span>: wrap/nowrap;</span><br><span class="line"><span class="attribute">align-content</span>: flex-start/flex-end/center/space-between/space-evenly/space-around;</span><br></pre></td></tr></table></figure>
+
+<p>当<code>flex-wrap</code>的值为<code>wrap</code>的时候，折行的部分由<code>align-content</code>的属性来控制，其值的作用可参考<code>justify-conten</code>，当然了，折行发生的条件是子元素的宽度固定且不能收缩，并且超过了父容器的宽度</p>
+<hr>
+<h2 id="子元素属性"><a href="#子元素属性" class="headerlink" title="子元素属性"></a>子元素属性</h2><h3 id="子元素覆盖父容器的排列方式"><a href="#子元素覆盖父容器的排列方式" class="headerlink" title="子元素覆盖父容器的排列方式"></a>子元素覆盖父容器的排列方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">align-seft: flex-start/center/flex-end/stretch/baseline;</span><br><span class="line"><span class="attribute">margin</span>: auto;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>align-seft</code> =&gt; 覆盖父容器设置的<code>align-items</code>属性</li>
+<li><code>margin</code> =&gt; 覆盖父容器的<code>justify-content</code>属性</li>
+</ul>
+<h3 id="子元素的空间占比"><a href="#子元素的空间占比" class="headerlink" title="子元素的空间占比"></a>子元素的空间占比</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex</span>: <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>flex</code>属性的值表示该子元素占父容器的空间比，总容量是所有子元素的<code>flex</code>属性和</li>
+</ul>
+<h3 id="子元素的增长"><a href="#子元素的增长" class="headerlink" title="子元素的增长"></a>子元素的增长</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-grow</span>: <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>flex-grow</code>属性是指当父容器的空间还有空余的时候，子元素主动增长去撑满这些<strong>空余空间</strong>(<strong>行模式下是宽度，列模式下是高度</strong>)，而占这些空余空间的比列就是由<code>flex-grow</code>的值来决定的，默认不设置<code>flex-grow</code>的情况下，值为<code>0</code>，子元素不会主动增长</p>
+<p>当把所有的子元素的<code>flex-grow</code>都设置成相等 =&gt; <code>[ a-a-a b-b-b c-c-c]</code></p>
+<p>或者中间的子元素的<code>flex-grow</code>是两边的子元素<code>flex-grow</code>的两倍 =&gt; <code>[ a-a b-b-b-b c-c]</code></p>
+<h3 id="子元素的收缩"><a href="#子元素的收缩" class="headerlink" title="子元素的收缩"></a>子元素的收缩</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-shrink</span>: <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>flex-shrink</code>属性和<code>flex-grow</code>属性相似，只不过作用在于收缩的时候，<code>flex-shrink</code>越大的子元素在收缩的时候收缩的高度/宽度更大，默认不设置<code>flex-shrink</code>的情况下，值为<code>1</code>，子元素收缩且收缩比例为<code>1</code></p>
+<p>中间的子元素的<code>flex-shrink</code>是两边子元素<code>flex-shrink</code>的两倍 :</p>
+<p><code>[ a-a-a-a-a-a b-b-b-b-b-b c-c-c-c-c-c- ]</code>  -&gt;  <code>[ a-a-a-a b-b c-c-c-c ]</code></p>
+<h3 id="子元素的宽度-高度"><a href="#子元素的宽度-高度" class="headerlink" title="子元素的宽度/高度"></a>子元素的宽度/高度</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-basis</span>: <span class="number">200px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>行模式 =&gt; <code>flex-basis</code>控制子元素的宽度</li>
+<li>列模式 =&gt; <code>flex-basis</code>控制子元素的高度</li>
+</ul>
+<p><strong>[什么是行模式和列模式？](#### 行模式&amp;列模式)</strong></p>
+<ul>
+<li>行模式下，如果设置了<code>flex-basis</code>，则子元素设置的<code>width</code>属性不会生效，<code>flex-basis</code>没有设置的情况下默认值为<code>auto</code>，也就是由内容决定</li>
+<li>列模式下，如果设置了<code>flex-basis</code>，则子元素设置的<code>height</code>属性不会生效，<code>flex-basis</code>没有设置的情况下默认值为<code>auto</code>，也就是由内容决定</li>
+</ul>
+<blockquote>
+<p>但是，虽然<code>width/height</code>属性会被覆盖，我们依然可以用<code>min-width/min-height</code>来限制最小宽高</p>
+</blockquote>
+<h3 id="子元素的flex属性"><a href="#子元素的flex属性" class="headerlink" title="子元素的flex属性"></a>子元素的flex属性</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex</span>: <span class="number">0</span> <span class="number">1</span> auto;</span><br></pre></td></tr></table></figure>
+
+<p><code>flex</code>属性的值其实就是<code>flex-grow</code>、<code>flex-shrink</code>、<code>flex-basis</code> 这3种属性的缩写，默认值就是<code>0 1 auto</code>，也就对应</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flex-grow: 0;</span><br><span class="line">flex-shrink: 1;</span><br><span class="line">flex-basis: auto;</span><br></pre></td></tr></table></figure>
+
+<p>即<strong>不增长</strong>，<strong>收缩比例为1</strong>，<strong>宽度/高度为内容的宽度/高度</strong></p>
+
+
+				
+					<div class="license-statement">本文由http://troyyang.com原创编写，转载请尽量保留版权网址，感谢您的理解与分享!</div>
+				
+				
+					
+				
+			
+		</div><!-- .entry-content -->
+		
+			<div class="entry-comments">
+				 
+  
+   
+			</div>
+		
+		<footer class="entry-footer">
+			<span class="posted-on font-asesome-icon">
+	<a href="" rel="bookmark">
+	<time class="updated" datetime="2021-03-27T11:21:00.000Z">2021-03-27</time>
+	</a>
+</span>
+
+
+	<span class="tags-links font-asesome-icon">
+	
+		<a href="/tags/css/" rel="category tag">css</a>
+    
+		<a href="/tags/flex/" rel="category tag">flex</a>
+    
+</span>
+		
+
+		</footer><!-- .entry-footer -->
+</article>
+
+			</main>
+		</div>
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<span>powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp; theme by <a target="_blank" rel="noopener" href="https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress">Troy</a> &nbsp; inspired by <a target="_blank" rel="noopener" href="https://wordpress.org/themes/">wordpress</a></span>
+			</div><!-- .site-info -->
+		</footer>
+	</div>
+	<div class="misc">
+    <a href="#main"><span class="top font-asesome-icon">Top</span></a>
+</div>
+	
+    <!-- After footer scripts -->
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+<!-- Head tag -->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+		<link href="/favicon.ico" rel="icon">
+	 
+      <title>用Python的海龟画图画一个哆啦A梦 | adiynil</title>
+	
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+
+	
+<link rel="stylesheet" href="/css/style.css">
+
+	
+<link rel="stylesheet" href="/css/highlight.css">
+
+	
+  
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+	<div id="site" class="site">
+		<div id="sidebar" class="sidebar">
+			<header id="header" class="site-header">
+	<div class="site-branding">
+		<h1 class="site-title">
+			
+				<a href="/images/avatar-small.png" class="avatar-circle"><img src="/images/avatar-small.png" /></a>
+			
+			<a href="/" rel="home">Troy&#39;s 博客</a></h1>
+		<p class="site-description">专注于Web开发，现在居住于成都. Happy Coding, Happy Life!</p>
+		<button class="secondary-toggle font-asesome-icon">Menu and widgets</button>
+	</div>
+</header>
+<div id="secondary" class="secondary">
+	<nav class="main-navigation">
+                         <ul id="menu-demo-menu" class="nav-menu">
+						 
+							<li class="menu-item"><a href="/">首页</a></li>
+						
+							<li class="menu-item"><a href="/archives">归档</a></li>
+						
+							<li class="menu-item"><a href="/about">关于</a></li>
+						
+                         </ul>
+    </nav>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">归档</h3>		
+		<ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+		</ul>
+	</aside>
+
+
+	
+		<aside class="widget">
+    <input id="local-search-input" type="search" class="search-field" placeholder="Search …" value="" name="s">
+    <div id="local-search-result" class="search-result">
+    </div>
+</aside>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">最新文章</h3>		
+		<ul>
+			
+          <li>
+            <a href="/2021/10/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
+          </li>
+        
+		</ul>
+	</aside>
+
+
+	
+		
+  <aside class="widget">
+		<h3 class="widget-title">标签云</h3>
+        <a href="/tags/nextTick/" style="font-size: 10px;">$nextTick</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Chrome-Extension/" style="font-size: 10px;">Chrome Extension</a> <a href="/tags/CloudFlare/" style="font-size: 10px;">CloudFlare</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/GitHub-Page/" style="font-size: 10px;">GitHub Page</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Json%E6%95%B0%E7%BB%84/" style="font-size: 10px;">Json数组</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/editor-md/" style="font-size: 10px;">editor.md</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/promise/" style="font-size: 20px;">promise</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">谷歌浏览器</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 10px;">队列</a>
+    </aside>
+
+	
+</div>
+
+		</div>
+		<div id="content" class="site-content">
+			<main id="main" class="site-main" role="main">
+				
+<article class="hentry ">
+		
+		
+			<header class="entry-header">
+				<h2 class="entry-title"><a class="post-title-link" href="/2020/02/17/python%E6%B5%B7%E9%BE%9F%E7%94%BB%E5%9B%BE%E7%94%BB%E4%B8%80%E4%B8%AA%E5%93%86%E5%95%A6A%E6%A2%A6/" rel="bookmark">用Python的海龟画图画一个哆啦A梦</a></h2>	
+			</header>
+		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<p>一年之前学的Python，过了这么久也差不多都还给老师了。我的傻吊儿子（误）喜欢哆啦A梦，前几天花了时间专门找了很多高清的哆啦A梦的海报挂上图床，突发奇想想到用Python的turtle画图能否实现画一个哆啦A梦….</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>由于实在是<del>年代久远</del>学艺不精，学的一点Python也还给老师了，加上前些天看课程直播讲到了Python又把Python装了回来，所以就有了尝试用turtle来画一个哆啦A梦的想法，自己琢磨了一会发现就只能画个头画眼睛化胡须啥的，身体其他部分完全没有思路怎么去画，就干脆点直接冲浪搜了，没想到还真的有人画这个，既然有现成，代码也能看的懂，那就拷贝下来自己研究研究吧。</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><hr>
+<p>先上一个最终的效果图吧 ☟☟☟</p>
+<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg@master/doraemon/GIF.gif" alt="turtle画图哆啦A梦"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle <span class="keyword">as</span> t</span><br><span class="line">t.speed(<span class="number">20</span>)</span><br><span class="line">t.pensize(<span class="number">4</span>)</span><br><span class="line">t.hideturtle()</span><br><span class="line">t.screensize(<span class="number">500</span>, <span class="number">500</span>, bg=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line"><span class="comment"># 猫脸</span></span><br><span class="line">t.fillcolor(<span class="string">&#x27;#00A1E8&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">120</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.fillcolor(<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">100</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">134</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.fillcolor(<span class="string">&quot;#EA0014&quot;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">18</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">7</span>, <span class="number">155</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.color(<span class="string">&#x27;white&#x27;</span>, <span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">4</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(-<span class="number">30</span>, <span class="number">160</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">&#x27;black&#x27;</span>, <span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">a = <span class="number">0.4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">120</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">        a = a+<span class="number">0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>) <span class="comment">#向左转3度</span></span><br><span class="line">        t.fd(a) <span class="comment">#向前走a的步长</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        a = a-<span class="number">0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>)</span><br><span class="line">        t.fd(a)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">30</span>, <span class="number">160</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">&#x27;black&#x27;</span>, <span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">120</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">        a = a+<span class="number">0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>)  <span class="comment"># 向左转3度</span></span><br><span class="line">        t.fd(a)  <span class="comment"># 向前走a的步长</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        a = a-<span class="number">0.08</span></span><br><span class="line">        t.lt(<span class="number">3</span>)</span><br><span class="line">        t.fd(a)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(-<span class="number">38</span>,<span class="number">190</span>)</span><br><span class="line">t.pensize(<span class="number">4</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.right(-<span class="number">30</span>)</span><br><span class="line">t.forward(<span class="number">15</span>)</span><br><span class="line">t.right(<span class="number">70</span>)</span><br><span class="line">t.forward(<span class="number">15</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">15</span>, <span class="number">185</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">&#x27;black&#x27;</span>, <span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">13</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">13</span>, <span class="number">190</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">&#x27;white&#x27;</span>, <span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">5</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line"> </span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">134</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.right(<span class="number">90</span>)</span><br><span class="line">t.forward(<span class="number">40</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">124</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">10</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">114</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">6</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>,<span class="number">104</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">0</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line"><span class="comment"># 左边的胡子</span></span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>,<span class="number">124</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">170</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">114</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">174</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(<span class="number">0</span>, <span class="number">104</span>)</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.left(<span class="number">180</span>)</span><br><span class="line">t.forward(<span class="number">80</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(-<span class="number">70</span>, <span class="number">70</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.color(<span class="string">&#x27;black&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.seth(-<span class="number">60</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">80</span>,<span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">80</span>,<span class="number">80</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(-<span class="number">80</span>,<span class="number">70</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.forward(<span class="number">160</span>)</span><br><span class="line">t.pu()</span><br><span class="line">t.home()</span><br><span class="line">t.goto(-<span class="number">50</span>,<span class="number">50</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.fillcolor(<span class="string">&quot;#eb6e1a&quot;</span>)</span><br><span class="line">t.seth(<span class="number">40</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(-<span class="number">40</span>, <span class="number">40</span>)</span><br><span class="line">t.circle(-<span class="number">40</span>, <span class="number">40</span>)</span><br><span class="line">t.seth(<span class="number">40</span>)</span><br><span class="line">t.circle(-<span class="number">40</span>, <span class="number">40</span>)</span><br><span class="line">t.circle(-<span class="number">40</span>, <span class="number">40</span>)</span><br><span class="line">t.seth(<span class="number">220</span>)</span><br><span class="line">t.circle(-<span class="number">80</span>, <span class="number">40</span>)</span><br><span class="line">t.circle(-<span class="number">80</span>, <span class="number">40</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line"><span class="comment"># 领带</span></span><br><span class="line">t.pu()</span><br><span class="line">t.goto(-<span class="number">70</span>, <span class="number">12</span>)</span><br><span class="line">t.pensize(<span class="number">14</span>)</span><br><span class="line">t.pencolor(<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.seth(-<span class="number">20</span>)</span><br><span class="line">t.circle(<span class="number">200</span>, <span class="number">30</span>)</span><br><span class="line">t.circle(<span class="number">200</span>, <span class="number">10</span>)</span><br><span class="line"><span class="comment"># 铃铛</span></span><br><span class="line">t.pu()</span><br><span class="line">t.goto(<span class="number">0</span>, -<span class="number">46</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">1</span>)</span><br><span class="line">t.color(<span class="string">&quot;black&quot;</span>, <span class="string">&#x27;#f8d102&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">25</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pu()</span><br><span class="line">t.goto(-<span class="number">5</span>, -<span class="number">40</span>)</span><br><span class="line">t.pd()</span><br><span class="line">t.pensize(<span class="number">2</span>)</span><br><span class="line">t.color(<span class="string">&quot;black&quot;</span>, <span class="string">&#x27;#79675d&#x27;</span>)</span><br><span class="line">t.begin_fill()</span><br><span class="line">t.circle(<span class="number">5</span>)</span><br><span class="line">t.end_fill()</span><br><span class="line">t.pensize(<span class="number">3</span>)</span><br><span class="line">t.right(<span class="number">115</span>)</span><br><span class="line">t.forward(<span class="number">7</span>)</span><br><span class="line">t.mainloop()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>最后推荐一个很适合新手入门的Python社区—— <a target="_blank" rel="noopener" href="https://python123.io/">https://python123.io</a> ，是我们老师以前上课的时候安利给我们的，主要是里面东西都比较浅显易懂，Python是我觉得而且大部分人都这么觉得入门最简单的编程语言了。</p>
+</blockquote>
+
+
+				
+					<div class="license-statement">本文由http://troyyang.com原创编写，转载请尽量保留版权网址，感谢您的理解与分享!</div>
+				
+				
+					
+				
+			
+		</div><!-- .entry-content -->
+		
+			<div class="entry-comments">
+				 
+  
+   
+			</div>
+		
+		<footer class="entry-footer">
+			<span class="posted-on font-asesome-icon">
+	<a href="" rel="bookmark">
+	<time class="updated" datetime="2020-02-17T16:00:00.000Z">2020-02-17</time>
+	</a>
+</span>
+
+
+	<span class="tags-links font-asesome-icon">
+	
+		<a href="/tags/Python/" rel="category tag">Python</a>
+    
+		<a href="/tags/turtle/" rel="category tag">turtle</a>
+    
+</span>
+		
+
+		</footer><!-- .entry-footer -->
+</article>
+
+			</main>
+		</div>
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<span>powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp; theme by <a target="_blank" rel="noopener" href="https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress">Troy</a> &nbsp; inspired by <a target="_blank" rel="noopener" href="https://wordpress.org/themes/">wordpress</a></span>
+			</div><!-- .site-info -->
+		</footer>
+	</div>
+	<div class="misc">
+    <a href="#main"><span class="top font-asesome-icon">Top</span></a>
+</div>
+	
+    <!-- After footer scripts -->
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+</body>
+</html>

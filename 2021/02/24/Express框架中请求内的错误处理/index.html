@@ -1,0 +1,224 @@
+<html>
+<!-- Head tag -->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+		<link href="/favicon.ico" rel="icon">
+	 
+      <title>Express框架中请求内的错误处理 | adiynil</title>
+	
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+
+	
+<link rel="stylesheet" href="/css/style.css">
+
+	
+<link rel="stylesheet" href="/css/highlight.css">
+
+	
+  
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+	<div id="site" class="site">
+		<div id="sidebar" class="sidebar">
+			<header id="header" class="site-header">
+	<div class="site-branding">
+		<h1 class="site-title">
+			
+				<a href="/images/avatar-small.png" class="avatar-circle"><img src="/images/avatar-small.png" /></a>
+			
+			<a href="/" rel="home">Troy&#39;s 博客</a></h1>
+		<p class="site-description">专注于Web开发，现在居住于成都. Happy Coding, Happy Life!</p>
+		<button class="secondary-toggle font-asesome-icon">Menu and widgets</button>
+	</div>
+</header>
+<div id="secondary" class="secondary">
+	<nav class="main-navigation">
+                         <ul id="menu-demo-menu" class="nav-menu">
+						 
+							<li class="menu-item"><a href="/">首页</a></li>
+						
+							<li class="menu-item"><a href="/archives">归档</a></li>
+						
+							<li class="menu-item"><a href="/about">关于</a></li>
+						
+                         </ul>
+    </nav>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">归档</h3>		
+		<ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+		</ul>
+	</aside>
+
+
+	
+		<aside class="widget">
+    <input id="local-search-input" type="search" class="search-field" placeholder="Search …" value="" name="s">
+    <div id="local-search-result" class="search-result">
+    </div>
+</aside>
+	
+		
+<aside class="widget">
+		<h3 class="widget-title">最新文章</h3>		
+		<ul>
+			
+          <li>
+            <a href="/2021/10/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
+          </li>
+        
+		</ul>
+	</aside>
+
+
+	
+		
+  <aside class="widget">
+		<h3 class="widget-title">标签云</h3>
+        <a href="/tags/nextTick/" style="font-size: 10px;">$nextTick</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Chrome-Extension/" style="font-size: 10px;">Chrome Extension</a> <a href="/tags/CloudFlare/" style="font-size: 10px;">CloudFlare</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/GitHub-Page/" style="font-size: 10px;">GitHub Page</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Json/" style="font-size: 10px;">Json</a> <a href="/tags/Json%E6%95%B0%E7%BB%84/" style="font-size: 10px;">Json数组</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/editor-md/" style="font-size: 10px;">editor.md</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/promise/" style="font-size: 20px;">promise</a> <a href="/tags/turtle/" style="font-size: 10px;">turtle</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">谷歌浏览器</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 10px;">队列</a>
+    </aside>
+
+	
+</div>
+
+		</div>
+		<div id="content" class="site-content">
+			<main id="main" class="site-main" role="main">
+				
+<article class="hentry ">
+		
+		
+			<header class="entry-header">
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/24/Express%E6%A1%86%E6%9E%B6%E4%B8%AD%E8%AF%B7%E6%B1%82%E5%86%85%E7%9A%84%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/" rel="bookmark">Express框架中请求内的错误处理</a></h2>	
+			</header>
+		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<blockquote>
+<p>Whichever method you use, if you want Express error handlers to be called in and the application to survive, you must ensure that Express receives the error.</p>
+</blockquote>
+<p>Express官方文档中提到，要确保你的Express程序在遇到错误的时候不会宕机，就得确保Express能接收到程序抛出的错误。</p>
+<span id="more"></span>
+
+<h2 id="uncaughtException导致的node宕机"><a href="#uncaughtException导致的node宕机" class="headerlink" title="uncaughtException导致的node宕机"></a>uncaughtException导致的node宕机</h2><p>如上所说，Express程序必须手动处理<strong>所有</strong>可能抛出的错误才不会发生宕机，或者说降低宕机的风险，这和node是息息相关的，毕竟Express是基于Nodejs的，在node中，在遇到<code>uncaughtException</code>时会直接结束node进程，之前写过一篇文章</p>
+<p><a target="_blank" rel="noopener" href="https://fateguy.com/note/20.html">Promise的UnhandledPromiseRejectionWarning问题</a></p>
+<p>就是提到的node的这个特性，对Promise对象没有用<code>.catch()</code>来捕捉错误就会使node可能宕机。</p>
+<p>当然了我们可以用pm2或者forever之类的node进程管理工具来管理重启和记录错误，这样也更利于我们之后对程序进行修复。</p>
+<p>但是，在运行过程中，我们还是更希望我们的程序宕机的次数越少越好，如果我们的程序的Session是存储在内存中的，那么程序宕机重启之后，所有的用户登录状态也将不复存在。</p>
+<h2 id="Error-Handler-错误处理函数"><a href="#Error-Handler-错误处理函数" class="headerlink" title="Error Handler 错误处理函数"></a>Error Handler 错误处理函数</h2><p>Express框架内置了一个错误处理函数（Error Handler），这个函数是以中间件（MiddleWare）的形式来使用的，只不过这个中间件和其他的中间件稍微不一样，那就是错误处理函数接受4个参数，比常规中间件多了接收错误的参数<code>err</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">err, req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 处理错误</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>错误处理函数一般定义在所有路由之后，为了确保Express程序不会因为错误而宕机，则需要把错误抛给这个错误处理函数来处理，在请求内有两种方式把错误抛给错误处理函数。</p>
+<p>直接<code>throw new Error()</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;BROKEN&#x27;</span>) <span class="comment">// Express will catch this on its own.</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>或者在<code>next()</code>函数中传入错误对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;/file-does-not-exist&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      next(err) <span class="comment">// Pass errors to Express.</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.send(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>直接抛出错误，或者在<code>next()</code>函数中传入错误对象都能直接跳过剩余的路由，直接进入错误处理函数。</p>
+<p>参考官方文档</p>
+<blockquote>
+<p>If you pass anything to the <code>next()</code> function (except the string <code>&#39;route&#39;</code>), Express regards the current request as being an error and will skip any remaining non-error handling routing and middleware functions.</p>
+</blockquote>
+<h2 id="next-函数"><a href="#next-函数" class="headerlink" title="next()函数"></a>next()函数</h2><p>上面的官方文档说道 <strong>except the string <code>&#39;route&#39;</code></strong></p>
+<p>意思即是<code>next()</code>直接跳到下一个<strong>中间件</strong>；传的值是字符串<code>route</code>即<code>next(&#39;route&#39;)</code>时，直接跳到下一个<strong>路由</strong>；传入其他值都会跳到错误处理函数。</p>
+<ul>
+<li>next()——跳到下一个中间件</li>
+<li>next(‘route’)——跳到下一个路由</li>
+<li>next(err)——跳到错误处理函数</li>
+</ul>
+<p>注意<code>next()</code>和<code>next(&#39;route&#39;)</code>是分别跳到下一个<strong>中间件</strong>和<strong>路由</strong>，经常看到说<code>next()</code>函数会跳到下一个路由的，其实这样说是不准确的，一个路由可以有多个中间件来处理</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mw1 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line">mw2 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line">mw3 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line">mw4 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, mw1, mw2, mw3)</span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, mw4)</span><br></pre></td></tr></table></figure>
+
+<p>例如在<code>mw1</code>函数中调用了<code>next()</code>，实际上是跳到<code>mw2</code>开始执行，而如果我们调用的是<code>next(&#39;route&#39;)</code>，那么就会直接跳过<code>mw2</code>和<code>mw3</code>，直接开始执行<code>mw4</code>。</p>
+<p>之所以有时候混淆是因为经常一个路由我们只用一个函数来处理，而不是链式处理，一个路由一个函数处理，调用<code>next()</code>和调用<code>next(&#39;route&#39;)</code>的效果是一样的。</p>
+<p>值得一提的还有，在官方文档中还提到</p>
+<blockquote>
+<p>Starting with Express 5, route handlers and middleware that return a Promise will call <code>next(value)</code> automatically when they reject or throw an error.</p>
+</blockquote>
+<p>也就是说，从Express5开始，在请求中或者中间件中的Promise对象，即使没有手动调用<code>next(err)</code>和<code>throw new Error()</code>，如果Promise中抛出了错误或者<code>reject</code>了，那么Express会自动调用<code>next(err)</code>，其中的<code>err</code>为Promise内抛出的错误或者<code>reject</code>的值，如果不存在就传入一个默认的<code>Error</code>对象。</p>
+
+
+				
+					<div class="license-statement">本文由http://troyyang.com原创编写，转载请尽量保留版权网址，感谢您的理解与分享!</div>
+				
+				
+					
+				
+			
+		</div><!-- .entry-content -->
+		
+			<div class="entry-comments">
+				 
+  
+   
+			</div>
+		
+		<footer class="entry-footer">
+			<span class="posted-on font-asesome-icon">
+	<a href="" rel="bookmark">
+	<time class="updated" datetime="2021-02-24T16:00:00.000Z">2021-02-24</time>
+	</a>
+</span>
+
+
+	<span class="tags-links font-asesome-icon">
+	
+		<a href="/tags/express/" rel="category tag">express</a>
+    
+		<a href="/tags/promise/" rel="category tag">promise</a>
+    
+</span>
+		
+
+		</footer><!-- .entry-footer -->
+</article>
+
+			</main>
+		</div>
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<span>powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;&nbsp; theme by <a target="_blank" rel="noopener" href="https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress">Troy</a> &nbsp; inspired by <a target="_blank" rel="noopener" href="https://wordpress.org/themes/">wordpress</a></span>
+			</div><!-- .site-info -->
+		</footer>
+	</div>
+	<div class="misc">
+    <a href="#main"><span class="top font-asesome-icon">Top</span></a>
+</div>
+	
+    <!-- After footer scripts -->
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+</body>
+</html>
