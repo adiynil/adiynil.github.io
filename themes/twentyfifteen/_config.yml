@@ -2,23 +2,24 @@
 # Site Settings
 # ===========================================
 # Header
-site_title: Troy's 博客
-site_description: 专注于Web开发，现在居住于成都. Happy Coding, Happy Life!
+site_title: adiynil
+site_description: Web前端开发，中国广州。 to Produce wonderful ideas.
 # ---Optional ---
-site_avatar: /images/avatar-small.png
-artical_license_statement: 本文由http://troyyang.com原创编写，转载请尽量保留版权网址，感谢您的理解与分享!
+site_avatar: /images/avatar.jpg
+artical_license_statement: 本文由adiynil原创编写，转载请尽量保留版权网址，感谢您的理解与分享!
 # ---End Optional ---
 menu:
   Home: /
   Archives: /archives
   AboutMe: /about
-
+social_link:
+  email: aadiynil#gmail.com
 # display widgets
 widgets:
-- archives
+# - social_links
 - search
-#- social_links
 - recent_posts
+- archives
 - tagcloud
 
 # widget behavior
@@ -39,8 +40,8 @@ google_analytics:
 addthis_analytics:
 # Disqus
 disqus:
-  enable: false
-  shortname: troyyang-com
+  enable: true
+  shortname: adiynil
   count: true
 # changyan
 changyan:
@@ -50,23 +51,19 @@ changyan:
 # duoshuo
 duoshuo:
   enable: false
-  shortname: troyyang
+  shortname:
 # Visitors
 leancloud_visitors:
   enable: false
-  app_id: wzqncxgqp9MCPiPERe3gnX2Q-gzGzoHsz
-  app_key: CCtBiqyPtJWupuozt1393AXm
+  app_id:
+  app_key:
 donation:
   enable: false
-  alipay: /images/alipay-qr.png
-  wechat: /images/wechat-qr.png
+  alipay:
+  wechat:
 
 # Search 
 # Note: please install hexo-generator-search plugin and config the root _config.yml (not theme's _config.yml) as below value search.json(https://www.npmjs.com/package/hexo-generator-search):
-#search:
-#  path: search.json
-#  field: post
-infinite:
-  enable: false
-  title1: Happy Coding, Happy Life!
-  title2: 蜀ICP备15004900号-1
+# search:
+#   path: search.xml
+#   field: post

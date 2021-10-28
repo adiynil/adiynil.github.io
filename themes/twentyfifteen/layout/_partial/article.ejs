@@ -29,9 +29,7 @@
 			<% } %>
 		</div><!-- .entry-content -->
 		<% if (!index && post.comments){ %>
-			<div class="entry-comments">
-				<%- partial('article-comments', {post: post}) %>
-			</div>
+			<%- partial('article-comments', {post: post}) %>
 		<% } %>
 		<footer class="entry-footer">
 			<%- partial('article-footer', {post: post}) %>

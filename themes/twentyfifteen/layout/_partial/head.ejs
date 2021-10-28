@@ -1,6 +1,6 @@
 <head>
 <%
-  var title = page.title;
+  var title;
 
   if (is_archive()){
     title = __('archive_a');
@@ -26,7 +26,15 @@
   	<% } else { %>
 		<link href="<%- config.root %>favicon.ico" rel="icon">
 	<% } %> 
-      <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+      <title>
+        <% if (title){ %>
+          <%= title + ' | ' %>
+        <% } %>
+        <%= config.title %>
+        <% if (!title){ %>
+          <%= ' - ' + config.subtitle %>
+        <% } %>
+      </title>
 	<%- css('css/font-awesome/css/font-awesome.css') %>
 	<%- css('css/style.css') %>
 	<%- css('css/highlight.css') %>

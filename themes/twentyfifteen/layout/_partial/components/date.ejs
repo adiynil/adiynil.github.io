@@ -1,5 +1,6 @@
-<span class="posted-on font-asesome-icon">
-	<a href="" rel="bookmark">
+<% var year = post.date.toDate().getFullYear(); %>
+<span class="posted-on font-awesome-icon">
+	<a href="<%- url_for(config.archive_dir + '/' + year) %>" rel="bookmark">
 	<time class="updated" datetime="<%= post.date.toDate().toISOString() %>"><%= post.date.format(config.date_format) %></time>
 	</a>
 </span>

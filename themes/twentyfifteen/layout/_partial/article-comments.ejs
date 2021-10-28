@@ -1,9 +1,15 @@
  <% if(theme.disqus.enable) { %>
+ <div class="entry-comments">
       <%- partial('/comments/disqus') %>
+   </div>
   <% } %>
   <% if(theme.changyan.enable) { %>
+  <div class="entry-comments">
       <%- partial('/comments/changyan') %>
+   </div>
  <% } %>
    <% if(theme.duoshuo.enable) { %>
+   <div class="entry-comments">
       <%- partial('/comments/duoshuo') %>
+   </div>
  <% } %>
