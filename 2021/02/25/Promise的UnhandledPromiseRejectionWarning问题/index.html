@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	
-		<link href="/favicon.ico" rel="icon">
+		<link href="/favicon.png" rel="icon">
 	 
       <title>
         
@@ -28,7 +28,7 @@
   
 
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
   <body>
     <div class="site" id="site">
       <div class="sidebar" id="sidebar">
@@ -68,6 +68,10 @@
 		<ul>
 			
           <li>
+            <a href="/2022/03/14/js-get-video-cover/">js获取在线视频的第一帧作为封面</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/27/hello-world/">Hello World</a>
           </li>
         
@@ -83,10 +87,6 @@
             <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
           </li>
         
-          <li>
-            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
-          </li>
-        
 		</ul>
 	</aside>
 
@@ -96,7 +96,7 @@
 <aside class="widget">
 		<h3 class="widget-title">归档</h3>		
 		<ul>
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
 		</ul>
 	</aside>
 
@@ -129,18 +129,18 @@
 <span id="more"></span>
 
 <p>先看看我原来的code：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) reject(<span class="string">&#x27;foo&#x27;</span>)</span><br><span class="line">	resolve(<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) <span class="title function_">reject</span>(<span class="string">&#x27;foo&#x27;</span>)</span><br><span class="line">	<span class="title function_">resolve</span>(<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>也就是说，如果你定义的Promise没有进行Catch处理Rejection这种情况，就会有这个提示，解决方法有几个：</p>
 <ol>
 <li><p>直接用resolve来返回错误代码而不用reject</p>
 <p> 反正最后promise都要返回点什么，用reject还是resolve有什么区别呢，我只要在用的时候根据返回的对象去主动判断这个promise是否是成功的也能达到一样的效果。</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) resolve(&#123;<span class="attr">status</span>: <span class="number">0</span>, <span class="attr">msg</span>: <span class="string">&quot;foo&quot;</span>&#125;)</span><br><span class="line">	resolve(&#123;<span class="attr">status</span>: <span class="number">1</span>, <span class="attr">msg</span>: <span class="string">&quot;bar&quot;</span>&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) <span class="title function_">resolve</span>(&#123;<span class="attr">status</span>: <span class="number">0</span>, <span class="attr">msg</span>: <span class="string">&quot;foo&quot;</span>&#125;)</span><br><span class="line">	<span class="title function_">resolve</span>(&#123;<span class="attr">status</span>: <span class="number">1</span>, <span class="attr">msg</span>: <span class="string">&quot;bar&quot;</span>&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
 <li><p>直接在Promise里用空函数处理</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) reject(<span class="string">&quot;foo&quot;</span>)</span><br><span class="line">    resolve(<span class="string">&quot;bar&quot;</span>)</span><br><span class="line">&#125;).catch(<span class="function">()=&gt;</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) <span class="title function_">reject</span>(<span class="string">&quot;foo&quot;</span>)</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="string">&quot;bar&quot;</span>)</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">()=&gt;</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>用node process的全局<code>unhandledRejection</code>事件来处理</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">process.on(<span class="string">&#x27;unhandledRejection&#x27;</span>, <span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;我帮你处理了&#x27;</span>, error.message);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) reject(<span class="string">&quot;foo&quot;</span>)</span><br><span class="line">    resolve(<span class="string">&quot;bar&quot;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">process.<span class="title function_">on</span>(<span class="string">&#x27;unhandledRejection&#x27;</span>, <span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;我帮你处理了&#x27;</span>, error.<span class="property">message</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">2</span>&gt;<span class="number">1</span>) <span class="title function_">reject</span>(<span class="string">&quot;foo&quot;</span>)</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="string">&quot;bar&quot;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>注意，这种情况下，全局的<code>unhandledRejection</code>事件会优先处理这个错误，也就是像第二种在Promise里用Catch处理是不会生效的。</p>
 </li>

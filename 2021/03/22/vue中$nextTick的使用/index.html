@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	
-		<link href="/favicon.ico" rel="icon">
+		<link href="/favicon.png" rel="icon">
 	 
       <title>
         
@@ -28,7 +28,7 @@
   
 
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
   <body>
     <div class="site" id="site">
       <div class="sidebar" id="sidebar">
@@ -68,6 +68,10 @@
 		<ul>
 			
           <li>
+            <a href="/2022/03/14/js-get-video-cover/">js获取在线视频的第一帧作为封面</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/27/hello-world/">Hello World</a>
           </li>
         
@@ -83,10 +87,6 @@
             <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
           </li>
         
-          <li>
-            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
-          </li>
-        
 		</ul>
 	</aside>
 
@@ -96,7 +96,7 @@
 <aside class="widget">
 		<h3 class="widget-title">归档</h3>		
 		<ul>
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
 		</ul>
 	</aside>
 
@@ -126,7 +126,7 @@
 		<div class="entry-content">
 			
 				<h3 id="一、使用方法"><a href="#一、使用方法" class="headerlink" title="一、使用方法"></a>一、使用方法</h3><p>在vue中有一种情况，获取了数据后，需要对新视图进行下一步操作或者其他操作时，发现获取不到dom。因为赋值操作只完成了数据模型的改变并没有完成视图更新。在这个时候我们需要$nextTick函数（或者setTimeout）。<span id="more"></span><br> 比如：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    <span class="keyword">list</span>: []</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    this.get()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      this.<span class="variable">$http</span>.get(<span class="string">&#x27;/api/article&#x27;</span>).then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        this.<span class="keyword">list</span> = res.data.data.<span class="keyword">list</span></span><br><span class="line">        <span class="comment">// ref  list 引用了ul元素，我想把第一个li颜色变为红色</span></span><br><span class="line">        this.<span class="variable">$refs</span>.<span class="keyword">list</span>.getElementsByTagName(<span class="string">&#x27;li&#x27;</span>)[<span class="number">0</span>].style.color = <span class="string">&#x27;red&#x27;</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    <span class="keyword">list</span>: []</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    this.<span class="title function_ invoke__">get</span>()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      this.<span class="variable">$http</span>.<span class="title function_ invoke__">get</span>(<span class="string">&#x27;/api/article&#x27;</span>).<span class="title function_ invoke__">then</span>(function (res) &#123;</span><br><span class="line">        this.<span class="keyword">list</span> = res.data.data.<span class="keyword">list</span></span><br><span class="line">        <span class="comment">// ref  list 引用了ul元素，我想把第一个li颜色变为红色</span></span><br><span class="line">        this.<span class="variable">$refs</span>.<span class="keyword">list</span>.<span class="title function_ invoke__">getElementsByTagName</span>(<span class="string">&#x27;li&#x27;</span>)[<span class="number">0</span>].style.color = <span class="string">&#x27;red&#x27;</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>使用示例</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$nextTick(() =&gt; &#123;</span><br><span class="line">        <span class="keyword">this</span>.msg2 = <span class="keyword">this</span>.$refs.msgDiv.innerHTML</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>

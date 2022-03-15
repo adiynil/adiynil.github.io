@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	
-		<link href="/favicon.ico" rel="icon">
+		<link href="/favicon.png" rel="icon">
 	 
       <title>
         
@@ -28,7 +28,7 @@
   
 
   
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
   <body>
     <div class="site" id="site">
       <div class="sidebar" id="sidebar">
@@ -68,6 +68,10 @@
 		<ul>
 			
           <li>
+            <a href="/2022/03/14/js-get-video-cover/">js获取在线视频的第一帧作为封面</a>
+          </li>
+        
+          <li>
             <a href="/2021/10/27/hello-world/">Hello World</a>
           </li>
         
@@ -83,10 +87,6 @@
             <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
           </li>
         
-          <li>
-            <a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/">Promise的UnhandledPromiseRejectionWarning问题</a>
-          </li>
-        
 		</ul>
 	</aside>
 
@@ -96,7 +96,7 @@
 <aside class="widget">
 		<h3 class="widget-title">归档</h3>		
 		<ul>
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
 		</ul>
 	</aside>
 
@@ -137,14 +137,14 @@
 <p>当然了我们可以用pm2或者forever之类的node进程管理工具来管理重启和记录错误，这样也更利于我们之后对程序进行修复。</p>
 <p>但是，在运行过程中，我们还是更希望我们的程序宕机的次数越少越好，如果我们的程序的Session是存储在内存中的，那么程序宕机重启之后，所有的用户登录状态也将不复存在。</p>
 <h2 id="Error-Handler-错误处理函数"><a href="#Error-Handler-错误处理函数" class="headerlink" title="Error Handler 错误处理函数"></a>Error Handler 错误处理函数</h2><p>Express框架内置了一个错误处理函数（Error Handler），这个函数是以中间件（MiddleWare）的形式来使用的，只不过这个中间件和其他的中间件稍微不一样，那就是错误处理函数接受4个参数，比常规中间件多了接收错误的参数<code>err</code>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">err, req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 处理错误</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">use</span>(<span class="keyword">function</span>(<span class="params">err, req, res, next</span>) &#123;</span><br><span class="line">  <span class="comment">// 处理错误</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>错误处理函数一般定义在所有路由之后，为了确保Express程序不会因为错误而宕机，则需要把错误抛给这个错误处理函数来处理，在请求内有两种方式把错误抛给错误处理函数。</p>
 <p>直接<code>throw new Error()</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;BROKEN&#x27;</span>) <span class="comment">// Express will catch this on its own.</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;BROKEN&#x27;</span>) <span class="comment">// Express will catch this on its own.</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>或者在<code>next()</code>函数中传入错误对象</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;/file-does-not-exist&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      next(err) <span class="comment">// Pass errors to Express.</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.send(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res, next</span>) &#123;</span><br><span class="line">  fs.<span class="title function_">readFile</span>(<span class="string">&#x27;/file-does-not-exist&#x27;</span>, <span class="keyword">function</span> (<span class="params">err, data</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="title function_">next</span>(err) <span class="comment">// Pass errors to Express.</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.<span class="title function_">send</span>(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>直接抛出错误，或者在<code>next()</code>函数中传入错误对象都能直接跳过剩余的路由，直接进入错误处理函数。</p>
 <p>参考官方文档</p>
@@ -159,7 +159,7 @@
 <li>next(err)——跳到错误处理函数</li>
 </ul>
 <p>注意<code>next()</code>和<code>next(&#39;route&#39;)</code>是分别跳到下一个<strong>中间件</strong>和<strong>路由</strong>，经常看到说<code>next()</code>函数会跳到下一个路由的，其实这样说是不准确的，一个路由可以有多个中间件来处理</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mw1 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line">mw2 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line">mw3 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line">mw4 = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, mw1, mw2, mw3)</span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, mw4)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mw1 = <span class="keyword">function</span>(<span class="params">req, res, next</span>)&#123;&#125;</span><br><span class="line">mw2 = <span class="keyword">function</span>(<span class="params">req, res, next</span>)&#123;&#125;</span><br><span class="line">mw3 = <span class="keyword">function</span>(<span class="params">req, res, next</span>)&#123;&#125;</span><br><span class="line">mw4 = <span class="keyword">function</span>(<span class="params">req, res, next</span>)&#123;&#125;</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, mw1, mw2, mw3)</span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, mw4)</span><br></pre></td></tr></table></figure>
 
 <p>例如在<code>mw1</code>函数中调用了<code>next()</code>，实际上是跳到<code>mw2</code>开始执行，而如果我们调用的是<code>next(&#39;route&#39;)</code>，那么就会直接跳过<code>mw2</code>和<code>mw3</code>，直接开始执行<code>mw4</code>。</p>
 <p>之所以有时候混淆是因为经常一个路由我们只用一个函数来处理，而不是链式处理，一个路由一个函数处理，调用<code>next()</code>和调用<code>next(&#39;route&#39;)</code>的效果是一样的。</p>
