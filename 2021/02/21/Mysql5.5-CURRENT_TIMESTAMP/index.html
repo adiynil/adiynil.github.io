@@ -10,9 +10,9 @@
 	 
       <title>
         
-          标签: GitHub | 
-        
         adiynil
+        
+           - to Produce wonderful ideas
         
       </title>
 	
@@ -115,31 +115,76 @@
       <div class="site-content" id="content">
         <main class="site-main" id="main" role="main">
           
-  <section class="archives-wrap hentry">
-  
-  
-    
-    
-      
-      
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <ul>
-    
-    <li>
-    <div class="inner">
-      <a class="title" href="/2020/02/03/how-to-use-cloudflare/">如何使用Cloudflare来加速我的GitHub Page</a>
-      <time class="time" datetime="2020-02-03T16:00:00.000Z" itemprop="datePublished">2月 4</time>
-    </div>
-</li>
-  
-  
-    </ul>
-  
-  </section>
+<article class="hentry ">
+		
+		
+			<header class="entry-header">
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/21/Mysql5.5-CURRENT_TIMESTAMP/" rel="bookmark">Mysql5.5版本中日期默认为CURRENT_TIMESTAMP报错</a></h2>	
+			</header>
+		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<p>建表的时候发现设置create_time列的默认值为CURRENT_TIMESTAMP时报错了，无非是两种报错：</p>
+<ul>
+<li>数据类型是datetime导致报错</li>
+<li>通个表同时存在两个字段为CURRENT_TIMESTAMP</li>
+</ul>
+<p>这是因为在Mysql5.6.5（也有说是5.6）版本之前，datetime类型的字段不会自动初始化并更新当前日期和时间，而timestamp类型的字段可以，并且每个表只能包含一个timestamp字段，而在此之后的版本，timestamp和datetime字段都可以自动初始化并更新当前日期和时间，并且没有限制字段数。</p>
+<p>解决方法也很简单：</p>
+<ol>
+<li>升级到Mysql5.6.5版本或以上</li>
+<li>创建触发器trigger来自动更新字段值</li>
+</ol>
 
 
+				
+					<div class="license-statement">本文由adiynil原创编写，转载请尽量保留版权网址，感谢您的理解与分享!</div>
+				
+				
+					
+				
+			
+		</div><!-- .entry-content -->
+		
+			 
+ <div class="entry-comments">
+      <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'adiynil'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+   </div>
+  
+  
+   
+		
+		<footer class="entry-footer">
+			
+<span class="posted-on font-awesome-icon">
+	<a href="/archives/2021" rel="bookmark">
+	<time class="updated" datetime="2021-02-21T07:16:00.000Z">2021-02-21</time>
+	</a>
+</span>
+
+
+	<span class="tags-links font-awesome-icon">
+	
+		<a href="/tags/mysql/" rel="category tag">mysql</a>
+    
+</span>
+		
+
+		</footer><!-- .entry-footer -->
+</article>
 
         </main>
       </div>

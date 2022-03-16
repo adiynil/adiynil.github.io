@@ -68,6 +68,10 @@
 		<ul>
 			
           <li>
+            <a href="/2022/03/16/miniprogram-page-commuincation/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/14/js-get-video-cover/">js获取在线视频的第一帧作为封面</a>
           </li>
         
@@ -76,15 +80,11 @@
           </li>
         
           <li>
-            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+            <a href="/2021/03/27/css-flex/">一文搞懂CSS Flex布局</a>
           </li>
         
           <li>
-            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+            <a href="/2021/03/23/vue3-with-editor/">vue中整合editor.md</a>
           </li>
         
 		</ul>
@@ -96,7 +96,7 @@
 <aside class="widget">
 		<h3 class="widget-title">归档</h3>		
 		<ul>
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
 		</ul>
 	</aside>
 
@@ -120,6 +120,40 @@
 <article class="hentry ">
 		
 		
+		<!-- .entry-header -->
+		<div class="entry-content">
+			
+				<ul>
+<li>setStorage/getStorage（setStorageSync/getStorageSync）存储到缓存，在页面的onShow阶段绑定</li>
+<li>wx.navigateTo({url: ‘../page/you/go?key=value’})在onLoad中获取option参数（tabBar页面不支持）</li>
+<li>模板传参/组件传参</li>
+</ul>
+				
+				<p class="article-more-link">
+					<a href="/2022/03/16/miniprogram-page-commuincation/#more">Read More</a>
+				</p>
+				
+			
+		</div><!-- .entry-content -->
+		
+		<footer class="entry-footer">
+			
+<span class="posted-on font-awesome-icon">
+	<a href="/archives/2022" rel="bookmark">
+	<time class="updated" datetime="2022-03-16T07:28:23.422Z">2022-03-16</time>
+	</a>
+</span>
+
+		
+
+		</footer><!-- .entry-footer -->
+</article>
+
+  
+    
+<article class="hentry ">
+		
+		
 			<header class="entry-header">
 				<h2 class="entry-title"><a class="post-title-link" href="/2022/03/14/js-get-video-cover/" rel="bookmark">js获取在线视频的第一帧作为封面</a></h2>	
 			</header>
@@ -127,11 +161,11 @@
 		<!-- .entry-header -->
 		<div class="entry-content">
 			
-				<p>最近碰到一个需求，要求获取在线视频文件的第一帧画面作为视频的封面图片，项目中使用的是 xgplayer 播放器，封面 poster 要求传封面的 url，但是又刚好</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">getVideoBase64</span> = (<span class="params">url: <span class="built_in">string</span></span>) =&gt;</span><br><span class="line">  <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span> (<span class="params">resolve</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> dataURL = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">let</span> video = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;video&#x27;</span>)</span><br><span class="line">    video.<span class="title function_">setAttribute</span>(<span class="string">&#x27;crossOrigin&#x27;</span>, <span class="string">&#x27;anonymous&#x27;</span>) <span class="comment">//处理跨域</span></span><br><span class="line">    video.<span class="title function_">setAttribute</span>(<span class="string">&#x27;src&#x27;</span>, url)</span><br><span class="line">    video.<span class="title function_">setAttribute</span>(<span class="string">&#x27;width&#x27;</span>, <span class="number">880</span> + <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    video.<span class="title function_">setAttribute</span>(<span class="string">&#x27;height&#x27;</span>, <span class="number">495</span> + <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    video.<span class="title function_">setAttribute</span>(<span class="string">&#x27;autoplay&#x27;</span>, <span class="string">&#x27;autoplay&#x27;</span>)</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(video)</span><br><span class="line">    video.<span class="title function_">addEventListener</span>(<span class="string">&#x27;loadeddata&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> canvas = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;canvas&#x27;</span>),</span><br><span class="line">        width = width, <span class="comment">//canvas的尺寸和图片一样</span></span><br><span class="line">        height = height</span><br><span class="line">      canvas.<span class="property">width</span> = video.<span class="property">width</span></span><br><span class="line">      canvas.<span class="property">height</span> = video.<span class="property">height</span></span><br><span class="line">      canvas.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>)!.<span class="title function_">drawImage</span>(video, <span class="number">0</span>, <span class="number">0</span>, width, height) <span class="comment">//绘制canvas</span></span><br><span class="line">      dataURL = canvas.<span class="title function_">toDataURL</span>(<span class="string">&#x27;image/jpeg&#x27;</span>) <span class="comment">//转换为base64</span></span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(video)</span><br><span class="line">      <span class="title function_">resolve</span>(dataURL)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">base64ImgtoFile</span> = (<span class="params">dataurl: <span class="built_in">string</span>, filename = <span class="string">&#x27;file&#x27;</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> arr = dataurl.<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">  <span class="keyword">let</span> mime = arr[<span class="number">0</span>].<span class="title function_">match</span>(<span class="regexp">/:(.*?);/</span>)![<span class="number">1</span>]</span><br><span class="line">  <span class="keyword">let</span> suffix = mime.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>)[<span class="number">1</span>]</span><br><span class="line">  <span class="keyword">let</span> bstr = <span class="title function_">atob</span>(arr[<span class="number">1</span>])</span><br><span class="line">  <span class="keyword">let</span> n = bstr.<span class="property">length</span></span><br><span class="line">  <span class="keyword">let</span> u8arr = <span class="keyword">new</span> <span class="title class_">Uint8Array</span>(n)</span><br><span class="line">  <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">    u8arr[n] = bstr.<span class="title function_">charCodeAt</span>(n)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">File</span>([u8arr], <span class="string">`<span class="subst">$&#123;filename&#125;</span>.<span class="subst">$&#123;suffix&#125;</span>`</span>, &#123;</span><br><span class="line">    <span class="attr">type</span>: mime</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">getLocalPreviewUrl</span> = (<span class="params">file: File</span>) =&gt; <span class="variable constant_">URL</span>.<span class="title function_">createObjectURL</span>(file)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">getOnlineVideoCover</span> = <span class="keyword">async</span> (<span class="params">url: <span class="built_in">string</span></span>) =&gt;</span><br><span class="line">  <span class="title function_">getLocalPreviewUrl</span>(<span class="title function_">base64ImgtoFile</span>((<span class="keyword">await</span> <span class="title function_">getVideoBase64</span>(url)) <span class="keyword">as</span> <span class="built_in">string</span>))</span><br></pre></td></tr></table></figure>
-
-
+				<p>最近碰到一个需求，要求获取在线视频文件的第一帧画面作为视频的封面图片，项目中使用的是 xgplayer 播放器，封面 poster 要求传封面的 url。<br>思路：用 canvas 绘出画面 - 转成 base64 - base64 转成 File - 获取 File 的本地预览地址</p>
 				
+				<p class="article-more-link">
+					<a href="/2022/03/14/js-get-video-cover/#more">Read More</a>
+				</p>
 				
 			
 		</div><!-- .entry-content -->
@@ -195,7 +229,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/27/flex%E5%B8%83%E5%B1%80/" rel="bookmark">一文搞懂CSS Flex布局</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/27/css-flex/" rel="bookmark">一文搞懂CSS Flex布局</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -204,7 +238,7 @@
 				<p>css中，flex、grid 各种布局都是我们必须掌握的，作为常用功能又强大的flex布局你还没学会吗，全文没有一张图，用最通俗易懂的语言教你怎么用css中的flex布局。</p>
 				
 				<p class="article-more-link">
-					<a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/#more">Read More</a>
+					<a href="/2021/03/27/css-flex/#more">Read More</a>
 				</p>
 				
 			
@@ -237,7 +271,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/" rel="bookmark">vue中整合editor.md</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/23/vue3-with-editor/" rel="bookmark">vue中整合editor.md</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -247,7 +281,7 @@
 <p>Editor.md作为一个很成熟开元Markdown编辑器，虽然已经好久不更新了，但是无疑还是非常实用的，由于Editor.md并没有提供与Vue整合的直接方案，但是我们可以自己把它封装成一个Vue组件来使用。</p>
 				
 				<p class="article-more-link">
-					<a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/#more">Read More</a>
+					<a href="/2021/03/23/vue3-with-editor/#more">Read More</a>
 				</p>
 				
 			
@@ -280,7 +314,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="bookmark">vue中$nextTick的使用</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/03/22/vue-$nextTick/" rel="bookmark">vue中$nextTick的使用</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -289,7 +323,7 @@
 				<h3 id="一、使用方法"><a href="#一、使用方法" class="headerlink" title="一、使用方法"></a>一、使用方法</h3><p>在vue中有一种情况，获取了数据后，需要对新视图进行下一步操作或者其他操作时，发现获取不到dom。因为赋值操作只完成了数据模型的改变并没有完成视图更新。在这个时候我们需要$nextTick函数（或者setTimeout）。
 				
 				<p class="article-more-link">
-					<a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/#more">Read More</a>
+					<a href="/2021/03/22/vue-$nextTick/#more">Read More</a>
 				</p>
 				
 			
@@ -322,7 +356,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/" rel="bookmark">Promise的UnhandledPromiseRejectionWarning问题</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/25/Promise-UnhandledPromiseRejectionWarning/" rel="bookmark">Promise的UnhandledPromiseRejectionWarning问题</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -331,7 +365,7 @@
 				<p>在封装Nodejs对MySQL的CRUD API的时候遇到了<code>UnhandledPromiseRejectionWarning</code>提示，查询了解到这是Node.js 6.6.0中增加的一个特性：对 Promise 中未处理的 rejection 默认会输出 <code>UnhandledPromiseRejectionWarning</code> 提示。</p>
 				
 				<p class="article-more-link">
-					<a href="/2021/02/25/Promise%E7%9A%84UnhandledPromiseRejectionWarning%E9%97%AE%E9%A2%98/#more">Read More</a>
+					<a href="/2021/02/25/Promise-UnhandledPromiseRejectionWarning/#more">Read More</a>
 				</p>
 				
 			
@@ -362,7 +396,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/24/Express%E6%A1%86%E6%9E%B6%E4%B8%AD%E8%AF%B7%E6%B1%82%E5%86%85%E7%9A%84%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/" rel="bookmark">Express框架中请求内的错误处理</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/24/express-error-handle/" rel="bookmark">Express框架中请求内的错误处理</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -374,7 +408,7 @@
 <p>Express官方文档中提到，要确保你的Express程序在遇到错误的时候不会宕机，就得确保Express能接收到程序抛出的错误。</p>
 				
 				<p class="article-more-link">
-					<a href="/2021/02/24/Express%E6%A1%86%E6%9E%B6%E4%B8%AD%E8%AF%B7%E6%B1%82%E5%86%85%E7%9A%84%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/#more">Read More</a>
+					<a href="/2021/02/24/express-error-handle/#more">Read More</a>
 				</p>
 				
 			
@@ -391,9 +425,9 @@
 
 	<span class="tags-links font-awesome-icon">
 	
-		<a href="/tags/express/" rel="category tag">express</a>
-    
 		<a href="/tags/promise/" rel="category tag">promise</a>
+    
+		<a href="/tags/express/" rel="category tag">express</a>
     
 </span>
 		
@@ -407,7 +441,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/21/Mysql5.5%E7%89%88%E6%9C%AC%E4%B8%AD%E6%97%A5%E6%9C%9F%E9%BB%98%E8%AE%A4%E4%B8%BACURRENT_TIMESTAMP%E6%8A%A5%E9%94%99/" rel="bookmark">Mysql5.5版本中日期默认为CURRENT_TIMESTAMP报错</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2021/02/21/Mysql5.5-CURRENT_TIMESTAMP/" rel="bookmark">Mysql5.5版本中日期默认为CURRENT_TIMESTAMP报错</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -456,7 +490,7 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2020/12/22/JavaScript%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" rel="bookmark">JavaScript实现数据结构的栈、队列和双向链表</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2020/12/22/js-stack-queue-linklist/" rel="bookmark">JavaScript实现数据结构的栈、队列和双向链表</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
@@ -466,7 +500,7 @@
 <p>面试的时候被问到的数据结构题，当时是脑袋有点蒙的，用纸笔不知道怎么下手，过后自己写了一下其实并不难，尤其是栈和队列，可以直接直接用原生Array的pop()、push()、shift()、unshift()方法来实现，之前做JSON数据的时候还专门记录过这几个方法，真的是猪油蒙了心居然没写出来。</p>
 				
 				<p class="article-more-link">
-					<a href="/2020/12/22/JavaScript%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97%E5%92%8C%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/#more">Read More</a>
+					<a href="/2020/12/22/js-stack-queue-linklist/#more">Read More</a>
 				</p>
 				
 			
@@ -496,46 +530,6 @@
 		<a href="/tags/%E9%98%9F%E5%88%97/" rel="category tag">队列</a>
     
 		<a href="/tags/%E9%93%BE%E8%A1%A8/" rel="category tag">链表</a>
-    
-</span>
-		
-
-		</footer><!-- .entry-footer -->
-</article>
-
-  
-    
-<article class="hentry ">
-		
-		
-			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2020/12/17/%E8%A7%A3%E5%86%B3MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%99%BB%E9%99%86%E5%A4%B1%E8%B4%A51045%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF/" rel="bookmark">解决MySQL数据库登陆失败1045权限错误</a></h2>	
-			</header>
-		
-		<!-- .entry-header -->
-		<div class="entry-content">
-			
-				<p>从做完JavaWeb的项目之后，好久没打开过本地的MySQL，今天一打开突然就打不开了，反复确认了MySQL服务是在运行中，仍然是报1045权限错误。</p>
-				
-				<p class="article-more-link">
-					<a href="/2020/12/17/%E8%A7%A3%E5%86%B3MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%99%BB%E9%99%86%E5%A4%B1%E8%B4%A51045%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF/#more">Read More</a>
-				</p>
-				
-			
-		</div><!-- .entry-content -->
-		
-		<footer class="entry-footer">
-			
-<span class="posted-on font-awesome-icon">
-	<a href="/archives/2020" rel="bookmark">
-	<time class="updated" datetime="2020-12-17T09:51:00.000Z">2020-12-17</time>
-	</a>
-</span>
-
-
-	<span class="tags-links font-awesome-icon">
-	
-		<a href="/tags/mysql/" rel="category tag">mysql</a>
     
 </span>
 		

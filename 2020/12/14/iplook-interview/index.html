@@ -68,6 +68,10 @@
 		<ul>
 			
           <li>
+            <a href="/2022/03/16/miniprogram-page-commuincation/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/14/js-get-video-cover/">js获取在线视频的第一帧作为封面</a>
           </li>
         
@@ -76,15 +80,11 @@
           </li>
         
           <li>
-            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+            <a href="/2021/03/27/css-flex/">一文搞懂CSS Flex布局</a>
           </li>
         
           <li>
-            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+            <a href="/2021/03/23/vue3-with-editor/">vue中整合editor.md</a>
           </li>
         
 		</ul>
@@ -96,7 +96,7 @@
 <aside class="widget">
 		<h3 class="widget-title">归档</h3>		
 		<ul>
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
 		</ul>
 	</aside>
 
@@ -119,22 +119,45 @@
 		
 		
 			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2020/12/17/%E8%A7%A3%E5%86%B3MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%99%BB%E9%99%86%E5%A4%B1%E8%B4%A51045%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF/" rel="bookmark">解决MySQL数据库登陆失败1045权限错误</a></h2>	
+				<h2 class="entry-title"><a class="post-title-link" href="/2020/12/14/iplook-interview/" rel="bookmark">iplook面试总结</a></h2>	
 			</header>
 		
 		<!-- .entry-header -->
 		<div class="entry-content">
 			
-				<p>从做完JavaWeb的项目之后，好久没打开过本地的MySQL，今天一打开突然就打不开了，反复确认了MySQL服务是在运行中，仍然是报1045权限错误。</p>
-<span id="more"></span>
-
-<p>本地的MySQL只是用来调试，所以密码设置的很简单，也即是说不是因为密码错误才会出现1045错误，具体我也不了解，但是好像如果好久打开过MySQL就会大概率性遇到这个错误。</p>
-<p>首先打开MySQL安装目录，找到<code>my.ini</code>文件，MySQL的配置文件，打开找到<code>[mysqld]</code>这一行，在下面加一行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
-<p>然后保存，注意如果你的MySQL安装在C盘，得用管理员权限打开编辑器才能保存。然后打开服务管理重启MySQL，具体是<code>win+r</code>输入<code>services.msc</code>回车。</p>
-<p>然后打开MySQL，在输入密码的时候直接回车就可以进入了，进去之后</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set password=password(&#x27;123&#x27;) where user = &#x27;root&#x27; and host = &#x27;localhost&#x27;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-<p>再次重启MySQL服务，登陆的时候输入你设置的密码就可以登录了。</p>
+				<p>广州，第三天，去面试了广州的一家通信公司的前端开发岗位。公司规模不算很大，但是氛围很好，进去之后根据前台小姐姐的指示找到了接待的地方，（应该是）人事部的小哥很面善，招呼我坐下来就给了我一份面试题和作答纸让我做了一份题，题目有20道，记录一下<span id="more"></span>还记得一些：</p>
+<ul>
+<li>列举并简单说明 HTML5 的 input 标签</li>
+<li>说说 HTML5 的语义化标签</li>
+<li>CSS 的选择器有哪些</li>
+<li>说说盒子模型</li>
+<li>var 和 let 的作用域</li>
+<li>响应式技术有哪些</li>
+<li>简单画出 DOM 的树状结构图</li>
+<li>公司的logo是蓝色，有三级菜单，页面内容是一个表单里面有文本数据和提交，谈谈如何进行页面布局和配色</li>
+<li>客户端数据存储有哪些、有什么区别</li>
+<li>原生js实现栈、队列和双向链表</li>
+<li>怎么实现页面局部内容刷新技术</li>
+<li>对图形化编程的了解</li>
+<li>怎么解决跨域问题</li>
+<li>移动通信模型（这个有两个还是三个问题，我都不会也就没记住）</li>
+</ul>
+<p>还有几个题实在想不起来了，有好些我都不会，做的就不怎么样，所以后面面试的时候就没什么底气。面试我的是两个人，一个男的一个女的，没了解到他们是什么职位的，但应该是资深技术开发的或者经理岗的，首先是自我介绍环节，尽管在进来之前自己在外面吹着冷风练了好几次，但是还是有卡壳的地方，还是要多练练，紧张是不可能不紧张的，适当还好，过了那个度的话应该是挺减分的。男面试官让我说说我简历上写的项目经历，实际上这两个项目一个是前端课程的作品一个是自学nodejs的demo项目，挺简单的没有什么好说；女面试官就比较犀利了，问问题的速度比较快，气场非常强，一个一个问题紧逼着，问的也很掐点，好多我都答不上来，我记得的： </p>
+<ul>
+<li>项目是用什么搭建的，还了解过哪些工具</li>
+<li>jQuery 框架的使用</li>
+<li>canvas绘图了解多少</li>
+<li>语义化标签的作用</li>
+<li>vue-cli 的使用</li>
+<li>vuex 的作用和使用</li>
+<li>vue的router怎么用</li>
+<li>前端怎么实现跨域（get/post）</li>
+<li>HTTP协议（拓展TCP/IP）</li>
+<li>媒体查询怎么实现div在不同宽度下显示不同颜色</li>
+</ul>
+<p>其实好多都是根据面试题来问一些更深一点的，但是被女面试官的语言犀利到，脑子都没转过弯来也就没有回答好，归根到底还是自己知识沉淀不够，能力达不到水平。</p>
+<p>后面照例还是由人事的主管聊了一下问了一下我的基本情况，说了一下我的答题情况，问了一下我的专业，确定了我是软件工程专业之后问我为什么没答栈队列链表那道题，是不是数据结构不好。我只能回答手写不知道如何下手就没写，其实她应该看得出来我是不会，毕竟我也没想到居然要考数据结构（混过来的）。还问了我对他们公司有什么了解，是做什么产品的，由于自己没有准备充分没去查阅所以不太了解。中间也问我有什么想要了解的，得知他们公司目前是在用原生js开发的，毕竟是通信方面的，最求稳定安全为上，还没有开始用框架。最后就是客套了一下，问了期望薪资问了学校的就业情况身边的人的实习薪资等，走个流程。</p>
+<p>总的来说，这是一次成功的失败面试。于这次面试本身我是失败了的，面试出来不需要他们通知我也知道自己没有机会；但是通过这次面试找到了自己的很多问题，基础的薄弱块，也意识到自己离一份offer的差距有多少，今后继续加油。</p>
 
 
 				
@@ -170,16 +193,10 @@
 			
 <span class="posted-on font-awesome-icon">
 	<a href="/archives/2020" rel="bookmark">
-	<time class="updated" datetime="2020-12-17T09:51:00.000Z">2020-12-17</time>
+	<time class="updated" datetime="2020-12-14T17:44:00.000Z">2020-12-14</time>
 	</a>
 </span>
 
-
-	<span class="tags-links font-awesome-icon">
-	
-		<a href="/tags/mysql/" rel="category tag">mysql</a>
-    
-</span>
 		
 
 		</footer><!-- .entry-footer -->

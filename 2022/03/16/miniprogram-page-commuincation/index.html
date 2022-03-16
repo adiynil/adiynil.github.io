@@ -68,6 +68,10 @@
 		<ul>
 			
           <li>
+            <a href="/2022/03/16/miniprogram-page-commuincation/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/14/js-get-video-cover/">js获取在线视频的第一帧作为封面</a>
           </li>
         
@@ -76,15 +80,11 @@
           </li>
         
           <li>
-            <a href="/2021/03/27/flex%E5%B8%83%E5%B1%80/">一文搞懂CSS Flex布局</a>
+            <a href="/2021/03/27/css-flex/">一文搞懂CSS Flex布局</a>
           </li>
         
           <li>
-            <a href="/2021/03/23/vue3%E4%B8%AD%E6%95%B4%E5%90%88editor/">vue中整合editor.md</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/22/vue%E4%B8%AD$nextTick%E7%9A%84%E4%BD%BF%E7%94%A8/">vue中$nextTick的使用</a>
+            <a href="/2021/03/23/vue3-with-editor/">vue中整合editor.md</a>
           </li>
         
 		</ul>
@@ -96,7 +96,7 @@
 <aside class="widget">
 		<h3 class="widget-title">归档</h3>		
 		<ul>
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li></ul>
 		</ul>
 	</aside>
 
@@ -118,42 +118,25 @@
 <article class="hentry ">
 		
 		
-			<header class="entry-header">
-				<h2 class="entry-title"><a class="post-title-link" href="/2020/02/03/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Cloudflare%E6%9D%A5%E5%8A%A0%E9%80%9F%E6%88%91%E7%9A%84GitHub%20Page/" rel="bookmark">如何使用Cloudflare来加速我的GitHub Page</a></h2>	
-			</header>
-		
 		<!-- .entry-header -->
 		<div class="entry-content">
 			
-				<p>我用了两天时间搭建起来的站点，依赖于GitHub的Page服务，域名是在腾讯云购买的，但是众所周知的是GitHub现在基本是半墙的状态，如果你不能快乐地上网，那么很可能不能愉快的访问GitHub，都已经用GitHub来搭建站点了，那么就要想法子来白嫖CDN来加速我的站点在国内的访问速度。</p>
+				<ul>
+<li>setStorage/getStorage（setStorageSync/getStorageSync）存储到缓存，在页面的onShow阶段绑定</li>
+<li>wx.navigateTo({url: ‘../page/you/go?key=value’})在onLoad中获取option参数（tabBar页面不支持）</li>
+<li>模板传参/组件传参</li>
+</ul>
 <span id="more"></span>
 
-<hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的站点是依赖Hexo搭建在GitHub Page上的博客系统，本身就已经很轻量了，但是苦于国内访问确实慢，<del>但是又没钱</del>，所以只能白嫖Cloudflare的CDN，尽管Cloudflare也日常会抽风，但是起码有一点加成。</p>
-<hr>
-<h2 id="在Cloudflare添加站点"><a href="#在Cloudflare添加站点" class="headerlink" title="在Cloudflare添加站点"></a>在Cloudflare添加站点</h2><p>你需要先注册一个 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a> 的账号，这个不赘述了，然后添加你的站点  </p>
-<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-1.png" alt="添加站点">  </p>
-<p>我们知道的是，Cloudflare免费套餐只能通过NS方式接入，这样用起来不够灵活、生效很慢（0~72小时），而且最重要的问题是没法在解析的时候手工解析到Cloudflare节点IP地址，这就达不到我的目的——指定节点解析。  </p>
-<blockquote>
-<p>指定节点解析有什么用呢，比如说我用的是默认的解析，在国内访问可能会走美国的节点，就打不到加速的目的了，我的目的就是白嫖Cloudflare的香港节点，或者是日本、韩国的节点都比较快。</p>
-</blockquote>
-<hr>
-<h2 id="接入第三方管理平台"><a href="#接入第三方管理平台" class="headerlink" title="接入第三方管理平台"></a>接入第三方管理平台</h2><p>这里我用到了第三方的Cloudflare管理平台 <a target="_blank" rel="noopener" href="https://cdn.bnxb.com/">BNXB</a> ，用API接入Cloudflare的账号来管理站点。通过这个平台我就可以用CNAME来解析我的站点来使用Cloudflare的CDN加速了，注意要选择CNAME解析。  </p>
-<p>配置好了之后的截图应该是这样的：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/adiynil/cloudimg//screenshot-2.png" alt="BNXD配置">  </p>
-<p>你需要在你的域名服务商那里添加一条CNAME记录解析到 <a target="_blank" rel="noopener" href="https://cdn.bnxb.com/">BNXB</a> 给你提供的地址，你可以在 <code>解析设置</code> 里看到对应的地址。解析了之后你要访问一次你的域名来激活SSL证书（当然你得有）。</p>
-<p>到了这一步你可以配置你的CDN了，你可以选择在 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a> 配置，或者如果你的英语不太好可以选择在 <a target="_blank" rel="noopener" href="https://cdn.bnxb.com/">BNXB</a> 配置，已经中文本土化了。详细的配置应该怎么配置可以百度有很多配置教程。</p>
-<h2 id="自定义解析节点"><a href="#自定义解析节点" class="headerlink" title="自定义解析节点"></a>自定义解析节点</h2><p>用第三方管理平台来管理Cloudflare不用NS接入，那么我们完全可以自己定义解析节点，只要是Cloudflare的节点就可以。  </p>
-<p>Cloudflare自己发布节点的页面是 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/ips/">IP Changes</a>  </p>
-<p>部分网友整理的节点有：  </p>
-<h3 id="移动联通推荐"><a href="#移动联通推荐" class="headerlink" title="移动联通推荐"></a>移动联通推荐</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">104.23.240.0-104.23.243.254</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 模板</span><br><span class="line">&lt;template name=&quot;comment&quot;&gt;</span><br><span class="line">	&lt;view&gt;&#123;&#123;msg&#125;&#125; - &#123;&#123;time&#125;&#125;&lt;view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">// 使用模板</span><br><span class="line">&lt;import src=&quot;link/to/your/template.wxml&quot;/&gt;</span><br><span class="line">&lt;template is=&quot;comment&quot; data=&quot;&#123;&#123;...item&#125;&#125;&quot; /&gt;</span><br><span class="line">// wxss样式</span><br><span class="line">@import &quot;link/to/template/style.wxss&quot;</span><br><span class="line">// 页面数据</span><br><span class="line">Page(&#123;</span><br><span class="line">	data: &#123;</span><br><span class="line">		item: &#123;</span><br><span class="line">			msg: &quot;hello&quot;,</span><br><span class="line">			time: &quot;2022-02-22&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="电信推荐"><a href="#电信推荐" class="headerlink" title="电信推荐"></a>电信推荐</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">162.159.208.4-162.159.208.103</span><br><span class="line">162.159.209.4-162.159.209.103</span><br><span class="line">162.159.210.4-162.159.210.103</span><br><span class="line">162.159.211.4-162.159.211.103</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取到当前的页面对上一页面进行setData</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pages = <span class="title function_">getCurrentPages</span>()</span><br><span class="line">prevPage = pages[pages.<span class="property">length</span> - <span class="number">2</span>]</span><br><span class="line">prevPage.<span class="title function_">setData</span>(&#123;<span class="comment">/*  */</span>&#125;)</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>这里可以在自己的域名服务商那里自定义使用哪个节点，各个节点不一定都可以使用，自己测试觉得可以再用吧</p>
-</blockquote>
-<p>修改完解析记录，等待DNS生效即可。</p>
+
+
 
 
 				
@@ -188,29 +171,11 @@
 		<footer class="entry-footer">
 			
 <span class="posted-on font-awesome-icon">
-	<a href="/archives/2020" rel="bookmark">
-	<time class="updated" datetime="2020-02-03T16:00:00.000Z">2020-02-03</time>
+	<a href="/archives/2022" rel="bookmark">
+	<time class="updated" datetime="2022-03-16T07:28:23.422Z">2022-03-16</time>
 	</a>
 </span>
 
-	<span class="cat-links font-awesome-icon">
-		
-				<a href="/categories/%E5%B9%B2%E8%B4%A7/" rel="category tag">干货</a>
-		
-	</span>
-
-
-	<span class="tags-links font-awesome-icon">
-	
-		<a href="/tags/Hexo/" rel="category tag">Hexo</a>
-    
-		<a href="/tags/CloudFlare/" rel="category tag">CloudFlare</a>
-    
-		<a href="/tags/GitHub-Page/" rel="category tag">GitHub Page</a>
-    
-		<a href="/tags/GitHub/" rel="category tag">GitHub</a>
-    
-</span>
 		
 
 		</footer><!-- .entry-footer -->
