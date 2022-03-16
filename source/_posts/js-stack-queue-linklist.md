@@ -98,7 +98,7 @@ class Queue {
 
 相比较于栈和队列，双向链表就稍微复杂一点。双向链表是没有顺序的，但是每个结点（Node）都会有指针（Pointer）指向该结点的前结点（Previous）和后结点（Next），还有一个头指针（Head）和尾指针（Tail）分别指向链表的头结点和尾结点，如果没有则指向`Null`，也即是空指针（Null Pointer），理论可能说不太清楚，还是图解比较条理清晰
 
-![image-20201221191959448](JavaScript实现数据结构的栈、队列和双向链表.assets/image-20201221191959448.png)
+![image-20201221191959448](https://cdn.jsdelivr.net/gh/adiynil/storage/2022/03/16/image-20201221191959448-7f54d02b.png)
 
 然后是实现，首先我们得有一个结点类Node，包含前指针、后指针和数据：
 
